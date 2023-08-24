@@ -371,21 +371,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-02
+                    2023-08-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    5.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    21 分
                 </div>
                 
 
@@ -405,7 +405,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C-巩固"><a href="#C-巩固" class="headerlink" title="C++巩固"></a>C++巩固</h1><p>B站黑马程序员</p>
+                <ul>
+<li><h1 id="C-巩固"><a href="#C-巩固" class="headerlink" title="C++巩固"></a>C++巩固</h1><p>B站黑马程序员</p>
 <h2 id="一、基础概念"><a href="#一、基础概念" class="headerlink" title="一、基础概念"></a>一、基础概念</h2><h4 id="1、hello-world"><a href="#1、hello-world" class="headerlink" title="1、hello world"></a>1、hello world</h4><h5 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h5><p>适用于大多数的C++程序：</p>
 <pre class=" language-c++"><code class="language-c++">#include<iostream>
 using namespace std;
@@ -442,7 +443,7 @@ int main()
 <h5 id="sizeof关键字"><a href="#sizeof关键字" class="headerlink" title="sizeof关键字"></a>sizeof关键字</h5><p><strong>作用</strong>：统计数据类型所占空间的大小</p>
 <p>语法：<code>sizeof(数据类型/变量);</code></p>
 <h5 id="浮点型（实型）"><a href="#浮点型（实型）" class="headerlink" title="浮点型（实型）"></a>浮点型（实型）</h5><p><strong>作用</strong>：用于表示小数。浮点型分为两种-单精度float-双精度double</p>
-<p>![img](E:\My Blog\Blog\source_posts\C++巩固.assets\20210610203143466-16909904123482.png)</p>
+<p>![img](E:\My Blog\Blog\source_posts\C++巩固.assets\20210610203143466-16928933192092.png)</p>
 <blockquote>
 <p>单精度代码格式最好为: float f1 = 3.14f</p>
 <p>数字后不加f的话,编译器会默认把一个小数当做双精度,然后再把双精度转为单精度,多一次转换的时间.</p>
@@ -482,11 +483,11 @@ int main()
 <p>后置递增a++——先进行<a href="">表达式运算</a>然后a再+1，递减同理。</p>
 </blockquote>
 <h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h5><p><strong>作用</strong>：用于将表达式的值赋给变量</p>
-<p>![image-20230802001904427](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802001904427.png)</p>
+<p>![image-20230802001904427](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802001904427-16928933192093.png)</p>
 <h5 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h5><p><strong>作用</strong>：用于表达式的比较，并返回一个真值或假值</p>
-<p>![image-20230802181654758](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802181654758.png)</p>
+<p>![image-20230802181654758](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802181654758-16928933192094.png)</p>
 <h5 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h5><p><strong>作用</strong>：用于根据表达式的值返回真值或假值</p>
-<p>![image-20230802182356342](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802182356342.png)</p>
+<p>![image-20230802182356342](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802182356342-16928933192095.png)</p>
 <h4 id="4、程序流程结构"><a href="#4、程序流程结构" class="headerlink" title="4、程序流程结构"></a>4、程序流程结构</h4><p>C/C++支持最基本的三大基本程序运算结构:<strong>顺序结构、选择结构、循环结构。</strong></p>
 <ul>
 <li>顺序结构：程序按顺序执行，不发生跳转。</li>
@@ -530,14 +531,273 @@ int main()
 <p>switch和if的区别：</p>
 <ul>
 <li>优点：结构清晰，执行效率快</li>
-<li>缺点：在判断时候不能是区间，只能是整形和字符型</li>
+<li>缺点：在判断时候不能是区间，只能是<a href="">整形</a>和<a href="">字符型</a></li>
 </ul>
 <h5 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h5><h6 id="while循环语句"><a href="#while循环语句" class="headerlink" title="while循环语句"></a>while循环语句</h6><p><strong>作用</strong>:满足循环条件，执行循环语句</p>
+<p><strong>语法</strong>:<code>while(循环条件){循环语句}</code></p>
+<h6 id="do-while循环语句"><a href="#do-while循环语句" class="headerlink" title="do-while循环语句"></a>do-while循环语句</h6><p><strong>作用</strong>：先执行，后判断循环条件</p>
 <p><strong>语法</strong>:</p>
-<h2 id="二、核心内容（面向对象编程）"><a href="#二、核心内容（面向对象编程）" class="headerlink" title="二、核心内容（面向对象编程）"></a>二、核心内容（面向对象编程）</h2><h2 id="三、进阶技巧（泛型编程-STL基础）"><a href="#三、进阶技巧（泛型编程-STL基础）" class="headerlink" title="三、进阶技巧（泛型编程+STL基础）"></a>三、进阶技巧（泛型编程+STL基础）</h2><h2 id="四、文件操作"><a href="#四、文件操作" class="headerlink" title="四、文件操作"></a>四、文件操作</h2><p>数据永久化的方式：文件和数据库。</p>
+<pre class=" language-c++"><code class="language-c++">do{    
+    循环语句
+}while(循环条件)
+</code></pre>
+<h6 id="for循环语句"><a href="#for循环语句" class="headerlink" title="for循环语句"></a>for循环语句</h6><p><strong>作用</strong>:满足循环条件，执行循环语句</p>
+<p><strong>语法</strong>:<code>for(起始条件;条件表达式;末尾循环体){ 循环语句}</code></p>
+<h6 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h6><p><strong>作用</strong>:在循环体中再嵌套一层循环，解决一些实际问题，外层循环一次，内层循环一周</p>
+<h5 id="跳转语句"><a href="#跳转语句" class="headerlink" title="跳转语句"></a>跳转语句</h5><h6 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h6><p><strong>作用</strong>:用于跳出<a href="">选择</a>结构或者<a href="">循环</a>结构</p>
+<p>break使用的时机：</p>
+<ul>
+<li>出现在switch语句中，作用是终止case并跳出swtich</li>
+<li>出现在循环语句中，作用是跳出当前的循环语句</li>
+<li>出现在嵌套语句中，跳出最近的内层循环语句</li>
+</ul>
+<h6 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h6><p>作用：在循环语句中，跳过本次循环中余下尚未执行的语句，<a href="">继续执行</a>下一次循环</p>
+<h6 id="goto语句"><a href="#goto语句" class="headerlink" title="goto语句"></a>goto语句</h6><p><strong>作用</strong>:可以无条件跳转语句</p>
+<p><strong>语法</strong>:</p>
+<pre class=" language-c++"><code class="language-c++">goto Flag;......
+Flag:......
+</code></pre>
+<p><strong>解释：</strong>如果标记的名称存在，执行到goto语句的时候，会跳转到标记的位置。</p>
+<blockquote>
+<p>在程序中，不要频繁使用goto语句，以免造成程序流通混乱</p>
+</blockquote>
+<h4 id="5、数组"><a href="#5、数组" class="headerlink" title="5、数组"></a>5、数组</h4><p>所谓数组就是一个集合，里面存放了<a href="">相同类型</a>的数据元素</p>
+<p><strong>特点1</strong>：数组中的每个数据元素都是相同的数据类型</p>
+<p><strong>特点2</strong>：数组放在一块<a href="">连续的内存空间</a></p>
+<p><strong>缺点</strong>：容量大小不可变，有内存溢出风险  </p>
+<p><strong>与vector的区别</strong>：</p>
+<p>![image-20230805000214983](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230805000214983-16928933192096.png)</p>
+<h6 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h6><p>语法:</p>
+<pre class=" language-c++"><code class="language-c++">数据类型 数组名[数组长度];
+数据类型 数组名[数组长度] = {值1，值2......};
+数据类型 数组名[] = {值1，值2......};;
+</code></pre>
+<p>数组名：</p>
+<ul>
+<li>获取数组的首地址  <code>cout&lt;&lt;arr</code></li>
+<li>计算所占内存大小  <code>sizeof(arr)</code>  <code>sizeof(arr[i])</code></li>
+</ul>
+<p>冒泡排序：</p>
+<p><strong>作用</strong>:最常用的排序算法，对数组内元素进行排序，用嵌套循环实现</p>
+<ol>
+<li>比较相邻两个元素，如果第一个比第二个大就交换他们的位置</li>
+<li>每一对相邻元素做同样的工作，整型完毕后，找到第一个最大值</li>
+<li>重复以上的步骤，每次比较次数-1，直到不需要比较</li>
+</ol>
+<h6 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h6><p>两个维度的数组</p>
+<p>定义:</p>
+<pre class=" language-c++"><code class="language-c++">数据类型 数组名[行][列];
+数据类型 数组名[行][列] = {{数据1，数据2}，{数据3，数据4}};//这种最为直观
+数据类型 数组名[行][列] = {数据1，数据2，数据3，数据4};
+数据类型 数组名[][列] = {数据1，数据2，数据3，数据4};//不能只写行数
+</code></pre>
+<p>数组名：</p>
+<ul>
+<li><p>查看二维数组所占内存空间</p>
+<ul>
+<li>整个数组的空间：<code>sizeof(arr)</code></li>
+<li>一行：<code>sizeof(arr[0])</code></li>
+<li>每一个数据：<code>sizeof(arr{0}[0])</code></li>
+</ul>
+</li>
+<li><p>获取二维数组首地址和每行的首地址</p>
+<p>具体的元素地址需要取地址符<code>(int) &amp;arr[0][2]</code></p>
+</li>
+</ul>
+<h4 id="6、函数"><a href="#6、函数" class="headerlink" title="6、函数"></a>6、函数</h4><h5 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h5><p><strong>作用</strong>:将一段经常使用的代码封装起来，减少重复代码。</p>
+<p>​        一个较大的程序，一般分为若干个程序块，每个<a href="">模块</a>实现特定的功能。</p>
+<h5 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h5><p>五要素：返回值类型，函数名 ，参数，函数体语句，return表达式</p>
+<h5 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h5><p><strong>语法</strong>:自定义的函数名(参数)</p>
+<h5 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h5><ul>
+<li>就是函数调用时将参数值传给形参</li>
+<li>值传递时，形参改变，实参不改变</li>
+</ul>
+<h5 id="函数的常见样式"><a href="#函数的常见样式" class="headerlink" title="函数的常见样式"></a>函数的常见样式</h5><p>无参无返、有参无返、无参有返、有参有返</p>
+<h5 id="函数的声明"><a href="#函数的声明" class="headerlink" title="函数的声明"></a>函数的声明</h5><p><strong>作用</strong>：告诉编译器函数名称及如何调用函数。函数的实际主体可以单独定义。</p>
+<p>​         函数定义在main函数前可以不用定义，在main函数后必须要定义，不然编译器找不到相关函数进行调用。</p>
+<p>​         函数的声明可以有很多次，定义只能有一次。</p>
+<h5 id="函数的分文件编写"><a href="#函数的分文件编写" class="headerlink" title="函数的分文件编写"></a>函数的分文件编写</h5><p><strong>作用</strong>:让代码结构更加清晰</p>
+<ul>
+<li><p>函数声名在.h头文件，函数的定义在.c源文件</p>
+</li>
+<li><p>源文件中<code>#include "自定义.h"</code>，使头文件和源文件关联</p>
+</li>
+<li><p>其他文件中包含自定义的头文件，即可使用自定义的函数</p>
+</li>
+</ul>
+<blockquote>
+<p>和Python中的模块和包有区别！</p>
+</blockquote>
+<h4 id="7、指针"><a href="#7、指针" class="headerlink" title="7、指针"></a>7、指针</h4><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p>指针的作用:可以通过指针<a href="">间接访问</a>内存；指针是数据类型为地址的变量</p>
+<ul>
+<li>内存编号是从0开始记录的，一般用16进制数字标识</li>
+<li>可以利用指针变量保存地址</li>
+</ul>
+<h5 id="指针变量的定义和使用"><a href="#指针变量的定义和使用" class="headerlink" title="指针变量的定义和使用"></a>指针变量的定义和使用</h5><p><strong>指针定义</strong>：数据类型+变量名  <code>int *p</code>    <code>p=&amp;a</code></p>
+<p>指针前加*号，表示<a href="">解引用</a>，找到指针指向的内存中的数据</p>
+<h5 id="指针所占内存空间"><a href="#指针所占内存空间" class="headerlink" title="指针所占内存空间"></a>指针所占内存空间</h5><p>32位的系统占用4个字节；64位系统占用8个字节。</p>
+<h5 id="空指针"><a href="#空指针" class="headerlink" title="空指针"></a>空指针</h5><p>指针变量指向内存中编号为0的空间</p>
+<p><strong>作用</strong>:初始化指针变量</p>
+<p><strong>注意</strong>:空指针指向的内存空间是不可以访问的，<a href="">0-255是系统占用的</a>，不可访问</p>
+<p>语法：<code>int* p = NULL;</code></p>
+<h5 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h5><p>指针变量指向非法的内存空间，但是用户没有权限导致程序崩溃。</p>
+<h5 id="const修饰指针"><a href="#const修饰指针" class="headerlink" title="const修饰指针"></a>const修饰指针</h5><p>3种情况：</p>
+<ul>
+<li><p>const修饰指针—常量指针</p>
+<p>const修饰的是指针，指针指向可以改，指针指向的值不可以改    </p>
+<p><code>const int* p1 = &amp;a</code>，指针指向的值只为常量。</p>
+</li>
+<li><p>const修饰常量—指针常量</p>
+<p>const修饰的是常量，指针指向不可以改，指针指向的值可以更改    </p>
+<p><code>int* const p2 = &amp;a</code>，即p2里的地址不会发生改变。</p>
+</li>
+<li><p>const既修饰指针，又修饰常量</p>
+<p>const既修饰指针，又修饰常量，指针的指向和指针指向的值都不可以改变   </p>
+<p><code>const int* const p = &amp;a</code></p>
+</li>
+</ul>
+<h5 id="指针和数组"><a href="#指针和数组" class="headerlink" title="指针和数组"></a>指针和数组</h5><p><strong>作用</strong>:利用指针访问数组元素</p>
+<pre class=" language-c++"><code class="language-c++">int arr[] = {1,2,3,4};
+int* p = arr;
+p++;
+</code></pre>
+<h5 id="指针和函数"><a href="#指针和函数" class="headerlink" title="指针和函数"></a>指针和函数</h5><p><strong>作用</strong>:利用指针作函数的参数，可以修改实参的值</p>
+<p>例如：<code>void swap(int *p,int *t)</code></p>
+<p>注意值传递和地址传递的区别</p>
+<h4 id="8、结构体"><a href="#8、结构体" class="headerlink" title="8、结构体"></a>8、结构体</h4><h5 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h5><p>结构体属于用户自定义的数据类型，允许用户存储<a href="">不同的数据类型</a></p>
+<h5 id="定义和使用"><a href="#定义和使用" class="headerlink" title="定义和使用"></a>定义和使用</h5><p><strong>语法</strong>：</p>
+<pre class=" language-c++"><code class="language-c++">struct 结构体名称
+{ 结构体成员列表};
+</code></pre>
+<p>通过结构体创建变量的方式有三种：</p>
+<ul>
+<li>struct 结构体名 变量名</li>
+<li>struct 结构体名 变量名 = （成员1值，成员2值…)</li>
+<li>定义结构体时顺便创建变量</li>
+</ul>
+<blockquote>
+<p>结构体为用户自定义的类型，是一些数据类型的集合</p>
+<p>struct关键字在定义时候不可以省略，在创建变量时候可以省</p>
+</blockquote>
+<h5 id="结构体数组"><a href="#结构体数组" class="headerlink" title="结构体数组"></a>结构体数组</h5><p><strong>作用</strong>:将自定义的结构头放入到数组中方便维护</p>
+<p><strong>语法</strong>：“<a href=""><code>struct 结构体名 数组名[元素个数]=  {{}，{}...{}};</code></a>”</p>
+<blockquote>
+<p>数组作函数形参时只能为地址传递！ 值传递的形式也只是把首地址复制。</p>
+</blockquote>
+<h5 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h5><p><strong>作用</strong>：通过指针访问结构体中的成员</p>
+<p>利用操作符-&gt;可以通过结构体指针访问结构体属性，表示所指向的东西的成员变量。</p>
+<pre class=" language-c++"><code class="language-c++">struct Student s1;
+struct Student* p = &s1;
+p->score = 10;
+</code></pre>
+<h5 id="结构体嵌套结构体"><a href="#结构体嵌套结构体" class="headerlink" title="结构体嵌套结构体"></a>结构体嵌套结构体</h5><p><strong>作用</strong>：结构体中的成员可以是另一个结构体</p>
+<p><strong>例如</strong>: 每个老师辅导一个学员，一个老师的结构体中，记录一个学生的的结构体</p>
+<blockquote>
+<p>学生结构体的声名必须在老师前。</p>
+<p>随时间生成随机数步骤：</p>
+<p>include &lt;ctime.h&gt;</p>
+<p>srand = ((unsigned int)time(NULL));</p>
+<p>int random = rand()&amp;61 +40;//按时间随机生成数字40-100</p>
+</blockquote>
+<h5 id="结构体作函数参数"><a href="#结构体作函数参数" class="headerlink" title="结构体作函数参数"></a>结构体作函数参数</h5><p><strong>作用</strong>:将结构体作为参数向函数中传递</p>
+<p>传递方式有两种：</p>
+<p>同上函数参数-指针</p>
+<ul>
+<li>值传递-无法改变实参</li>
+<li>地址传递-可以改变实参</li>
+</ul>
+<h5 id="结构体中const使用场景"><a href="#结构体中const使用场景" class="headerlink" title="结构体中const使用场景"></a>结构体中const使用场景</h5><p><strong>作用</strong>：用const来防止误操作，防止变量修改</p>
+<p>可以用地址传递，减少值传递时复制数据的时间和空间，提高效率</p>
+<p>定义函数中的形参变为<code>const student *s</code>，防止数据修改，数据仅可读。</p>
+<h2 id="二、核心内容（面向对象编程）"><a href="#二、核心内容（面向对象编程）" class="headerlink" title="二、核心内容（面向对象编程）"></a>二、核心内容（面向对象编程）</h2><h4 id="1、内存分区模型"><a href="#1、内存分区模型" class="headerlink" title="1、内存分区模型"></a>1、内存分区模型</h4><p>代码区：存放函数的二级制代码，由操作系统进行管理的</p>
+<p>全局区：存放全局变量和静态变量以及常量</p>
+<p>栈区：由<a href="">编译器</a>自动分配释放，存放函数的参数值，局部变量等</p>
+<p>堆区： 由程序员分配和释放，若程序员不释放，程序结束时由操作系统回收</p>
+<p>内存四区意义：不同区域存放的数据，赋予不同的<a href="">声明周期</a>，给我们更大的灵活编程</p>
+<h5 id="程序运行前"><a href="#程序运行前" class="headerlink" title="程序运行前"></a>程序运行前</h5><p>在程序编译后，生成了exe可执行文件，未执行该程序前分为两个区域</p>
+<h6 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h6><p>存放cpu执行的机器指令</p>
+<p>代码区是<a href="">共享</a>的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份打码即可</p>
+<p>代码区是<a href="">只读</a>的，使其只读的原因是防止程序意外的修改了它的指令</p>
+<h6 id="全局区："><a href="#全局区：" class="headerlink" title="全局区："></a>全局区：</h6><p><a href="">全局变量</a>（放在函数之外的变量）和<a href="">静态变量</a>（static修饰的变量）存放于此</p>
+<p>全局区还包含了<a href="">常量区</a>，字符串常量和其他常量也存放于此（其他常量是const修饰的全局变量，const修饰的局部变量是和局部变量存放在一起）</p>
+<p><a href="">该区域的数据在程序结束之后由操作系统释放</a></p>
+<h5 id="程序运行后"><a href="#程序运行后" class="headerlink" title="程序运行后"></a>程序运行后</h5><h6 id="栈区："><a href="#栈区：" class="headerlink" title="栈区："></a>栈区：</h6><p>由<a href="">编译器</a>自动分配释放，存放函数的参数值（形参数据），局部变量等</p>
+<p><a href="">注意事项：</a>不要返回局部变量的地址（函数类型是返回指针类型存放地址），因为栈区开辟的数据在函数执行</p>
+<p>后由<a href="">编译器自动</a>释放</p>
+<h6 id="堆区："><a href="#堆区：" class="headerlink" title="堆区："></a>堆区：</h6><p>有<a href="">程序员分配释放</a>，若程序员不释放，程序结束之后有操作系统回收</p>
+<p>在C++中主要利用new在堆区中开辟内存，返回的是地址，用指针接收：</p>
+<p><code>int* p = new int(10);</code></p>
+<h5 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h5><p>在堆区开辟数据</p>
+<p>堆区开辟的数据，由程序员手动开辟，手动释放，释放用delete</p>
+<p>利用new创建的数据，会返回该数据对应类型的指针</p>
+<p><code>int* p = new int(10); int* arry = new int[10]</code></p>
+<p><code>delete p; delete[] arry;</code>//指针须指向一个动态分配的数据或为空</p>
+<h4 id="2、引用"><a href="#2、引用" class="headerlink" title="2、引用"></a>2、引用</h4><h5 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h5><p><strong>作用</strong>:给变量（一段内存空间）起别名</p>
+<p><strong>语法</strong>：数据类型 &amp;别名 = 原名</p>
+<pre class=" language-c++"><code class="language-c++">int a = 0;
+int &b = a;
+//a和b操作的是同一块内存
+</code></pre>
+<h5 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h5><ul>
+<li>引用必须初始化——告诉它它是谁的别名</li>
+<li>引用在初始化之后，不可以改变</li>
+</ul>
+<h5 id="做函数参数"><a href="#做函数参数" class="headerlink" title="做函数参数"></a>做函数参数</h5><p><strong>作用</strong>：函数传参时，可以利用引用让形参修饰实参</p>
+<p><strong>优点</strong>：可以简化指针修改实参（传址）</p>
+<pre class=" language-c++"><code class="language-c++">void changeNums(int &a,int& b);//引用传递
+int main(void)
+{
+    int a = 10;
+    int b = 20;
+    changeNums(a,b);
+    //引用——其实上面的a就是下面a的一个别名
+    return 0;
+}
+</code></pre>
+<blockquote>
+<p>函数参数传递的三种方式：1、形参传递 2、地址传递 3、引用传递</p>
+</blockquote>
+<h5 id="做函数的返回值"><a href="#做函数的返回值" class="headerlink" title="做函数的返回值"></a>做函数的返回值</h5><p><strong>注意</strong>：不要返回<a href="">局部变量</a>引用，因为编译器只做一次保留，然后数据会被自动释放。</p>
+<p><strong>用法</strong>：函数调用作为左值，即返回内存空间的别名可以重新赋值</p>
+<h5 id="引用本质"><a href="#引用本质" class="headerlink" title="引用本质"></a>引用本质</h5><p><strong>本质</strong>：引用的本质在c++内部实现是一个<a href="">指针常量</a>,引用一旦被初始化之后就不能更改，即存放的地址不可改变。</p>
+<pre class=" language-c++"><code class="language-c++">void func(int& ref)
+{
+    ref = 100;//ref是引用，转换为*ref = 100
+}
+int main(void)
+{
+    int a  = 10;
+    int &ref = a;//自动转化int* const ref = &a;//指针常量是指针指向不可改，也说明为什么引用不可更
+    ref =20;//自动发现ref是引用，自动转换为*ref = 20;
+}
+</code></pre>
+<p><strong>结论</strong>：C++推荐使用引用技术，因为语法方便，引用本质是指针常量，但所有的指针操作编译器都帮我们做了。</p>
+<h5 id="常量引用"><a href="#常量引用" class="headerlink" title="常量引用"></a>常量引用</h5><p><strong>作用</strong>:常量引用主要用来修饰形参，防止误操作</p>
+<pre class=" language-c++"><code class="language-c++">//常量引用
+//使用场景，用来修饰形参，防止误操作
+//引用必须引用一块合法的内存空间
+const int& ref = 10;
+//加上const之后，编译器将代码修改为int temp =10;int& ref = temp;
+//加入const之后变为只读不可以修改
+</code></pre>
+<h4 id="3、函数提高"><a href="#3、函数提高" class="headerlink" title="3、函数提高"></a>3、函数提高</h4><h5 id="函数默认参数"><a href="#函数默认参数" class="headerlink" title="函数默认参数"></a>函数默认参数</h5><p>在c++中函数形参列表中的形参是可以有默认值的，即如果没有传入参数时，形参为设置的默认值。</p>
+<p><strong>语法</strong>：返回值类型 函数名(参数=默认值)</p>
+<p><strong>注意事项</strong>：如果某个位置已经有了默认参数，那么从这个位置往后都要有默认参数；函数的<a href="">声明和定义</a>中只能有一个有默认参数，否则编译器不知道按照哪个。</p>
+<h5 id="函数占位参数"><a href="#函数占位参数" class="headerlink" title="函数占位参数"></a>函数占位参数</h5><p>C++中函数的形参列表里可以有占位参数，用来占位（还可以加入默认参数 ），<a href="">调用函数的时候必须填补该位置</a></p>
+<p><strong>语法</strong>：返回值类型 函数名 （数据类型）{}，</p>
+<p>在现阶段函数的占位参数存在意义不大，但是后面的课程中会用到该技术</p>
+<h5 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h5><p><strong>作用</strong>:函数名可以相同，提高复用性</p>
+<p><strong>函数重载满足条件</strong>：</p>
+<ul>
+<li>同一个作用域下</li>
+<li>函数名相同</li>
+<li>函数参数类型不同或者个数不同或者顺序不同</li>
+</ul>
+<p><strong>注意</strong>：函数的返回值不可以作为函数重载的条件</p>
+<h2 id="三、进阶技巧（泛型编程-STL基础）"><a href="#三、进阶技巧（泛型编程-STL基础）" class="headerlink" title="三、进阶技巧（泛型编程+STL基础）"></a>三、进阶技巧（泛型编程+STL基础）</h2><h2 id="四、文件操作"><a href="#四、文件操作" class="headerlink" title="四、文件操作"></a>四、文件操作</h2><p>数据永久化的方式：文件和数据库。</p>
 <p>c++中文件操作属于技术应用而不是文件操作。</p>
 <p>c和c++主要用于开发后台服务程序，不再用于开发人机交互界面。</p>
-<p>![image-20230801004251696](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801004251696-16909904123493.png)</p>
+<p>![image-20230801004251696](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801004251696-16928933192097.png)</p>
 <ul>
 <li><p>文本数据：存放的是字符春，以<a href="">行</a>为单位，每个字节都有意义，每个字节存储一个ASCII码来表示字符</p>
 </li>
@@ -556,12 +816,12 @@ int main()
 <li><p>不要以文本模式打开3进制文件 ，也不要用行的方法操作二进制文件，可能会破坏二进制数据文件的格式，也没有必要。(因为二 进制文件中的某字节的取值可能是换行符，但它的意义并不是换行，可能是整数n个字节中的某个字节)</p>
 </li>
 </ul>
-<h4 id="2、文件位置指针"><a href="#2、文件位置指针" class="headerlink" title="2、文件位置指针"></a>2、文件位置指针</h4><h5 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h5><p>ofstrem类中是成员函数tellp();ifstream类中是成员函数tellg();fstream类中两个函数都有，<a href="">两者作用一样</a></p>
-<h5 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h5><p>ofstrem类中是成员函数seekp();ifstream类中是成员函数seekg();fstream类中两个函数都有</p>
-<h5 id="写入数据"><a href="#写入数据" class="headerlink" title="写入数据"></a>写入数据</h5><p>![image-20230801144909811](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801144909811-16909904123494.png)</p>
+<h4 id="2、文件位置指针"><a href="#2、文件位置指针" class="headerlink" title="2、文件位置指针"></a>2、文件位置指针</h4><h5 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h5><p>ofstrem类中是成员函数<code>tellp()</code>;ifstream类中是成员函数<code>tellg()</code>;fstream类中两个函数都有，<a href="">两者作用一样</a></p>
+<h5 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h5><p>ofstrem类中是成员函数<code>seekp()</code>;ifstream类中是成员函数<code>seekg()</code>;fstream类中两个函数都有</p>
+<h5 id="写入数据"><a href="#写入数据" class="headerlink" title="写入数据"></a>写入数据</h5><p>![image-20230801144909811](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801144909811-16928933192098.png)</p>
 <p>数据写入是按覆盖的形式，写入后是第三行的形式。想要第二种形式，必须把原本内容后移三个字节。</p>
-<p>![image-20230801145232477](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801145232477-16909904123495.png)</p>
-<h4 id="3、文件缓冲区和流状态"><a href="#3、文件缓冲区和流状态" class="headerlink" title="3、文件缓冲区和流状态"></a>3、文件缓冲区和流状态</h4><h5 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h5><p>![image-20230801172442828](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801172442828-16909904123496.png)</p>
+<p>![image-20230801145232477](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801145232477-16928933192099.png)</p>
+<h4 id="3、文件缓冲区和流状态"><a href="#3、文件缓冲区和流状态" class="headerlink" title="3、文件缓冲区和流状态"></a>3、文件缓冲区和流状态</h4><h5 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h5><p>![image-20230801172442828](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801172442828-169289331921010.png)</p>
 <p>在C++中，每打开一个文件，系统都自动为其分配一个缓冲区，不同的流，<a href="">缓冲区是独立的</a>。程序员不需要关</p>
 <p>输入缓冲区，只需要关注输出缓冲区即可。</p>
 <p>在缺省模式下，只有缓冲区数据满了，才会把数据写入磁盘，但是有时会降低效率。</p>
@@ -572,7 +832,7 @@ int main()
 <h5 id="流状态"><a href="#流状态" class="headerlink" title="流状态"></a>流状态</h5><p>流状态有3个: eofbit、 badbit 和 failbit, 取值: 1-设置;或0-清除。</p>
 <p>当三个流状成都为0时,表示一切顺利，good()成员函数返回true。</p>
 <ul>
-<li><p>eofbite</p>
+<li><p>eofbit</p>
 <p>当<a href="">输入流</a>操作到达文件未尾时，将设置eofbit.，</p>
 <p>eof()成员函数检查流是否设置了eofbit。<code>fin.eof() == true</code></p>
 </li>
@@ -587,6 +847,8 @@ int main()
 <li><p>clear()成员函数清理流状态</p>
 </li>
 <li><p>setstate()成员函数重置流状态</p>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -1131,7 +1393,7 @@ int main()
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.4k</span>&nbsp;字
+                class="white-color">14.9k</span>&nbsp;字
             
             
             
