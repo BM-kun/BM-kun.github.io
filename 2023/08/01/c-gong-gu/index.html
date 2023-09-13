@@ -371,21 +371,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-25
+                    2023-09-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.9k
+                    6.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    21 分
+                    22 分
                 </div>
                 
 
@@ -406,6 +406,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ul>
+<li><ul>
 <li><h1 id="C-巩固"><a href="#C-巩固" class="headerlink" title="C++巩固"></a>C++巩固</h1><p>B站黑马程序员</p>
 <h2 id="一、基础概念"><a href="#一、基础概念" class="headerlink" title="一、基础概念"></a>一、基础概念</h2><h4 id="1、hello-world"><a href="#1、hello-world" class="headerlink" title="1、hello world"></a>1、hello world</h4><h5 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h5><p>适用于大多数的C++程序：</p>
 <pre class=" language-c++"><code class="language-c++">#include<iostream>
@@ -443,7 +444,7 @@ int main()
 <h5 id="sizeof关键字"><a href="#sizeof关键字" class="headerlink" title="sizeof关键字"></a>sizeof关键字</h5><p><strong>作用</strong>：统计数据类型所占空间的大小</p>
 <p>语法：<code>sizeof(数据类型/变量);</code></p>
 <h5 id="浮点型（实型）"><a href="#浮点型（实型）" class="headerlink" title="浮点型（实型）"></a>浮点型（实型）</h5><p><strong>作用</strong>：用于表示小数。浮点型分为两种-单精度float-双精度double</p>
-<p>![img](E:\My Blog\Blog\source_posts\C++巩固.assets\20210610203143466-16928933192092.png)</p>
+<p>![img](E:\My Blog\Blog\source_posts\C++巩固.assets\20210610203143466-16946176545372.png)</p>
 <blockquote>
 <p>单精度代码格式最好为: float f1 = 3.14f</p>
 <p>数字后不加f的话,编译器会默认把一个小数当做双精度,然后再把双精度转为单精度,多一次转换的时间.</p>
@@ -483,11 +484,11 @@ int main()
 <p>后置递增a++——先进行<a href="">表达式运算</a>然后a再+1，递减同理。</p>
 </blockquote>
 <h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h5><p><strong>作用</strong>：用于将表达式的值赋给变量</p>
-<p>![image-20230802001904427](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802001904427-16928933192093.png)</p>
+<p>![image-20230802001904427](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802001904427-16946176545383.png)</p>
 <h5 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h5><p><strong>作用</strong>：用于表达式的比较，并返回一个真值或假值</p>
-<p>![image-20230802181654758](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802181654758-16928933192094.png)</p>
+<p>![image-20230802181654758](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802181654758-16946176545385.png)</p>
 <h5 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h5><p><strong>作用</strong>：用于根据表达式的值返回真值或假值</p>
-<p>![image-20230802182356342](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802182356342-16928933192095.png)</p>
+<p>![image-20230802182356342](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230802182356342-16946176545384.png)</p>
 <h4 id="4、程序流程结构"><a href="#4、程序流程结构" class="headerlink" title="4、程序流程结构"></a>4、程序流程结构</h4><p>C/C++支持最基本的三大基本程序运算结构:<strong>顺序结构、选择结构、循环结构。</strong></p>
 <ul>
 <li>顺序结构：程序按顺序执行，不发生跳转。</li>
@@ -566,7 +567,7 @@ Flag:......
 <p><strong>特点2</strong>：数组放在一块<a href="">连续的内存空间</a></p>
 <p><strong>缺点</strong>：容量大小不可变，有内存溢出风险  </p>
 <p><strong>与vector的区别</strong>：</p>
-<p>![image-20230805000214983](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230805000214983-16928933192096.png)</p>
+<p>![image-20230805000214983](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230805000214983-16946176545386.png)</p>
 <h6 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h6><p>语法:</p>
 <pre class=" language-c++"><code class="language-c++">数据类型 数组名[数组长度];
 数据类型 数组名[数组长度] = {值1，值2......};
@@ -618,7 +619,7 @@ Flag:......
 <p>​         函数的声明可以有很多次，定义只能有一次。</p>
 <h5 id="函数的分文件编写"><a href="#函数的分文件编写" class="headerlink" title="函数的分文件编写"></a>函数的分文件编写</h5><p><strong>作用</strong>:让代码结构更加清晰</p>
 <ul>
-<li><p>函数声名在.h头文件，函数的定义在.c源文件</p>
+<li><p><a href="">函数声名在.h头文件，函数的定义在.c源文件</a></p>
 </li>
 <li><p>源文件中<code>#include "自定义.h"</code>，使头文件和源文件关联</p>
 </li>
@@ -664,7 +665,7 @@ p++;
 <h5 id="指针和函数"><a href="#指针和函数" class="headerlink" title="指针和函数"></a>指针和函数</h5><p><strong>作用</strong>:利用指针作函数的参数，可以修改实参的值</p>
 <p>例如：<code>void swap(int *p,int *t)</code></p>
 <p>注意值传递和地址传递的区别</p>
-<h4 id="8、结构体"><a href="#8、结构体" class="headerlink" title="8、结构体"></a>8、结构体</h4><h5 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h5><p>结构体属于用户自定义的数据类型，允许用户存储<a href="">不同的数据类型</a></p>
+<h4 id="8、结构体"><a href="#8、结构体" class="headerlink" title="8、结构体"></a>8、结构体</h4><h5 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h5><p>结构体属于用户<a href="">自定义的数据类型</a>，允许用户存储<a href="">不同的数据类型</a></p>
 <h5 id="定义和使用"><a href="#定义和使用" class="headerlink" title="定义和使用"></a>定义和使用</h5><p><strong>语法</strong>：</p>
 <pre class=" language-c++"><code class="language-c++">struct 结构体名称
 { 结构体成员列表};
@@ -775,8 +776,8 @@ int main(void)
 <h5 id="常量引用"><a href="#常量引用" class="headerlink" title="常量引用"></a>常量引用</h5><p><strong>作用</strong>:常量引用主要用来修饰形参，防止误操作</p>
 <pre class=" language-c++"><code class="language-c++">//常量引用
 //使用场景，用来修饰形参，防止误操作
-//引用必须引用一块合法的内存空间
-const int& ref = 10;
+//引用必须引用一块合法的内存空间，得是堆区和栈区
+const int& ref = 10;//const修饰的局部常量
 //加上const之后，编译器将代码修改为int temp =10;int& ref = temp;
 //加入const之后变为只读不可以修改
 </code></pre>
@@ -786,18 +787,177 @@ const int& ref = 10;
 <h5 id="函数占位参数"><a href="#函数占位参数" class="headerlink" title="函数占位参数"></a>函数占位参数</h5><p>C++中函数的形参列表里可以有占位参数，用来占位（还可以加入默认参数 ），<a href="">调用函数的时候必须填补该位置</a></p>
 <p><strong>语法</strong>：返回值类型 函数名 （数据类型）{}，</p>
 <p>在现阶段函数的占位参数存在意义不大，但是后面的课程中会用到该技术</p>
-<h5 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h5><p><strong>作用</strong>:函数名可以相同，提高复用性</p>
-<p><strong>函数重载满足条件</strong>：</p>
+<h5 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h5><p><strong>作用</strong>:函数名可以相同，提高复用性，比如传入不同的参数，有不同的效果。</p>
+<p><strong>函数重载满足的条件</strong>：</p>
 <ul>
 <li>同一个作用域下</li>
 <li>函数名相同</li>
 <li>函数参数类型不同或者个数不同或者顺序不同</li>
 </ul>
-<p><strong>注意</strong>：函数的返回值不可以作为函数重载的条件</p>
-<h2 id="三、进阶技巧（泛型编程-STL基础）"><a href="#三、进阶技巧（泛型编程-STL基础）" class="headerlink" title="三、进阶技巧（泛型编程+STL基础）"></a>三、进阶技巧（泛型编程+STL基础）</h2><h2 id="四、文件操作"><a href="#四、文件操作" class="headerlink" title="四、文件操作"></a>四、文件操作</h2><p>数据永久化的方式：文件和数据库。</p>
-<p>c++中文件操作属于技术应用而不是文件操作。</p>
-<p>c和c++主要用于开发后台服务程序，不再用于开发人机交互界面。</p>
-<p>![image-20230801004251696](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801004251696-16928933192097.png)</p>
+<p><strong>注意</strong>：函数的<a href="">返回值类型</a>不可以作为函数重载的条件</p>
+<h6 id="函数重载的注意事项"><a href="#函数重载的注意事项" class="headerlink" title="函数重载的注意事项"></a>函数重载的注意事项</h6><ul>
+<li>引用作为函数重载条件（const int &amp;a = 10）</li>
+<li>函数重载碰到函数默认参数,出现二义性报错，尽量避免这种情况：(int a,int b =10)与(int a)当只传入一个参数时</li>
+</ul>
+<h4 id="4、类和对象"><a href="#4、类和对象" class="headerlink" title="4、类和对象"></a>4、类和对象</h4><p>C++面向对象的三大特性为：<a href="">封装、继承、多态</a></p>
+<p>C++认为万事万物皆为对象，对象上有其<a href="">属性和行为</a></p>
+<p>exp：人可以作为对象，属性有姓名、年龄、身高、体重…行为有唱、跳、rap…</p>
+<h5 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h5><h6 id="封装的意义"><a href="#封装的意义" class="headerlink" title="封装的意义"></a>封装的意义</h6><p>封装是C++面向对象的三大特征之一</p>
+<p>封装的意义：</p>
+<ul>
+<li>将属性和行为作为一个整体，表现生活中的事物</li>
+<li>将属性和行为加以权限控制</li>
+</ul>
+<p>封装的意义一：</p>
+<p>在设计类的时候，属性和行为写在一起，表现事物</p>
+<p><strong>语法</strong>:</p>
+<pre class=" language-c++"><code class="language-c++">class 类名{访问权限: 属性 / 行为};
+</code></pre>
+<p>别名：</p>
+<p>类中的属性和行为，我们统称为<a href="">成员</a></p>
+<p>属性-成员属性-成员变量</p>
+<p>行为-成员函数-成员方法</p>
+<p>封装的意义二：</p>
+<p>类在设计时，可以把属性和行为放在不同的权限下，加以控制</p>
+<p>访问权限有三种</p>
+<ol>
+<li>public——公共权限——成员类内可以访问，类外可以访问</li>
+<li>protected–保护权限——成员类内可以访问，类外不可以访问  儿子也可以访问父亲保护内容</li>
+<li>private——私有权限——成员类内可以访问，类外不可以访问  儿子不可以访问父亲保护内容</li>
+</ol>
+<h6 id="struct和class"><a href="#struct和class" class="headerlink" title="struct和class"></a>struct和class</h6><p>在C++中struct和class的唯一区别就是默认的访问权限不同。</p>
+<p><strong>区别</strong>：</p>
+<p>struct默认权限为公共public</p>
+<p>class默认权限为私有private</p>
+<h6 id="成员属性设置为私有"><a href="#成员属性设置为私有" class="headerlink" title="成员属性设置为私有"></a>成员属性设置为私有</h6><p>优点1：将所有成员属性设置为私有，可以自己控制<a href="">读写</a>权限。(用<a href="">公共接口</a>实现对私有属性的读写（设置，获取）)</p>
+<p>优点2：对于写权限，我们可以检测数据的有效性（是否符合要求）。</p>
+<h6 id="点和圆关系的案例"><a href="#点和圆关系的案例" class="headerlink" title="点和圆关系的案例"></a>点和圆关系的案例</h6><p>将一个类拆分成两个文件：</p>
+<p>point.h  <a href="">成员函数和属性的声名</a></p>
+<pre class=" language-c++"><code class="language-c++">#pragma once  //防止头文件重复包含
+#include<iostream>
+using namespace std;
+class Point
+{
+public:
+    void setx(int x);
+    int getx();
+    void sety(int y);
+    int gety();
+private:
+    int c_x;
+    int c_y;
+};
+
+</code></pre>
+<p>point.cpp <a href="">成员函数的实现</a></p>
+<pre class=" language-c++"><code class="language-c++">#include"point.h"
+//Point::告诉编译器这是Point作用域下面的一个成员函数
+void Point::setx(int x)
+{
+    c_x = x;
+}
+int Point::getx()
+{
+    return c_x;
+}
+void Point::sety(int y)
+{
+    Point::c_y = y;
+}
+int Point::gety()
+{
+    return c_y;
+}
+
+</code></pre>
+<h5 id="对象的初始化清理"><a href="#对象的初始化清理" class="headerlink" title="对象的初始化清理"></a>对象的初始化清理</h5><ul>
+<li>在生活中我们所购买的点子产品大多都有恢复出厂设置，在某一天我们不使用的时候清楚自己的数据来保证自己信息的安全。</li>
+<li>C++中的面向对象来源生活，每个对象也会有初识设置以及对象销毁前的清理数据的设置。</li>
+</ul>
+<h6 id="构造函数和析构函数"><a href="#构造函数和析构函数" class="headerlink" title="构造函数和析构函数"></a>构造函数和析构函数</h6><p>对象的<a href="">初始化和清理</a>也是两个非常重要的安全问题。</p>
+<p>​        一个对象或者变量没有初识状态，对其使用后的后果是未知的。</p>
+<p>​        同样的使用完一个对象或者变量，没有及时进行清理，也会造成一定的安全问题。</p>
+<p>C++利用了<a href="">构造函数和析构函数</a>解决上述问题，这两个函数将会被<a href="">编译器自动斓用</a>，完成对象初始化和清理</p>
+<p>工作。对象的初始化和清理工作是编译器强制要我们做的事情，<a href="">因此如果我们不提供构造和析构</a>，编译器会</p>
+<p>提供，是编译器提供的构造函数和析构函数是<a href="">空实现</a>。</p>
+<p><strong>构造函数</strong>：主要作用在于创建对象时为对象的成员属性赋值，构造函数由编译器自动调用，无须手动调用。</p>
+<p><strong>析构函数</strong>：主要作用在于对象销毁前系统自动调用，执行一些清理工作。</p>
+<p><strong>构造函数语法</strong></p>
+<pre class=" language-c++"><code class="language-c++">类名(){}
+</code></pre>
+<ol>
+<li>构造函数没有返回值也不写void</li>
+<li>函数名称与类名相同</li>
+<li>构造函数可以有参数，因此可以发生<a href="">重载</a></li>
+<li>程序在调用对象的时候会自动调用构造，无须手动调用，而且只会调用一次</li>
+</ol>
+<p><strong>析构函数语法</strong></p>
+<pre class=" language-c++"><code class="language-c++">~类名(){}
+</code></pre>
+<ol>
+<li>析构函数没有返回值也不写void</li>
+<li>函数名称与类名相同，在名称前加上~</li>
+<li>析构函数不可以有参数，因此不可以发生重载</li>
+<li>程序在对象销毁前会自动调用析构，无须手动调用，而且只会调用一次</li>
+</ol>
+<h6 id="构造函数的分类及调用"><a href="#构造函数的分类及调用" class="headerlink" title="构造函数的分类及调用"></a>构造函数的分类及调用</h6><p>两种分类方式：</p>
+<ul>
+<li>按参数分为:有参构造和无参构造（默认）</li>
+<li>按类型分为:普通构造（除了拷贝之外的）和拷贝构造（<code>Person（const Person &amp;p）</code>，将传入的对象拷贝到自己身上）</li>
+</ul>
+<p>三种调用方式：</p>
+<ul>
+<li>括号法</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">    Person p;//默认构造函数调用
+    /*注意：使用默认构造函数的时候，不要加(),编译器会认为这是一个函数的声明
+    例如：Person p1();不会认为在创建对象*/
+    Person p2(10);//有参构造函数调用
+    Person p3(p2);//拷贝构造函数调用
+    cout << "p2的年龄为" << p2.age << endl;
+    cout << "p3的年龄为" << p3.age << endl;
+</code></pre>
+<ul>
+<li>显示法</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">Person p1;//无参
+    Person p2 = Person(10);//有参
+    Person p3 = Person(p2);//拷贝
+    //如果把等号右边的式子单独拿出来
+    //Person(10)这是一个匿名对象-特点——当前行执行结束后，系统会立即回收掉匿名对象
+    //注意：不要利用拷贝函数初始化匿名对象-编译器会认为Person(p3) == Person p3 编译器会认为是对象的声明
+    //Person(p3)
+
+</code></pre>
+<ul>
+<li>隐式转换法</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">Person p4 = 10;//相当与Person p4 = Person(10);
+Person p5 = p4;//拷贝构造
+</code></pre>
+<h6 id="拷贝构造函数调用时机"><a href="#拷贝构造函数调用时机" class="headerlink" title="拷贝构造函数调用时机"></a>拷贝构造函数调用时机</h6><p>C++中拷贝构造函数调用时机通常有三种情况：</p>
+<ul>
+<li>使用一个已经创建完毕的对象来初始化一个新对象</li>
+<li>值传递的方式给函数参数传值（形参是实参的复制）</li>
+<li>以值方式返回局部对象(拷贝出去)</li>
+</ul>
+<h6 id="构造函数的调用规则"><a href="#构造函数的调用规则" class="headerlink" title="构造函数的调用规则"></a>构造函数的调用规则</h6><p>默认情况下，C++编译器至少给一个类添加三个函数：</p>
+<ol>
+<li>默认构造函数(无参、函数体为空)</li>
+<li>默认析构函数(无参、函数体为空)</li>
+<li>默认拷贝函数构造函数，对属性<a href="">值拷贝</a></li>
+</ol>
+<p><strong>构造函数调用规则如下:</strong></p>
+<ul>
+<li>如果用户定义<a href="">有参构造</a>函数，C++不再提供默认无参构造，但是会提供默认拷贝构造</li>
+<li>如果用户定义<a href="">拷贝构造</a>函数，C++不会再提供其他构造函数</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、进阶技巧（泛型编程-STL基础）"><a href="#三、进阶技巧（泛型编程-STL基础）" class="headerlink" title="三、进阶技巧（泛型编程+STL基础）"></a>三、进阶技巧（泛型编程+STL基础）</h2><h2 id="四、文件操作"><a href="#四、文件操作" class="headerlink" title="四、文件操作"></a>四、文件操作</h2><p>  数据永久化的方式：文件和数据库。</p>
+<p>  c++中文件操作属于技术应用而不是文件操作。</p>
+<p>  c和c++主要用于开发后台服务程序，不再用于开发人机交互界面。</p>
+<p>  ![image-20230801004251696](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801004251696-16946176545387.png)</p>
 <ul>
 <li><p>文本数据：存放的是字符春，以<a href="">行</a>为单位，每个字节都有意义，每个字节存储一个ASCII码来表示字符</p>
 </li>
@@ -805,7 +965,7 @@ const int& ref = 10;
 <p>使用<code>fin.read((char *)&amp;p,sizeof(Person))</code>读取二进制文件</p>
 </li>
 </ul>
-<h4 id="1、实际开发中的操作"><a href="#1、实际开发中的操作" class="headerlink" title="1、实际开发中的操作"></a>1、实际开发中的操作</h4><p>在实际开发中，从兼容和语义考虑，一-般: </p>
+<h4 id="1、实际开发中的操作"><a href="#1、实际开发中的操作" class="headerlink" title="1、实际开发中的操作"></a>1、实际开发中的操作</h4><p>  在实际开发中，从兼容和语义考虑，一-般: </p>
 <ul>
 <li><p>以文本模式打开文本文件，用行的方法操作它;</p>
 </li>
@@ -816,21 +976,21 @@ const int& ref = 10;
 <li><p>不要以文本模式打开3进制文件 ，也不要用行的方法操作二进制文件，可能会破坏二进制数据文件的格式，也没有必要。(因为二 进制文件中的某字节的取值可能是换行符，但它的意义并不是换行，可能是整数n个字节中的某个字节)</p>
 </li>
 </ul>
-<h4 id="2、文件位置指针"><a href="#2、文件位置指针" class="headerlink" title="2、文件位置指针"></a>2、文件位置指针</h4><h5 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h5><p>ofstrem类中是成员函数<code>tellp()</code>;ifstream类中是成员函数<code>tellg()</code>;fstream类中两个函数都有，<a href="">两者作用一样</a></p>
-<h5 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h5><p>ofstrem类中是成员函数<code>seekp()</code>;ifstream类中是成员函数<code>seekg()</code>;fstream类中两个函数都有</p>
-<h5 id="写入数据"><a href="#写入数据" class="headerlink" title="写入数据"></a>写入数据</h5><p>![image-20230801144909811](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801144909811-16928933192098.png)</p>
-<p>数据写入是按覆盖的形式，写入后是第三行的形式。想要第二种形式，必须把原本内容后移三个字节。</p>
-<p>![image-20230801145232477](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801145232477-16928933192099.png)</p>
-<h4 id="3、文件缓冲区和流状态"><a href="#3、文件缓冲区和流状态" class="headerlink" title="3、文件缓冲区和流状态"></a>3、文件缓冲区和流状态</h4><h5 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h5><p>![image-20230801172442828](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801172442828-169289331921010.png)</p>
-<p>在C++中，每打开一个文件，系统都自动为其分配一个缓冲区，不同的流，<a href="">缓冲区是独立的</a>。程序员不需要关</p>
-<p>输入缓冲区，只需要关注输出缓冲区即可。</p>
-<p>在缺省模式下，只有缓冲区数据满了，才会把数据写入磁盘，但是有时会降低效率。</p>
-<p>刷新缓冲区函数:<code>flush()</code>    不管缓冲区中有多少数据，立刻将数据写入磁盘中</p>
-<p><code>endl</code>除了换行，还有刷新缓冲区的作用。</p>
-<p><code>fout&lt;&lt;unitbuf</code>   设置fout输出流，在每次操作后自动刷新缓冲区</p>
-<p><code>fout&lt;&lt;nounitbuf</code>  让fout返回到缺省的缓冲方式</p>
-<h5 id="流状态"><a href="#流状态" class="headerlink" title="流状态"></a>流状态</h5><p>流状态有3个: eofbit、 badbit 和 failbit, 取值: 1-设置;或0-清除。</p>
-<p>当三个流状成都为0时,表示一切顺利，good()成员函数返回true。</p>
+<h4 id="2、文件位置指针"><a href="#2、文件位置指针" class="headerlink" title="2、文件位置指针"></a>2、文件位置指针</h4><h5 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h5><p>  ofstrem类中是成员函数<code>tellp()</code>;ifstream类中是成员函数<code>tellg()</code>;fstream类中两个函数都有，<a href="">两者作用一样</a></p>
+<h5 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h5><p>  ofstrem类中是成员函数<code>seekp()</code>;ifstream类中是成员函数<code>seekg()</code>;fstream类中两个函数都有</p>
+<h5 id="写入数据"><a href="#写入数据" class="headerlink" title="写入数据"></a>写入数据</h5><p>  ![image-20230801144909811](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801144909811-16946176545388.png)</p>
+<p>  数据写入是按覆盖的形式，写入后是第三行的形式。想要第二种形式，必须把原本内容后移三个字节。</p>
+<p>  ![image-20230801145232477](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801145232477-16946176545389.png)</p>
+<h4 id="3、文件缓冲区和流状态"><a href="#3、文件缓冲区和流状态" class="headerlink" title="3、文件缓冲区和流状态"></a>3、文件缓冲区和流状态</h4><h5 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h5><p>  ![image-20230801172442828](E:\My Blog\Blog\source_posts\C++巩固.assets\image-20230801172442828-169461765453810.png)</p>
+<p>  在C++中，每打开一个文件，系统都自动为其分配一个缓冲区，不同的流，<a href="">缓冲区是独立的</a>。程序员不需要关</p>
+<p>  输入缓冲区，只需要关注输出缓冲区即可。</p>
+<p>  在缺省模式下，只有缓冲区数据满了，才会把数据写入磁盘，但是有时会降低效率。</p>
+<p>  刷新缓冲区函数:<code>flush()</code>    不管缓冲区中有多少数据，立刻将数据写入磁盘中</p>
+<p>  <code>endl</code>除了换行，还有刷新缓冲区的作用。</p>
+<p>  <code>fout&lt;&lt;unitbuf</code>   设置fout输出流，在每次操作后自动刷新缓冲区</p>
+<p>  <code>fout&lt;&lt;nounitbuf</code>  让fout返回到缺省的缓冲方式</p>
+<h5 id="流状态"><a href="#流状态" class="headerlink" title="流状态"></a>流状态</h5><p>  流状态有3个: eofbit、 badbit 和 failbit, 取值: 1-设置;或0-清除。</p>
+<p>  当三个流状成都为0时,表示一切顺利，good()成员函数返回true。</p>
 <ul>
 <li><p>eofbit</p>
 <p>当<a href="">输入流</a>操作到达文件未尾时，将设置eofbit.，</p>
@@ -1393,7 +1553,7 @@ const int& ref = 10;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.9k</span>&nbsp;字
+                class="white-color">15.3k</span>&nbsp;字
             
             
             
