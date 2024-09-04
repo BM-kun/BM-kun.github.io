@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="小白教小白之博客搭建~, Python,C++,JavaScript,JQuery,Vue.js等">
+    <meta name="keywords" content="Git入门, Python,C++,JavaScript,JQuery,Vue.js等">
     <meta name="description" content="菜鸟提升,分享喜乐,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>小白教小白之博客搭建~ | BM-kun&#39;s Blog</title>
+    <title>Git入门 | BM-kun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -227,12 +227,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">小白教小白之博客搭建~</h1>
+                    <h1 class="description center-align post-title">Git入门</h1>
                 </div>
             </div>
         </div>
@@ -348,8 +348,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                     </div>
@@ -364,28 +364,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-27
+                    2023-01-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-25
+                    2024-09-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    539
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    2 分
                 </div>
                 
 
@@ -405,155 +405,71 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、序言"><a href="#一、序言" class="headerlink" title="一、序言"></a>一、序言</h2><p>​        跟着B站评论区大佬的博客学了两三天，自己也是终于把个人博客的大致框架搭了起来，踩过不少坑。然后想着自己可以在第一篇博客上把搭建的过程分享出来。当然哈，自己是个纯小白，八分主观，两分运气，如有不足之处请见谅。</p>
-<h2 id="二、博客环境搭建"><a href="#二、博客环境搭建" class="headerlink" title="二、博客环境搭建"></a>二、博客环境搭建</h2><p>​        有挺多用来写博客的框架，比如WordPress、Jekyll 、Hugo、Django 、Hexo ，我选择的是Hexo，其是基于node.js制作的一个博客工具，赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，快速、简洁且高效，是搭建博客的首选框架。对于服务器的选择，Hexo+Github是上手的最佳方式。</p>
-<h3 id="2-1-下载Node-js与Git"><a href="#2-1-下载Node-js与Git" class="headerlink" title="2.1.下载Node.js与Git"></a>2.1.下载Node.js与Git</h3><p>​        首先去Node.js与Git的官网，根据自己的电脑系统选择对应的版本进行下载和安装。安装位置最好选择在C盘以外。</p>
-<h3 id="2-2Node-js的安装"><a href="#2-2Node-js的安装" class="headerlink" title="2.2Node.js的安装"></a>2.2Node.js的安装</h3><p>​    官网：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+                <h1 id="Git新手向"><a href="#Git新手向" class="headerlink" title="Git新手向"></a>Git新手向</h1><h2 id="一、是什么"><a href="#一、是什么" class="headerlink" title="一、是什么"></a>一、是什么</h2><p>Git是版本控制软件，而github是基于Git这个版本控制软件打造的网站。</p>
+<p>Git的三个概念：commit提交、repository仓库、branch分支</p>
+<p>何为版本控制软件：<a href="">仓库</a>中<a href="">多人</a>协同完成代码后提交<a href="">存档</a></p>
+<p>目的：方便后悔，找回历史记录</p>
+<h2 id="二、查看他人Github项目"><a href="#二、查看他人Github项目" class="headerlink" title="二、查看他人Github项目"></a>二、查看他人Github项目</h2><p>浏览他人github代码仓库时,code找到网址，然后再自己的工作文件夹中Git bash 命令<code>git clone 代码网址</code></p>
 <ul>
-<li><p>node.js默认安装即可，终端输入node -v 查看是否安装成功。</p>
-<blockquote>
-<p> <strong>注意： 如果执行 node -v 报错的话，那么手动将 Node.js 的安装路径添加到环境变量中</strong>。</p>
-<p> <strong>添加环境变量参考：</strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ldq678/p/13287924.html">https://www.cnblogs.com/ldq678/p/13287924.html</a></p>
-</blockquote>
-</li>
-<li><p>cnpm工具安装(npm国内下载速度不太行，选用淘宝镜像源加速)</p>
-<p>终端输入<strong>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></strong>j进行安装。</p>
-<p>终端输入cnpm -v查看是否安装成功。</p>
-</li>
+<li>git clone   克隆项目</li>
+<li>star   收藏</li>
+<li>Readme.md  说明文档</li>
+<li>LICENSE  许可证</li>
+<li>issue  论坛                    </li>
 </ul>
-<h3 id="2-3Git的安装"><a href="#2-3Git的安装" class="headerlink" title="2.3Git的安装"></a>2.3Git的安装</h3><p>​    官网：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://git-for-windows.github.io/</a></p>
+<h2 id="三、查找开源项目"><a href="#三、查找开源项目" class="headerlink" title="三、查找开源项目"></a>三、查找开源项目</h2><p>找开源项目的一些途径<br>• <a target="_blank" rel="noopener" href="https://github.com/trending/">https://github.com/trending/</a><br>• <a target="_blank" rel="noopener" href="https://github.com/521xueweihan/HelloGitHub">https://github.com/521xueweihan/HelloGitHub</a><br>• <a target="_blank" rel="noopener" href="https://github.com/ruanyf/weekly">https://github.com/ruanyf/weekly</a><br>• <a target="_blank" rel="noopener" href="https://www.zhihu.com/column/mm-fe">https://www.zhihu.com/column/mm-fe</a></p>
+<p>特殊的查找资源小技巧-常用前缀后缀<br>• 找百科大全 awesome xxx<br>• 找例子 xxx sample<br>• 找空项目架子 xxx starter / xxx boilerplate<br>• 找教程  xxx tutorial</p>
+<h2 id="四、Git操作"><a href="#四、Git操作" class="headerlink" title="四、Git操作"></a>四、Git操作</h2><p>git clone 下载下来的是仓库，有.git文件夹；download zip下载下来是单纯的文件夹</p>
 <ul>
-<li>默认安装即可，终端输入git -v 查看是否安装成功</li>
-</ul>
-<h3 id="2-4Hexo的安装"><a href="#2-4Hexo的安装" class="headerlink" title="2.4Hexo的安装"></a>2.4Hexo的安装</h3><p>​    前面Git和Node.js安装好后，就可以安装hexo了。</p>
+<li><p>克隆仓库：git clone &lt;git地址&gt;</p>
+</li>
+<li><p>初始化仓库：git init   建立.git文件夹</p>
+</li>
+<li><p>提交</p>
+<p>![image-20230725115318390](E:\My Blog\博客文档\Git入门.assets\image-20230725115318390.png)</p>
 <ul>
-<li>安装指令：<strong>cnpm install -g hexo-cli</strong><br>依旧用hexo -v查看一下版本至此就全部安装完了。</li>
+<li><p>添加文件到暂存区：git add -A</p>
+</li>
+<li><p>把暂存区的文件提交到仓库：git commit -m “提交信息”  </p>
+<p>或者vscode中的源代码管理 ctrl + enter</p>
+</li>
+<li><p>查看提交的历史记录：git log –stat   </p>
+<p>或者在源代码管理区查看，一次提交都对应一个哈希值</p>
+</li>
 </ul>
-<h2 id="三、博客推送GitHub"><a href="#三、博客推送GitHub" class="headerlink" title="三、博客推送GitHub"></a>三、博客推送GitHub</h2><p>​        自己将博客编写完成后，需要借助GitHub的服务器发布到网上。首先是github账户的注册，应该较为简单。</p>
-<h3 id="3-1Git-的配置"><a href="#3-1Git-的配置" class="headerlink" title="3.1Git 的配置"></a>3.1Git 的配置</h3><p>​        在桌面点击鼠标右键，点击 Git Bash Here，然后分别输入下面的两个命令，并回车。</p>
-<pre class=" language-none"><code class="language-none">git config --global user.name "此处填写你注册时的用户名"
-git config --global user.email "此处填写你注册时的邮箱"
-# 一般只要不报错，可以跳过下面寻找.gitconfig文件
-</code></pre>
-<h3 id="3-2Github-的配置"><a href="#3-2Github-的配置" class="headerlink" title="3.2Github 的配置"></a>3.2Github 的配置</h3><p><strong>创建：</strong></p>
+</li>
+<li><p>维护项目</p>
 <ul>
-<li>新建一个名为你的用户名.github.io的仓库</li>
-<li>比如说，如果你的github用户名是test，那么你就新建test.github.io的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 <a target="_blank" rel="noopener" href="http://test.github.io/">http://test.github.io</a> 了，是不是很方便？由此可见，每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</li>
+<li><p>工作区回滚：git checkout <filename>  </filename></p>
+<p>相当于ctrl + z  或者源代码管理区中的更改撤回按钮</p>
+</li>
+<li><p>撤销最后一次提交：git reset HEAD^1    </p>
+<p>或者源代码管理区的undo commit</p>
+</li>
 </ul>
-<p><strong>注意：</strong></p>
+</li>
+<li><p>分支</p>
 <ul>
-<li>注册的邮箱一定要验证，否则不会成功；</li>
-<li>仓库名字必须是：username.github.io，其中username是你的用户名；</li>
-<li>仓库创建成功不会立即生效，需要过一段时间，大概10-30分钟，或者更久；</li>
-<li>创建页面如下：</li>
+<li><p>以当前分支为基础新建分支：git checkout -b <branchname>  b为build</branchname></p>
+</li>
+<li><p>列举所有的分支：git branch</p>
+</li>
+<li><p>单纯地切换到某个分支：git checkout <branchname></branchname></p>
+</li>
+<li><p>删掉特定的分支：git branch -D <branchname></branchname></p>
+</li>
+<li><p>合并分支：git merge <branchname>  </branchname></p>
+<p>git merge –abort  放弃本次合并</p>
+</li>
 </ul>
-<p><img src="/2022/08/27/xiao-bai-jiao-xiao-bai-zhi-bo-ke-da-jian/1.jpg" alt="img"></p>
+</li>
+<li><p>Git远程仓库</p>
 <ul>
-<li><p><strong>配置SSH 免密登录</strong></p>
-<p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
-<p>**简单的来说就是给予你当前电脑访问你GitHub 仓库的权限 **</p>
-<p><strong>操作步骤：</strong></p>
-</li>
-</ul>
-<ol>
-<li><p>在 git bash here 中创建一个ssh密钥</p>
-<p>指令：<code>cd ~/.ssh</code></p>
-<p>如果本地有的话，它会自动进入到了ssh目录下；</p>
-<p> 若没有则创建： <code>ssh-keygen -t rsa -C "邮箱"</code> 此处邮箱填写自己的邮箱</p>
-<p>然后enter三连</p>
-<p>生成两个文件： id_rsa id_rsa.pub 存放在 C:\Users\admin.ssh 文件夹下</p>
-<p><strong>注意：pub文件放置的，就是我们的公开的ssh码，也是给管理员这个ssh，让他来添加</strong></p>
-</li>
-<li><p>在GitHub 或者 Gitee 上添加 SSH key</p>
-</li>
-</ol>
-<p>​        Title：随意填写</p>
-<p>​        Key：将本地的id_rsa.pub文件用记事本打开，复制全部内容粘贴到GitHub 仓库的SSH Keys 位置</p>
-<p>​        如下图所示：</p>
-<p><img src="/2022/08/27/xiao-bai-jiao-xiao-bai-zhi-bo-ke-da-jian/2.jpg" alt="img"></p>
-<p><strong>至此，全部环境均已搭建好，接下来就是博客的编写和上传了</strong></p>
-<h3 id="3-3博客的初始化"><a href="#3-3博客的初始化" class="headerlink" title="3.3博客的初始化"></a>3.3博客的初始化</h3><ol>
-<li><p>在电脑的某个地方新建一个名为HexoData的文件夹（名字可以随便取），这个文件夹将来就作为你存放代码的地方，所以最好不要随便放</p>
-</li>
-<li><p>在该文件夹下右键打开 Git Bash</p>
-<p>并依次执行以下命令</p>
-<p><code>hexo init</code> 初始化命令，hexo会自动下载一些文件到这个目录，包括node_modules等</p>
-<p><code>hexo g</code> 生成命令</p>
-<p><code>hexo s</code> 启动服务</p>
-<p><strong>说明：</strong><code>hexo s</code> 是开启本地预览服务，打开浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可看到内容，说明博客初始化以及成功！</p>
-<p><img src="/2022/08/27/xiao-bai-jiao-xiao-bai-zhi-bo-ke-da-jian/4.jpeg" alt="img"></p>
-<p>很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，</p>
-<p>因为4000这个端口太常见了， 只需要关闭4000端口并重新启动即可</p>
-<p><strong>到此博客的初始化便完成了，此时你可以本地开启服务并访问，下一步便是推送到GitHub 上！</strong></p>
-</li>
-</ol>
-<h3 id="3-4推送至Github"><a href="#3-4推送至Github" class="headerlink" title="3.4推送至Github"></a>3.4推送至Github</h3><ul>
-<li><p>第一步：在自己定义的博客目录下安装 hexo-deployer-git 插件 （git bash here 处安装）</p>
-<p>命令：<code>npm install hexo-deployer-git --save</code></p>
-<p>说明：必须安装，否则执行hexo d 的话会报错</p>
-<p><strong>新建自己定义的博客目录完成后，指定文件夹目录下有：</strong></p>
-<ul>
-<li>node_modules: 依赖包</li>
-<li>public：存放生成的页面</li>
-<li>scaffolds：生成文章的一些模板</li>
-<li>source：用来存放你的文章</li>
-<li>themes：主题</li>
-<li>** _config.yml: 博客的配置文件**</li>
+<li>推送当前分支最新的提交到远程：git push </li>
+<li>拉取远程分支最新的提交到本地：git pull</li>
 </ul>
 </li>
-<li><p>第二步：编辑博客目录下的 _config.yml 文件, 在文件末尾修改配置文件：</p>
-<pre class=" language-none"><code class="language-none">deploy:
-  type: git
-  repo: github上对应仓库的ssh 链接  
-    //也可使用https地址，如：https://github.com/Github用户名/Github用户名.github.io.git            
-  branch: main
-</code></pre>
-<p><strong>说明：</strong>仓库的ssh链接如下</p>
-<p><img src="/2022/08/27/xiao-bai-jiao-xiao-bai-zhi-bo-ke-da-jian/3.jpg" alt="img"></p>
-<p><strong>切记：分支branch切记修改为 main，之前github的默认主分支为master，现已经改为main</strong> ！</p>
-</li>
-<li><p>第三步：在博客目录下, 将本地 blog 推送到 github仓库</p>
-<p>输入命令：<code>hexo d</code></p>
-<p>也可能需要输入 username &amp; pwd</p>
-<p>推送成功后, 在浏览器中输入对应域名, 即可访问</p>
-<p><strong>至此，你便初步搭建好了一个属于自己的博客！（本地服务不用启动依然可以访问）</strong></p>
-</li>
-<li><p><strong>hexo 框架常用的指令：</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">指令</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>hexo clean &amp;&amp; hexo g</code></td>
-<td align="left">清除本地项目并重新生成 （重新部署时使用）</td>
-</tr>
-<tr>
-<td align="left"><code>hexo g</code></td>
-<td align="left">重新生成</td>
-</tr>
-<tr>
-<td align="left"><code>Hexo s</code></td>
-<td align="left">开启本地预览</td>
-</tr>
-<tr>
-<td align="left"><code>Hexo d</code></td>
-<td align="left">推送到github</td>
-</tr>
-</tbody></table>
-</li>
 </ul>
-<h2 id="四、Hexo-博客的美化"><a href="#四、Hexo-博客的美化" class="headerlink" title="四、Hexo 博客的美化"></a>四、Hexo 博客的美化</h2><p>​        根据自己的特定需要网上搜寻教程即可。</p>
-<h2 id="五、参考文献"><a href="#五、参考文献" class="headerlink" title="五、参考文献"></a>五、参考文献</h2><ol>
-<li><p>theme-matery 主题官方使用说明 <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://laughingtiger.gitee.io/2021/11/29/ru-he-kuai-su-da-jian-shu-yu-zi-ji-de-bo-ke/">https://laughingtiger.gitee.io/2021/11/29/ru-he-kuai-su-da-jian-shu-yu-zi-ji-de-bo-ke/</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?spm_id_from=333.337.search-card.all.click&amp;vd_source=df70199ed9e748e3043b11859e7a6050">https://www.bilibili.com/video/BV1Yb411a7ty?spm_id_from=333.337.search-card.all.click&amp;vd_source=df70199ed9e748e3043b11859e7a6050</a></p>
-</li>
-</ol>
 
                 
             </div>
@@ -580,7 +496,7 @@ git config --global user.email "此处填写你注册时的邮箱"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/08/27/xiao-bai-jiao-xiao-bai-zhi-bo-ke-da-jian/">http://example.com/2022/08/27/xiao-bai-jiao-xiao-bai-zhi-bo-ke-da-jian/</a>
+                    <a href="http://example.com/2023/01/16/git-ru-men/">http://example.com/2023/01/16/git-ru-men/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -618,8 +534,8 @@ git config --global user.email "此处填写你注册时的邮箱"
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
                                 </a>
                             
                         </div>
@@ -815,13 +731,13 @@ git config --global user.email "此处填写你注册时的邮箱"
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/01/16/git-ru-men/">
+                <a href="/2023/02/15/typora-kuai-jie-ge-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Git入门">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Typora快捷格式">
                         
-                        <span class="card-title">Git入门</span>
+                        <span class="card-title">Typora快捷格式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -832,7 +748,7 @@ git config --global user.email "此处填写你注册时的邮箱"
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-15
                         </span>
                         <span class="publish-author">
                             
@@ -845,8 +761,8 @@ git config --global user.email "此处填写你注册时的邮箱"
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/%E6%97%A5%E5%B8%B8%E6%8A%80%E5%B7%A7/">
+                        <span class="chip bg-color">日常技巧</span>
                     </a>
                     
                 </div>
@@ -857,7 +773,7 @@ git config --global user.email "此处填写你注册时的邮箱"
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/08/27/xiao-bai-jiao-xiao-bai-zhi-bo-ke-da-jian/">
@@ -887,7 +803,6 @@ git config --global user.email "此处填写你注册时的邮箱"
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     

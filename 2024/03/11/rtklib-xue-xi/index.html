@@ -1,0 +1,3615 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="RTKLIB学习, Python,C++,JavaScript,JQuery,Vue.js等">
+    <meta name="description" content="菜鸟提升,分享喜乐,分享知识">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>RTKLIB学习 | BM-kun&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">BM-kun&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">BM-kun&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            菜鸟提升,分享喜乐,分享知识
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">RTKLIB学习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Rtklib/">
+                                <span class="chip bg-color">Rtklib</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-03-11
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-09-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="RTKLIB学习"><a href="#RTKLIB学习" class="headerlink" title="RTKLIB学习"></a>RTKLIB学习</h1><p><a href="">始于2024/4/19，记录自己对于rtklib中spp、ppp相关函数的学习，以防忘记</a>。</p>
+<blockquote>
+<p><strong>阶段目标</strong>：跟着网上的博客走一遍程序，写点注释和笔记。对rtklib的ppp进行二次开发，例如孙老师提到的周跳探测分离出来。</p>
+</blockquote>
+<h2 id="SPP代码流程框图"><a href="#SPP代码流程框图" class="headerlink" title="SPP代码流程框图"></a>SPP代码流程框图</h2><p>![spp](E:\My Blog\博客文档\Rtklib学习.assets\spp.png)</p>
+<h2 id="SPP"><a href="#SPP" class="headerlink" title="SPP"></a>SPP</h2><h3 id="1、pntpos"><a href="#1、pntpos" class="headerlink" title="1、pntpos"></a>1、pntpos</h3><h4 id="流程图："><a href="#流程图：" class="headerlink" title="流程图："></a>流程图：</h4><p>![img](E:\My Blog\博客文档\Rtklib学习.assets\0246fb12d67e41cfb139dcc61183d784.png)</p>
+<h4 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h4><p>依靠<a href="">多普勒频移测量值</a>和伪距来进行单点定位？？实现伪距单点定位的主函数，调用各个函数分步计算</p>
+<h4 id="输入参数："><a href="#输入参数：" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">obsd_t *obs      I   observation data            OBS观测数据
+int    n         I   number of observation data  OBS数
+nav_t  *nav      I   navigation data             NAV导航电文数据
+prcopt_t *opt    I   processing options          处理过程选项
+sol_t  *sol      IO  solution                    结果
+double *azel     IO  azimuth/elevation angle (rad) (NULL: no output)     方位角和俯仰角
+ssat_t *ssat     IO  satellite status              (NULL: no output)     卫星状态
+char   *msg      O   error message for error exit
+</code></pre>
+<h4 id="输出参数："><a href="#输出参数：" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">status(1:ok,0:error)        伪距位置顾及执行状态 1完成 0错误
+</code></pre>
+<h4 id="执行流程："><a href="#执行流程：" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li>检验观测值数是否大于0</li>
+<li><code>sol-&gt;time</code>赋值第一个观测值的时间</li>
+<li>如果处理选项不是SPP ，电离层矫正选Klobuchar模型 ，对流层矫正采用Saastmoinen模型</li>
+<li>调用<code>satposs()</code>计算计算卫星位置、速度和钟差<ul>
+<li><code>rs[(0:2)+i*6]</code>：obs[i] sat position {x,y,z} (m)</li>
+<li><code>rs [(3:5)+i*6]</code>：obs[i] sat velocity {vx,vy,vz} (m/s)</li>
+<li><code>dts[(0:1)+i*2]</code>：obs[i] sat clock {bias,drift} (s|s/s)</li>
+<li><code>var[i] </code>：卫星位置和钟差的协方差 (m^2)</li>
+<li><code>svh[i]</code> :卫星健康标志 (-1:correction not available)</li>
+</ul>
+</li>
+<li>调用<code>estpos() </code>用伪距位置估计，加权最小二乘，其中会调用valsol进行卡方检验和GDOP检验</li>
+<li><code>estpos()</code>中<code>valsol</code>检验失败，即位置估计失败，会调用<code>raim_fde</code>接收机自主完好性监测重新估计， 前提是卫星数&gt;6、对应参数解算设置<code>opt-&gt;posopt[4]=1</code></li>
+<li>调用<code>estvel()</code>用多普勒估计速度。</li>
+<li>存入方位角和俯仰角 ，赋值卫星状态结构体ssat<ul>
+<li>首先将 <code>ssat_t</code>结构体数组的 vs(定位时有效性)、azel（方位角、仰角）、resp(伪距残余)、resc(载波相位残余)和 snr(信号强度)都置为 0</li>
+<li>然后再将实现定位后的 azel、snr赋予 <code>ssat_t</code>结构体数组，而 vs、resp则只赋值给那些对定位有贡献的卫星，没有参与定位的卫星，这两个属性值为 0。</li>
+</ul>
+</li>
+</ul>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">extern int pntpos(const obsd_t *obs, int n, const nav_t *nav,
+                  const prcopt_t *opt, sol_t *sol, double *azel, ssat_t *ssat,
+                  char *msg)
+{
+    prcopt_t opt_=*opt;
+    double *rs,*dts,*var,*azel_,*resp;
+    int i,stat,vsat[MAXOBS]={0},svh[MAXOBS];
+    
+    sol->stat=SOLQ_NONE;//表示没有解算结果
+    
+    if (n<=0) {strcpy(msg,"no observation data"); return 0;}//没有obs观测数据
+    
+    trace(3,"pntpos  : tobs=%s n=%d\n",time_str(obs[0].time,3),n);//打印日志
+    
+    sol->time=obs[0].time; msg[0]='\0';//解算的时间是obs观测的第一个时间
+    
+    rs=mat(6,n); dts=mat(2,n); var=mat(1,n); azel_=zeros(2,n); resp=mat(1,n);
+    
+    if (opt_.mode!=PMODE_SINGLE) { /* for precise positioning */
+#if 0
+        opt_.sateph =EPHOPT_BRDC;
+#endif
+        opt_.ionoopt=IONOOPT_BRDC;//电离层矫正选Klobuchar广播星历模型
+        opt_.tropopt=TROPOPT_SAAS; //对流层矫正采用Saastmoinen模型
+    }
+    /* satellite positons, velocities and clocks */   //计算卫星位置、速度和钟差  rs dts var svh分别是？
+    satposs(sol->time,obs,n,nav,opt_.sateph,rs,dts,var,svh);
+    
+    /* estimate receiver position with pseudorange */  // //用伪距位置估计，加权最小二乘，其中会调用valsol进行卡方检验和GDOP检验
+    stat=estpos(obs,n,rs,dts,var,svh,nav,&opt_,sol,azel_,vsat,resp,msg);
+    
+    /* raim fde */
+    if (!stat&&n>=6&&opt->posopt[4]) // 1、如果estpos中valsol检验失败，即位置估计失败 2、会调用RAIM接收机自主完好性监测重新估计 3、前提是卫星数>6？？还是5啊，raim_fde中是5、对应参数解算设置opt->posopt[4]=1                              
+    {
+        stat=raim_fde(obs,n,rs,dts,var,svh,nav,&opt_,sol,azel_,vsat,resp,msg);
+    }
+    /* estimate receiver velocity with doppler */
+    if (stat) estvel(obs,n,rs,dts,nav,&opt_,sol,azel_,vsat);//伪距位置估计成功后，用多普勒估计速度
+    
+    if (azel) {
+        for (i=0;i<n*2;i++) azel[i]=azel_[i];//存入方位角和俯仰角
+    }
+    if (ssat) {             //赋值卫星状态结构体ssat  ssat里的具体内容？
+        for (i=0;i<MAXSAT;i++) {
+            ssat[i].vs=0;
+            ssat[i].azel[0]=ssat[i].azel[1]=0.0;
+            ssat[i].resp[0]=ssat[i].resc[0]=0.0;
+            ssat[i].snr[0]=0;
+        }
+        for (i=0;i<n;i++) {
+            ssat[obs[i].sat-1].azel[0]=azel_[  i*2];
+            ssat[obs[i].sat-1].azel[1]=azel_[1+i*2];
+            ssat[obs[i].sat-1].snr[0]=obs[i].SNR[0];
+            if (!vsat[i]) continue;
+            ssat[obs[i].sat-1].vs=1;
+            ssat[obs[i].sat-1].resp[0]=resp[i];
+        }
+    }
+    free(rs); free(dts); free(var); free(azel_); free(resp);//开辟的空间要释放
+    return stat;
+}
+</code></pre>
+<h4 id="疑问："><a href="#疑问：" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li><p>这里规定能够执行 <a target="_blank" rel="noopener" href="https://www.zybuluo.com/taqikema/note/1101465#raim_fde">raim_fde</a>函数的前提是数目大于等于 6，感觉不是只要大于等于 5就可以了吗？</p>
+<p>这里是4个卫星加两个自定义的观测方程，防止秩亏？</p>
+</li>
+<li><p>源码中将 <code>obs[0].time</code>作为星历选择时间传递给 <a target="_blank" rel="noopener" href="https://www.zybuluo.com/taqikema/note/1101465#satposs">satposs</a>函数，这样对于每一颗观测卫星，都要使用第一颗观测卫星的数据接收时间作为选择星历的时间标准。是否应该每颗卫星都使用自己的观测时间？或者应该使用每颗卫星自己的信号发射时间？，还是说这点差别对选择合适的星历其实没有关系？</p>
+<p>这里个人认为是</p>
+</li>
+<li></li>
+</ol>
+<h3 id="2、satposs"><a href="#2、satposs" class="headerlink" title="2、satposs"></a>2、satposs</h3><h4 id="流程图：-1"><a href="#流程图：-1" class="headerlink" title="流程图："></a>流程图：</h4><p>![img](E:\My Blog\博客文档\Rtklib学习.assets\watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5p2w5a6d54ix57yW56iL,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center.png)</p>
+<h4 id="功能：-1"><a href="#功能：-1" class="headerlink" title="功能："></a>功能：</h4><p>按照所观测到的卫星顺序计算出每颗卫星的位置、速度、{钟差、频漂}</p>
+<h4 id="输入参数：-1"><a href="#输入参数：-1" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">gtime_t  teph      I   time to select ephemeris (gpst)  广播星历选择的开始时间
+obsd_t   *obs      I   observation data            obs观测数据
+int      n         I   number of observation data    obs数
+nav_t    *nav      I   navigation data            nav导航电文
+int      ephopt    I   ephemeris option (EPHOPT_???)        星历选项
+double   *rs       O   satellite positions and velocities，长度为6*n，{x,y,z,vx,vy,vz}(ecef)(m,m/s)    卫星位置和速度
+double   *dts      O   satellite clocks，长度为2*n， {bias,drift} (s|s/s)    卫星钟差（钟差、频漂）
+double   *var      O   sat position and clock error variances (m^2)        卫星位置和钟的变化
+int      *svh      O   sat health flag (-1:correction not available)    卫星健康标志
+</code></pre>
+<h4 id="输出参数：-1"><a href="#输出参数：-1" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">none
+</code></pre>
+<h4 id="执行流程：-1"><a href="#执行流程：-1" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li>按照观测数据的顺序，首先将将当前观测卫星的 rs、dts、var和svh数组的元素置 0。</li>
+<li>通过判断某一频率下信号的伪距是否为 0，来得到此时所用的频率个数。注意，频率个数不能大于 <code>NFREQ</code>（默认为 3）。</li>
+<li>用数据接收时间减去伪距信号传播时间，得到卫星信号的发射时间。</li>
+<li>调用 <a target="_blank" rel="noopener" href="https://www.zybuluo.com/taqikema/note/1101465#ephclk">ephclk</a>函数，由<strong>广播星历</strong>计算出当前观测卫星的钟差。注意，此时的钟差是没有考虑相对论效应和 TGD的。</li>
+<li>用 3中的信号发射时间减去 4中的钟偏，得到 GPS时间下的卫星信号发射时间。</li>
+<li>调用 <a target="_blank" rel="noopener" href="https://www.zybuluo.com/taqikema/note/1101465#satpos">satpos</a>函数，计算<strong>信号发射</strong>时刻卫星的 P(ecef,m)、V(ecef,m/s)、C((s|s/s))。注意，这里计算出的钟差是考虑了相对论效应的了，只是还没有考虑 TGD。</li>
+<li>如果由 6中计算出的钟偏为 0，就再次调用 <a target="_blank" rel="noopener" href="https://www.zybuluo.com/taqikema/note/1101465#ephclk">ephclk</a>函数，将其计算出的卫星钟偏作为最终的结果。</li>
+</ul>
+<h4 id="代码：-1"><a href="#代码：-1" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">/* satellite positions and clocks ----------------------------------------------
+* compute satellite positions, velocities and clocks
+* args   : gtime_t teph     I   time to select ephemeris (gpst)
+*          obsd_t *obs      I   observation data
+*          int    n         I   number of observation data
+*          nav_t  *nav      I   navigation data
+*          int    ephopt    I   ephemeris option (EPHOPT_???)
+*          double *rs       O   satellite positions and velocities (ecef)
+*          double *dts      O   satellite clocks
+*          double *var      O   sat position and clock error variances (m^2)
+*          int    *svh      O   sat health flag (-1:correction not available)
+* return : none
+* notes  : rs [(0:2)+i*6]= obs[i] sat position {x,y,z} (m)
+*          rs [(3:5)+i*6]= obs[i] sat velocity {vx,vy,vz} (m/s)
+*          dts[(0:1)+i*2]= obs[i] sat clock {bias,drift} (s|s/s)
+*          var[i]        = obs[i] sat position and clock error variance (m^2)  //卫星位置和钟差的协方差
+*          svh[i]        = obs[i] sat health flag
+*          if no navigation data, set 0 to rs[], dts[], var[] and svh[]
+*          satellite position and clock are values at signal transmission time  位置是信号发射时间
+*          satellite position is referenced to antenna phase center    是天线相位中心
+*          satellite clock does not include code bias correction (tgd or bgd)   卫星钟差不包含码偏差  tgd是群时延
+*          any pseudorange and broadcast ephemeris are always needed to get
+*          signal transmission time             需要广播星历和？来获取信号发射时间
+*-----------------------------------------------------------------------------*/
+extern void satposs(gtime_t teph, const obsd_t *obs, int n, const nav_t *nav,
+                    int ephopt, double *rs, double *dts, double *var, int *svh)
+{
+    gtime_t time[MAXOBS]={{0}};  //这里是2*MAXOBS还是MAXOBS?
+    double dt,pr;
+    int i,j;
+    
+    trace(3,"satposs : teph=%s n=%d ephopt=%d\n",time_str(teph,3),n,ephopt);
+    
+    for (i=0;i<n&&i<MAXOBS;i++) {
+        for (j=0;j<6;j++) rs [j+i*6]=0.0;
+        for (j=0;j<2;j++) dts[j+i*2]=0.0;
+        var[i]=0.0; svh[i]=0;
+        
+        /* search any psuedorange */
+        for (j=0,pr=0.0;j<NFREQ;j++) if ((pr=obs[i].P[j])!=0.0) break;  //每颗卫星的信号频率  i为什么不是小于n   j这里是频率个数了
+        
+        if (j>=NFREQ) {
+            trace(2,"no pseudorange %s sat=%2d\n",time_str(obs[i].time,3),obs[i].sat);
+            continue;
+        }
+        /* transmission time by satellite clock */
+        time[i]=timeadd(obs[i].time,-pr/CLIGHT);   //传播时间
+        
+        /* satellite clock bias by broadcast ephemeris */   //广播星历计算钟差
+        if (!ephclk(time[i],teph,obs[i].sat,nav,&dt)) {
+            trace(2,"no broadcast clock %s sat=%2d\n",time_str(time[i],3),obs[i].sat);
+            continue;
+        }
+        time[i]=timeadd(time[i],-dt);
+        
+        /* satellite position and clock at transmission time */  //计算卫星发射时刻的P、V、C
+        if (!satpos(time[i],teph,obs[i].sat,ephopt,nav,rs+i*6,dts+i*2,var+i,
+                    svh+i)) {
+            trace(2,"no ephemeris %s sat=%2d\n",time_str(time[i],3),obs[i].sat);
+            continue;
+        }
+        /* if no precise clock available, use broadcast clock instead */
+        if (dts[i*2]==0.0) {
+            if (!ephclk(time[i],teph,obs[i].sat,nav,dts+i*2)) continue;
+            dts[1+i*2]=0.0;//这里这个是什么？钟漂为0……
+            *var=SQR(STD_BRDCCLK);
+        }
+    }
+    for (i=0;i<n&&i<MAXOBS;i++) {
+        trace(4,"%s sat=%2d rs=%13.3f %13.3f %13.3f dts=%12.3f var=%7.3f svh=%02X\n",
+              time_str(time[i],6),obs[i].sat,rs[i*6],rs[1+i*6],rs[2+i*6],
+              dts[i*2]*1E9,var[i],svh[i]);
+    }
+}
+</code></pre>
+<h4 id="疑问：-1"><a href="#疑问：-1" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li><p>这里是2*MAXOBS还是MAXOBS?为什么会有个2的倍数？</p>
+</li>
+<li><p>为甚eph2clk中不计算相对论而eph2pos计算</p>
+<p>个人认为一个计算的是相对值，而一个计算的是绝对值，故而不用计算抵消的相对论效应。</p>
+</li>
+</ol>
+<h4 id="2-1-ephclk"><a href="#2-1-ephclk" class="headerlink" title="2.1 ephclk"></a>2.1 ephclk</h4><h5 id="功能：-2"><a href="#功能：-2" class="headerlink" title="功能："></a>功能：</h5><p>通过广播星历来确定卫星钟偏</p>
+<h5 id="执行流程：-2"><a href="#执行流程：-2" class="headerlink" title="执行流程："></a>执行流程：</h5><ul>
+<li>首先调用 satsys函数根据卫星编号确定该卫星所属的导航系统和该卫星在该系统中的 PRN编号。</li>
+<li>对于 GPS导航系统，调用 seleph函数来选择 toe值与星历选择时间标准 teph最近的那个星历。</li>
+<li>调用 eph2clk函数，通过广播星历和信号发射时间计算出卫星钟差。</li>
+</ul>
+<h5 id="代码：-2"><a href="#代码：-2" class="headerlink" title="代码："></a>代码：</h5><pre class=" language-c++"><code class="language-c++">/* satellite clock with broadcast ephemeris ----------------------------------*/
+static int ephclk(gtime_t time, gtime_t teph, int sat, const nav_t *nav,
+                  double *dts)
+{
+    eph_t  *eph;
+    geph_t *geph;
+    seph_t *seph;//SBAS星历类型？
+    int sys;
+     
+    trace(4,"ephclk  : time=%s sat=%2d\n",time_str(time,3),sat);
+    
+    sys=satsys(sat,NULL);//找到系统和卫星PRN号   卫星编号和prn编号有什么区别？
+    
+    if (sys==SYS_GPS||sys==SYS_GAL||sys==SYS_QZS||sys==SYS_CMP) {
+        if (!(eph=seleph(teph,sat,-1,nav))) return 0;
+        *dts=eph2clk(time,eph);
+    }
+    else if (sys==SYS_GLO) {
+        if (!(geph=selgeph(teph,sat,-1,nav))) return 0;
+        *dts=geph2clk(time,geph);
+    }
+    else if (sys==SYS_SBS) {
+        if (!(seph=selseph(teph,sat,nav))) return 0;//北斗为什么用的是SBAS星历？
+        *dts=seph2clk(time,seph);
+    }
+    else return 0;
+    
+    return 1;
+}
+</code></pre>
+<h5 id="疑问：-2"><a href="#疑问：-2" class="headerlink" title="疑问："></a>疑问：</h5><ol>
+<li>为什么北斗用的是SBAS星历？那时候还没有北斗自己的广播星历吗？</li>
+</ol>
+<h3 id="3、estpos"><a href="#3、estpos" class="headerlink" title="3、estpos"></a>3、estpos</h3><h4 id="流程图：-2"><a href="#流程图：-2" class="headerlink" title="流程图："></a>流程图：</h4><p><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%20standalone%3D%22no%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%2020010904%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FTR%2F2001%2FREC-SVG-20010904%2FDTD%2Fsvg10.dtd%22%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2279%22%20height%3D%22408%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Csource%3E%3C!%5BCDATA%5BCreated%20with%20Rapha%C3%ABl%202.1.2estposrescodelsqvalsolend%5D%5D%3E%3C%2Fsource%3E%3Cdesc%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3ECreated%20with%20Rapha%C3%ABl%202.1.2%3C%2Fdesc%3E%3Cdefs%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3E%3Cpath%20id%3D%22raphael-marker-block-obj5%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20stroke-linecap%3D%22round%22%20d%3D%22M%205%200%20L%200%202.5%20L%205%205%20Z%22%3E%3C%2Fpath%3E%3Cmarker%20id%3D%22raphael-marker-endblock33-obj6%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20refX%3D%221.5%22%20refY%3D%221.5%22%20markerWidth%3D%223%22%20markerHeight%3D%223%22%20orient%3D%22auto%22%3E%3Cuse%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22black%22%20stroke%3D%22none%22%20stroke-width%3D%221.6667%22%20transform%3D%22rotate(180%201.5%201.5)%20scale(0.6)%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xlink%3Ahref%3D%22%23raphael-marker-block-obj5%22%3E%3C%2Fuse%3E%3C%2Fmarker%3E%3C%2Fdefs%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22st%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%208.585%2C%204)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2264.19%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22stt%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%208.585%2C%204)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eestpos%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22rescode_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%2095.25)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2273.36%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22rescode_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%2095.25)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Erescode%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22lsq_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2021.095%2C%20186.5)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2239.17%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22lsq_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2021.095%2C%20186.5)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Elsq%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22valsol_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2011.51%2C%20277.75)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2258.34%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22valsol_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2011.51%2C%20277.75)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Evalsol%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22e%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2018.17%2C%20369)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2245.02%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22et%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2018.17%2C%20369)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eend%3C%2Ftspan%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20x%3D%2210%22%20dy%3D%2218%22%3E%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj6%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2040.68%2041.25%20C%2040.68%2041.25%2040.68%2080.9041%2040.68%2092.2504%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj6%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2040.68%20132.5%20C%2040.68%20132.5%2040.68%20172.154%2040.68%20183.5%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj6%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2040.68%20223.75%20C%2040.68%20223.75%2040.68%20263.404%2040.68%20274.75%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj6%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2040.68%20315%20C%2040.68%20315%2040.68%20354.654%2040.68%20366%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="img"></p>
+<h4 id="功能：-3"><a href="#功能：-3" class="headerlink" title="功能："></a>功能：</h4><p>计算出接收机的<a href="">位置和钟差</a>，顺带返回实现定位后每颗卫星的{方位角、仰角}、定位时有效性、定位后伪距残差。</p>
+<h4 id="输入参数：-2"><a href="#输入参数：-2" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">obsd_t   *obs      I   观测量数据
+int      n         I   观测量数据的数量
+double   *rs       I   卫星位置和速度，长度为6*n，{x,y,z,vx,vy,vz}(ecef)(m,m/s)
+double *dts            I   卫星钟差和钟漂
+double   *vare     I   卫星位置和钟差的协方差 (m^2)
+int      *svh      I   卫星健康标志 (-1:correction not available)
+nav_t    *nav      I   导航数据
+prcopt_t *opt      I   处理过程选项
+sol_t    *sol      IO  solution
+double   *azel     IO  方位角和俯仰角 (rad)
+int      *vsat     IO  卫星在定位时是否有效
+double   *resp     IO  定位后伪距残差 (P-(r+c*dtr-c*dts+I+T))
+char     *msg      O   错误消息
+</code></pre>
+<h4 id="输出参数：-2"><a href="#输出参数：-2" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">int                O     (1:ok,0:error)
+</code></pre>
+<h4 id="执行流程：-3"><a href="#执行流程：-3" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li>赋值<code>x[i]</code>：如果是第一次定位，即输入的 sol 为空，则 x 初值为 0；如果之前有过定位，则可以将上一历元的定位值<code>sol-&gt;rr[]</code>作为该历元定位的初始值。</li>
+<li>开始迭代计算：迭代次数<code>MAXITR</code>默认为10<ul>
+<li>调用<code>rescode()</code>：计算当前迭代的伪距残差 v、设计矩阵 H、伪距残差的方差 var、所有观测卫星的方位角和仰角 azel，定位时有效性 vsat、定位后伪距残差 resp、参与定位的卫星个数<code> ns</code>和方程个数<code> nv</code>。</li>
+<li>确定方程组中方程的个数<code>nv</code>要大于未知数<code>NX</code>的个数。</li>
+<li>以伪距残差的标准差的倒数作为权重，对<code>H</code>和<code>v</code>分别左乘权重对角阵，得到加权之后的<code>H</code>和<code>v </code>。</li>
+<li>调用<code>lsq()</code>最小二乘函数,得到当前<code>x</code>的修改量<code>dx</code>和定位误差协方差矩阵中的权系数阵 。</li>
+<li>将<code>lsq()</code>中求得的 <code>dx</code> 加入到当前<code>x</code>值中，得到更新之后的<code>x</code>值</li>
+<li>如果求得的修改量<code>dx</code>小于截断因子(目前是1E-4)：<ul>
+<li>则将<code>x</code>作为最终的定位结果，对<code>sol</code>的相应参数赋值。</li>
+<li>之后再调用对定位结果进行卡方检验和GDOP检验，检验成立根据是否用SBAS赋值解的状态（单点解，SBAS解）。</li>
+<li>不小于截断因子，则进行下一次循环。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="代码：-3"><a href="#代码：-3" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">/* estimate receiver position ------------------------------------------------*/
+static int estpos(const obsd_t *obs, int n, const double *rs, const double *dts,
+                  const double *vare, const int *svh, const nav_t *nav,
+                  const prcopt_t *opt, sol_t *sol, double *azel, int *vsat,
+                  double *resp, char *msg)
+{
+    double x[NX]={0},dx[NX],Q[NX*NX],*v,*H,*var,sig;
+    int i,j,k,info,stat,nv,ns;
+    
+    trace(3,"estpos  : n=%d\n",n);
+    
+    v=mat(n+4,1); H=mat(NX,n+4); var=mat(n+4,1);
+    
+    for (i=0;i<3;i++) x[i]=sol->rr[i];//如果是第一次定位，即输入的 sol 为空，则 x 初值为 0；如果之前有过定位，则可以将上一历元的定位值sol->rr[]作为该历元定位的初始值
+    //开始迭代定位计算
+    for (i=0;i<MAXITR;i++) {
+        //首先调用 rescode 函数，计算当前迭代的伪距残差 v、几何矩阵 H
+        //伪距残差的方差 var、所有观测卫星的方位角和仰角 azel、定位时有效性 vsat、
+        //定位后伪距残差 resp、参与定位的卫星个数 ns 和方程个数 nv
+        /* pseudorange residuals */
+        nv=rescode(i,obs,n,rs,dts,vare,svh,nav,x,opt,v,H,var,azel,vsat,resp,
+                   &ns);
+        
+        if (nv<NX) { //确定方程组中方程的个数要大于未知数的个数
+            sprintf(msg,"lack of valid sats ns=%d",nv);
+            break;
+        }
+        /* weight by variance 方差定权*///以伪距残差的标准差的倒数作为权重，对 H 和 v 分别左乘权重对角阵，得到加权之后的H和v
+        for (j=0;j<nv;j++) {
+            sig=sqrt(var[j]); //这里的权重值是对角阵，这是建立在假设不同测量值的误差之间是彼此独立的基础上的
+            //直接对 H 和 v 分别左乘权重对角阵，得到加权之后的 H 和 v
+            v[j]/=sig;
+            for (k=0;k<NX;k++) H[k+j*NX]/=sig;
+        }
+        /* least square estimation 最小二乘法*/ //调用 lsq 函数,得到当前 x 的修改量 dx 和定位误差协方差矩阵中的权系数阵 Q
+        if ((info=lsq(H,v,NX,nv,dx,Q))) {
+            sprintf(msg,"lsq error info=%d",info);
+            break;
+        }
+        for (j=0;j<NX;j++) x[j]+=dx[j];//将lsq中求得的 dx 加入到当前 x 值中，得到更新之后的 x 值
+        //如果求得的修改量dx小于截断因子(目前是1E-4)，则将x[j]作为最终的定位结果，
+        //对 sol 的相应参数赋值,之后再调用 valsol 函数确认当前解是否符合要求,参考 RTKLIB Manual P162
+        //否则，进行下一次循环。
+        if (norm(dx,NX)<1E-4) {//模的平方大小？？？
+            sol->type=0; //解方程时的 dtr 单位是 m，是乘以了光速之后的，解出结果后赋给 sol->dtr 时再除以光速
+            sol->time=timeadd(obs[0].time,-x[3]/CLIGHT);//sol->time 中存储的是减去接收机钟差后的信号观测时间
+            sol->dtr[0]=x[3]/CLIGHT; /* receiver clock bias (s) */
+            sol->dtr[1]=x[4]/CLIGHT; /* glo-gps time offset (s) */
+            sol->dtr[2]=x[5]/CLIGHT; /* gal-gps time offset (s) */
+            sol->dtr[3]=x[6]/CLIGHT; /* bds-gps time offset (s) */
+            for (j=0;j<6;j++) sol->rr[j]=j<3?x[j]:0.0;
+            for (j=0;j<3;j++) sol->qr[j]=(float)Q[j+j*NX];
+            sol->qr[3]=(float)Q[1];    /* cov xy */
+            sol->qr[4]=(float)Q[2+NX]; /* cov yz */
+            sol->qr[5]=(float)Q[2];    /* cov zx */
+            sol->ns=(unsigned char)ns;
+            sol->age=sol->ratio=0.0;
+            
+            /* validate solution */
+            if ((stat=valsol(azel,vsat,n,opt,v,nv,NX,msg))) {
+                // 对定位结果进行卡方检验和GDOP检验
+                sol->stat=opt->sateph==EPHOPT_SBAS?SOLQ_SBAS:SOLQ_SINGLE;
+            }
+            free(v); free(H); free(var);
+            
+            return stat;
+        }
+    }
+    //如果超过了规定的循环次数，则输出发散信息后，return 0
+    if (i>=MAXITR) sprintf(msg,"iteration divergent i=%d",i);
+    
+    free(v); free(H); free(var);
+    
+    return 0;
+}
+</code></pre>
+<h4 id="疑问：-3"><a href="#疑问：-3" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li><p>noam函数返回是模平方的大小？</p>
+<p><code>norm</code> 函数用于计算数组的范数（或者称为模）。通常情况下，范数表示向量的长度或大小。在这里，<code>norm</code> 函数可能是作者自定义的一个函数，用于计算三维向量的欧几里得范数。</p>
+</li>
+<li><p>这里的NX=7不明白，应该只有个未知数的啊！</p>
+<p>第四个参数是钟差，后三个参数是gps与其他系统的钟差？？</p>
+</li>
+</ol>
+<h4 id="3-1-lsq"><a href="#3-1-lsq" class="headerlink" title="3.1 lsq"></a>3.1 lsq</h4><ul>
+<li><strong>A</strong>：nm阶设计矩阵的转置，m&lt;n则无法计算。</li>
+<li><strong>y</strong>：m阶观测残差，<strong>y=v=l-HX</strong> 。</li>
+<li><strong>X</strong>：传出参数、待估计的n阶参数向量的增量。</li>
+<li><strong>Q</strong>：传出参数、nn协方差阵。</li>
+</ul>
+<h5 id="功能：-4"><a href="#功能：-4" class="headerlink" title="功能："></a>功能：</h5><p>计算得到方程左边$x=(AA^T)^{-1}Ay$的值和该值的协方差矩阵 $Q=(AA^T)^{-1}$。</p>
+<h5 id="代码：-4"><a href="#代码：-4" class="headerlink" title="代码："></a>代码：</h5><pre class=" language-c++"><code class="language-c++">extern int lsq(const double *A, const double *y, int n, int m, double *x,
+               double *Q)//x和Q为指针，可以改变
+{
+    double *Ay;
+    int info;
+    
+    if (m<n) return -1;
+    Ay=mat(n,1);
+    matmul("NN",n,1,m,1.0,A,y,0.0,Ay); /* Ay=A*y */
+    matmul("NT",n,n,m,1.0,A,A,0.0,Q);  /* Q=A*A' */
+    if (!(info=matinv(Q,n))) matmul("NN",n,1,n,1.0,Q,Ay,0.0,x); /* x=Q^-1*Ay */
+    free(Ay);
+    return info;
+}
+</code></pre>
+<h4 id="3-2-rescode"><a href="#3-2-rescode" class="headerlink" title="3.2 rescode"></a>3.2 rescode</h4><h5 id="流程图：-3"><a href="#流程图：-3" class="headerlink" title="流程图："></a>流程图：</h5><p><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%20standalone%3D%22no%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%2020010904%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FTR%2F2001%2FREC-SVG-20010904%2FDTD%2Fsvg10.dtd%22%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2297%22%20height%3D%22955%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Csource%3E%3C!%5BCDATA%5BCreated%20with%20Rapha%C3%ABl%202.1.2rescodeecef2possatsysgeodistsatazelprangesatexcludeionocorrtropcorrvarerrend%5D%5D%3E%3C%2Fsource%3E%3Cdesc%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3ECreated%20with%20Rapha%C3%ABl%202.1.2%3C%2Fdesc%3E%3Cdefs%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3E%3Cpath%20id%3D%22raphael-marker-block-obj17%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20stroke-linecap%3D%22round%22%20d%3D%22M%205%200%20L%200%202.5%20L%205%205%20Z%22%3E%3C%2Fpath%3E%3Cmarker%20id%3D%22raphael-marker-endblock33-obj18%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20refX%3D%221.5%22%20refY%3D%221.5%22%20markerWidth%3D%223%22%20markerHeight%3D%223%22%20orient%3D%22auto%22%3E%3Cuse%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22black%22%20stroke%3D%22none%22%20stroke-width%3D%221.6667%22%20transform%3D%22rotate(180%201.5%201.5)%20scale(0.6)%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xlink%3Ahref%3D%22%23raphael-marker-block-obj17%22%3E%3C%2Fuse%3E%3C%2Fmarker%3E%3C%2Fdefs%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22st%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2013.17%2C%204)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2273.36%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22stt%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2013.17%2C%204)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Erescode%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22ecef2pos_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%209.415%2C%2095.25)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2280.87%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22ecef2pos_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%209.415%2C%2095.25)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eecef2pos%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22satsys_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2018.595%2C%20186.5)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2262.51%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22satsys_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2018.595%2C%20186.5)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Esatsys%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22geodist_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2015.67%2C%20277.75)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2268.36%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22geodist_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2015.67%2C%20277.75)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Egeodist%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22satazel_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2016.09%2C%20369)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2267.52%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22satazel_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2016.09%2C%20369)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Esatazel%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22prange_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2016.5%2C%20460.25)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2266.7%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22prange_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2016.5%2C%20460.25)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eprange%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22satexclude_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%20551.5)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2291.7%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22satexclude_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%20551.5)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Esatexclude%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22ionocorr_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2012.755%2C%20642.75)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2274.19%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22ionocorr_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2012.755%2C%20642.75)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eionocorr%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22tropcorr_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2014.005%2C%20734)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2271.69%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22tropcorr_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2014.005%2C%20734)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Etropcorr%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22varerr_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2020.26%2C%20825.25)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2259.18%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22varerr_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2020.26%2C%20825.25)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Evarerr%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22e%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2027.34%2C%20916.5)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2245.02%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22et%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2027.34%2C%20916.5)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eend%3C%2Ftspan%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20x%3D%2210%22%20dy%3D%2218%22%3E%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%2041.25%20C%2049.85%2041.25%2049.85%2080.9041%2049.85%2092.2504%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20132.5%20C%2049.85%20132.5%2049.85%20172.154%2049.85%20183.5%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20223.75%20C%2049.85%20223.75%2049.85%20263.404%2049.85%20274.75%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20315%20C%2049.85%20315%2049.85%20354.654%2049.85%20366%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20406.25%20C%2049.85%20406.25%2049.85%20445.904%2049.85%20457.25%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20497.5%20C%2049.85%20497.5%2049.85%20537.154%2049.85%20548.5%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20588.75%20C%2049.85%20588.75%2049.85%20628.404%2049.85%20639.75%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20680%20C%2049.85%20680%2049.85%20719.654%2049.85%20731%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20771.25%20C%2049.85%20771.25%2049.85%20810.904%2049.85%20822.25%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj18%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2049.85%20862.5%20C%2049.85%20862.5%2049.85%20902.154%2049.85%20913.5%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="img"></p>
+<h5 id="功能：-5"><a href="#功能：-5" class="headerlink" title="功能："></a>功能：</h5><p>计算当前迭代的伪距残差 v、设计矩阵 H、伪距残差的方差 var、所有观测卫星的方位角和仰角 azel，定位时有效性 vsat、定位后伪距残差 resp、参与定位的卫星个数 ns 和方程个数 nv</p>
+<blockquote>
+<p><code>dion</code>,<code>dtrp</code>,<code>vmeas</code>,<code>vion</code>,<code>vtrp</code>四个局部变量没有<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%88%9D%E5%A7%8B%E5%8C%96&amp;spm=1001.2101.3001.7020">初始化</a>， 运行时会报错，可赋初值0.0</p>
+</blockquote>
+<h5 id="输入参数：-3"><a href="#输入参数：-3" class="headerlink" title="输入参数："></a>输入参数：</h5><pre class=" language-c++"><code class="language-c++">int      iter      I   迭代次数，在estpos()里迭代调用，第i次迭代就传i
+obsd_t   *obs      I   观测量数据
+int      n         I   观测量数据的数量
+double   *rs       I   卫星位置和速度，长度为6*n，{x,y,z,vx,vy,vz}(ecef)(m,m/s)
+double   *dts      I   卫星钟差，长度为2*n， {bias,drift} (s|s/s)
+double   *vare     I   卫星位置和钟差的协方差 (m^2)
+int      *svh      I   卫星健康标志 (-1:correction not available)
+nav_t    *nav      I   导航数据
+double   *x        I   本次迭代开始之前的定位值,7*1,前3个是本次迭代开始之前的定位值，第4个是钟差，后三个分别是gps系统与glonass、galileo、bds系统的钟差。
+prcopt_t *opt      I   处理过程选项
+double   *v        O   定位方程的右端部分，伪距残差
+double   *H        O   定位方程中的几何矩阵
+double   *var      O   参与定位的伪距残差的方差
+double   *azel     O   对于当前定位值，所有观测卫星的 {方位角、高度角} (2*n)
+int      *vsat     O   所有观测卫星在当前定位时是否有效 (1*n)
+double   *resp     O   所有观测卫星的伪距残差，(P-(r+c*dtr-c*dts+I+T)) (1*n)
+int      *ns       O   参与定位的卫星的个数
+</code></pre>
+<h5 id="输出参数：-3"><a href="#输出参数：-3" class="headerlink" title="输出参数："></a>输出参数：</h5><pre class=" language-c++"><code class="language-c++">int                O   定位方程组的方程个数
+</code></pre>
+<h5 id="执行流程：-4"><a href="#执行流程：-4" class="headerlink" title="执行流程："></a>执行流程：</h5><ul>
+<li>将之前得到的定位解信息赋值给<code>rr</code>和<code>dtr</code>数组。</li>
+<li>调用<code>ecef2pos()</code>将将接收机位置<code>rr</code>由 ECEF-XYZ 转换为大地坐标系LLH<code>pos</code></li>
+<li>遍历当前历元所有<code>OBS[]</code>，即遍历每颗卫星：<ul>
+<li>将<code>vsat[]</code>、<code>azel[]</code>和<code>resp[]</code>数组置 0，因为在前后两次定位结果中，每颗卫星的上述信息都会发生变化。<code>time</code>赋值OBS的时间，<code>sat</code>赋值OBS的卫星。？？？这里代码没有呀</li>
+<li>检测当前观测卫星是否和下一个相邻数据重复；重复则不处理这一条，continue去处理下一条。</li>
+<li>调用<code>satexclude()</code>函数判断卫星是否需要排除，如果排除则continue去处理下一个卫星。</li>
+<li>调用<code>geodist()</code>函数，计算卫星和当前接收机位置之间的几何距离<code>r</code>和接收机到卫星的方向向量<code>e</code>。</li>
+<li>调用<code>satazel()</code>函数，计算在接收机位置处的站心坐标系中卫星的方位角和仰角；若仰角低于截断值<code>opt-&gt;elmin</code>，continue不处理此数据。</li>
+<li>调用<code>snrmask()</code>，根据接收机高度角和信号频率来检测该信号是否可用。<a href="">代码少了这个步骤？？</a></li>
+<li>调用<code> ionocorr()</code> 函数，计算电离层延时<code>I</code>,所得的电离层延时是建立在 L1 信号上的，当使用其它频率信号时，依据所用信号频组中第一个频率的波长与 L1 波长的比率，对上一步得到的电离层延时进行修正。</li>
+<li>调用<code>tropcorr()</code>函数,计算对流层延时<code>T</code>。</li>
+<li>调用<code>prange()</code>函数，计算经过<strong>DCB校正后</strong>的伪距值<code>p</code>。</li>
+<li>计算伪距残差<code>v[nv]</code>，即经过钟差，对流层，电离层改正后的伪距。</li>
+<li>组装设计矩阵<code>H</code>![img](E:\My Blog\博客文档\Rtklib学习.assets\8bf06744b5c24e25bb1c543afdaca29b.png)</li>
+<li>处理不同系统（GPS、GLO、GAL、CMP）之间的时间偏差，修改矩阵<code>H </code>。</li>
+<li>调用<code>varerr()</code>函数，计算此时的导航系统误差</li>
+</ul>
+</li>
+<li>为了防止不满秩的情况，把矩阵<code>H</code>补满秩了，<code>H[j+nv*NX]=j==i+3?1.0:0.0;</code></li>
+</ul>
+<h5 id="代码：-5"><a href="#代码：-5" class="headerlink" title="代码："></a>代码：</h5><pre class=" language-c++"><code class="language-c++">/* pseudorange residuals -----------------------------------------------------*/
+static int rescode(int iter, const obsd_t *obs, int n, const double *rs,
+                   const double *dts, const double *vare, const int *svh,
+                   const nav_t *nav, const double *x, const prcopt_t *opt,
+                   double *v, double *H, double *var, double *azel, int *vsat,
+                   double *resp, int *ns)
+{
+    double r,dion,dtrp,vmeas,vion,vtrp,rr[3],pos[3],dtr,e[3],P,lam_L1;
+    int i,j,nv=0,sys,mask[4]={0};
+    
+    trace(3,"resprng : n=%d\n",n);
+    
+    for (i=0;i<3;i++) rr[i]=x[i]; dtr=x[3];//将之前得到的定位解信息赋值给 rr 和 dtr 数组，以进行关于当前解的伪距残差的相关计算（dtr为接收机钟差）
+    
+    ecef2pos(rr,pos);//rr{x,y,z}->pos{lat,lon,h}     坐标系转换
+    
+    //遍历当前历元的obs
+
+    for (i=*ns=0;i<n&&i<MAXOBS;i++) {
+        vsat[i]=0; azel[i*2]=azel[1+i*2]=resp[i]=0.0;//将vsat、azel和resp数组置 0，因为在前后两次定位结果中，每颗卫星的上述信息都会发生变化。
+        
+        if (!(sys=satsys(obs[i].sat,NULL))) continue;//调用satsys()函数，验证卫星编号是否合理及其所属的导航系统
+         //检测当前观测卫星是否和下一个相邻数据重复；重复则不处理这一条，去处理下一条
+        /* reject duplicated observation data */
+        if (i<n-1&&i<MAXOBS-1&&obs[i].sat==obs[i+1].sat) {
+            trace(2,"duplicated observation data %s sat=%2d\n",
+                  time_str(obs[i].time,3),obs[i].sat);
+            i++;
+            continue;
+        }
+        //调用 geodist 函数，计算卫星和当前接收机位置之间的几何距离 r和接收机到卫星方向的观测矢量。
+        //然后检验几何距离是否 >0。此函数中会进行地球自转影响的校正（Sagnac效应）
+        //截断角是否小于阈值（opt中的设置）
+        /* geometric distance/azimuth/elevation angle */
+        if ((r=geodist(rs+i*6,rr,e))<=0.0||
+            satazel(pos,e,azel+i*2)<opt->elmin) continue;
+        //调用 prange 函数，得到经过DCB校正后的伪距值 ρ
+        /* psudorange with code bias correction */
+        if ((P=prange(obs+i,nav,azel+i*2,iter,opt,&vmeas))==0.0) continue;
+        
+        /* excluded satellite? *///处理选项中事先指定定位时排除哪些导航系统或卫星,调用 satexclude 函数完成
+        if (satexclude(obs[i].sat,svh[i],opt)) continue;
+        //调用 ionocorr 函数，计算电离层延时I,所得的电离层延时是建立在 L1 信号上的，
+        //当使用其它频率信号时，依据所用信号频组中第一个频率的波长与 L1 波长的关系，对上一步得到的电离层延时进行修正。即电离层延迟与频率有关
+        /* ionospheric corrections */
+        if (!ionocorr(obs[i].time,nav,obs[i].sat,pos,azel+i*2,
+                      iter>0?opt->ionoopt:IONOOPT_BRDC,&dion,&vion)) continue;
+        
+        /* GPS-L1 -> L1/B1 */
+        if ((lam_L1=nav->lam[obs[i].sat-1][0])>0.0) {
+            dion*=SQR(lam_L1/lam_carr[0]);
+        }
+        /* tropospheric corrections */
+        if (!tropcorr(obs[i].time,nav,pos,azel+i*2,
+                      iter>0?opt->tropopt:TROPOPT_SAAS,&dtrp,&vtrp)) {
+            continue;
+        }
+        //伪距残差
+        /* pseudorange residual */
+        v[nv]=P-(r+dtr-CLIGHT*dts[i*2]+dion+dtrp);
+        //组装设计矩阵H单位向量的反，前 3 行为中计算得到的视线向的反向，第 4 行为 1，其它行为 0
+        /* design matrix */
+        for (j=0;j<NX;j++) H[j+nv*NX]=j<3?-e[j]:(j==3?1.0:0.0);
+        //处理不同系统（GPS、GLO、GAL、CMP）之间的时间偏差，修改矩阵H
+        /* time system and receiver bias offset correction */
+        if      (sys==SYS_GLO) {v[nv]-=x[4]; H[4+nv*NX]=1.0; mask[1]=1;}
+        else if (sys==SYS_GAL) {v[nv]-=x[5]; H[5+nv*NX]=1.0; mask[2]=1;}
+        else if (sys==SYS_CMP) {v[nv]-=x[6]; H[6+nv*NX]=1.0; mask[3]=1;}//这里的与gps钟差是已经乘以光速的了
+        else mask[0]=1;
+        
+        vsat[i]=1; resp[i]=v[nv]; (*ns)++;
+        // 调用 varerr 函数，计算此时的导航系统误差，然后累加计算用户测距误差(URE)。
+        /* error variance */
+        var[nv++]=varerr(opt,azel[1+i*2],sys)+vare[i]+vmeas+vion+vtrp;//nv++了
+        
+        trace(4,"sat=%2d azel=%5.1f %4.1f res=%7.3f sig=%5.3f\n",obs[i].sat,
+              azel[i*2]*R2D,azel[1+i*2]*R2D,resp[i],sqrt(var[nv-1]));
+    }
+    //为了防止不满秩的情况，把矩阵H补满秩了
+    /* constraint to avoid rank-deficient */
+    for (i=0;i<4;i++) {
+        if (mask[i]) continue;
+        v[nv]=0.0;
+        for (j=0;j<NX;j++) H[j+nv*NX]=j==i+3?1.0:0.0;
+        var[nv++]=0.01;//为什么这么处理？方程的方差为0.01>?
+    }
+    return nv;
+    //返回值 v和 resp的主要区别在于长度不一致， v是需要参与定位方程组的解算的，维度为 nv*1；
+    //而resp仅表示所有观测卫星的伪距残余，维度为 n*1，对于没有参与定位的卫星，该值为 0
+}
+</code></pre>
+<h5 id="疑问：-4"><a href="#疑问：-4" class="headerlink" title="疑问："></a>疑问：</h5><ol>
+<li>为什么手动添加的方差设为0.01？而且最大是手动补3个方程吗？</li>
+<li>为什么缺少snrmask，<code>time</code>赋值OBS的时间，<code>sat</code>赋值OBS的卫星这两项，sat2freq函数也没有</li>
+</ol>
+<blockquote>
+<p>1、返回值 <code>v</code>和 <code>resp</code>的主要区别在于长度不一致， <code>v</code>是需要参与定位方程组的解算的，维度为 nv<em>1；而 resp仅表示所有观测卫星的伪距残余，维度为 n</em>1，对于没有参与定位的卫星，该值为 0。</p>
+<p>2、源码中 <code>dtr</code>的单位是 m。</p>
+<p>3、 <code>URE</code>值包括 ①卫星星历和钟差的误差 ②大气延时误差 ③伪距测量的码偏移误差 ④导航系统的误差</p>
+</blockquote>
+<h3 id="4、raim-fde"><a href="#4、raim-fde" class="headerlink" title="4、raim_fde"></a>4、raim_fde</h3><h4 id="流程图：-4"><a href="#流程图：-4" class="headerlink" title="流程图："></a>流程图：</h4><p><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%20standalone%3D%22no%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%2020010904%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FTR%2F2001%2FREC-SVG-20010904%2FDTD%2Fsvg10.dtd%22%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2284%22%20height%3D%22225%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Csource%3E%3C!%5BCDATA%5BCreated%20with%20Rapha%C3%ABl%202.1.2raim_fdeestposend%5D%5D%3E%3C%2Fsource%3E%3Cdesc%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3ECreated%20with%20Rapha%C3%ABl%202.1.2%3C%2Fdesc%3E%3Cdefs%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3E%3Cpath%20id%3D%22raphael-marker-block-obj7%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20stroke-linecap%3D%22round%22%20d%3D%22M%205%200%20L%200%202.5%20L%205%205%20Z%22%3E%3C%2Fpath%3E%3Cmarker%20id%3D%22raphael-marker-endblock33-obj8%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20refX%3D%221.5%22%20refY%3D%221.5%22%20markerWidth%3D%223%22%20markerHeight%3D%223%22%20orient%3D%22auto%22%3E%3Cuse%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22black%22%20stroke%3D%22none%22%20stroke-width%3D%221.6667%22%20transform%3D%22rotate(180%201.5%201.5)%20scale(0.6)%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xlink%3Ahref%3D%22%23raphael-marker-block-obj7%22%3E%3C%2Fuse%3E%3C%2Fmarker%3E%3C%2Fdefs%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22st%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%204)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2278.36%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22stt%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%204)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eraim_fde%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22estpos_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2011.085%2C%2095.25)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2264.19%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22estpos_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2011.085%2C%2095.25)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eestpos%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22e%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2020.67%2C%20186.5)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2245.02%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22et%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2020.67%2C%20186.5)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eend%3C%2Ftspan%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20x%3D%2210%22%20dy%3D%2218%22%3E%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj8%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2043.18%2041.25%20C%2043.18%2041.25%2043.18%2080.9041%2043.18%2092.2504%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj8%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2043.18%20132.5%20C%2043.18%20132.5%2043.18%20172.154%2043.18%20183.5%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="img"></p>
+<h4 id="功能：-6"><a href="#功能：-6" class="headerlink" title="功能："></a>功能：</h4><p>通过每次排除一颗卫星计算，选取残差最小的一次作为最终解算结果，此时对应的卫星就是故障卫星</p>
+<h4 id="输入参数：-4"><a href="#输入参数：-4" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">const obsd_t *obs       OBS观测数据
+int n                   观测数据的数量
+const double *rs        卫星位置和速度，长度为6*n，{x,y,z,vx,vy,vz}(ecef)(m,m/s)
+const double *dts       卫星钟差，长度为2*n， {bias,drift} (s|s/s)
+const double *vare      卫星位置和钟差的协方差 (m^2)
+const int *svh          卫星健康标志 (-1:correction not available)
+const nav_t *nav        导航数据
+const prcopt_t *opt     处理过程选项
+sol_t *sol              solution
+double *azel            方位角和俯仰角 (rad)
+int *vsat               卫星在定位时是否有效
+double *resp            观测卫星的伪距残差，(P-(r+c*dtr-c*dts+I+T)) (1*n)
+char *msg               错误信息
+</code></pre>
+<h4 id="输出参数：-4"><a href="#输出参数：-4" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">int                O     (1:ok,0:error)
+</code></pre>
+<h4 id="执行流程：-5"><a href="#执行流程：-5" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li>for循环，遍历每颗卫星，<code>i</code>表示最外面的大循环，每次将将第<code> i</code>颗卫星舍弃不用 ，<code>j</code>表示剩余使用的卫星的循环，每次进行相应数据的赋值，<code>k</code>表示参与定位的卫星的循环，与<code> j</code>一起使用。</li>
+<li>舍弃第 i 颗卫星后，将剩下卫星的数据复制到一起。</li>
+<li>调用<code>estpos()</code>函数计算使用剩下卫星进行定位的定位值。</li>
+<li>累加得到当前卫星实现定位后的伪距残差平方和<code>rms_e</code>与可用卫星数目<code>nvsat</code>。</li>
+<li>如果 <code>nvsat&lt;5</code>，则说明当前卫星数目过少，无法进行 RAIM_FDE 操作</li>
+<li>计算伪距残差平方和的标准差<code>rms_e</code></li>
+<li>如果伪距残差平方和的标准差<code>rms_e</code>&gt;<code>rms</code>,继续下一次循环</li>
+<li>如果小于 <code>rms</code>，则说明当前定位结果更合理，将 <code>stat</code> 置为 1，重新更新 <code>sol</code>、<code>azel</code>、<code>vsat</code>(当前被舍弃的卫星，此值置为0)、<code>resp</code>等值，并将当前的<code>rms_e</code>更新到 <code>rms</code> 中，用于下一次判断。</li>
+<li>遍历完所有卫星后， 如果stat`不为 0，则说明在弃用卫星的前提下有更好的解出现，输出信息，trace中指出弃用了哪颗卫星。</li>
+</ul>
+<h4 id="代码：-6"><a href="#代码：-6" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">/* raim fde (failure detection and exclution) -------------------------------*///自主完好性检测
+static int raim_fde(const obsd_t *obs, int n, const double *rs,
+                    const double *dts, const double *vare, const int *svh,
+                    const nav_t *nav, const prcopt_t *opt, sol_t *sol,
+                    double *azel, int *vsat, double *resp, char *msg)
+{
+    obsd_t *obs_e;
+    sol_t sol_e={{0}};
+    char tstr[32],name[16],msg_e[128];
+    double *rs_e,*dts_e,*vare_e,*azel_e,*resp_e,rms_e,rms=100.0;
+    int i,j,k,nvsat,stat=0,*svh_e,*vsat_e,sat=0;
+    
+    trace(3,"raim_fde: %s n=%2d\n",time_str(obs[0].time,0),n);
+    
+    if (!(obs_e=(obsd_t *)malloc(sizeof(obsd_t)*n))) return 0;
+    rs_e = mat(6,n); dts_e = mat(2,n); vare_e=mat(1,n); azel_e=zeros(2,n);
+    svh_e=imat(1,n); vsat_e=imat(1,n); resp_e=mat(1,n); 
+    //大循环是每次舍弃第 i 颗卫星。
+    //i表示最外面的大循环，每次将将第 i颗卫星舍弃不用，这是通过 if (j==i) continue实现的
+    //j表示剩余使用的卫星的循环，每次进行相应数据的赋值
+    //k表示参与定位的卫星的循环，与 j一起使用
+    for (i=0;i<n;i++) {
+        
+        /* satellite exclution */
+        for (j=k=0;j<n;j++) {
+            if (j==i) continue;
+            obs_e[k]=obs[j];
+            matcpy(rs_e +6*k,rs +6*j,6,1);
+            matcpy(dts_e+2*k,dts+2*j,2,1);
+            vare_e[k]=vare[j];
+            svh_e[k++]=svh[j];
+        }
+        //调用 estpos 函数计算使用剩下卫星进行定位的定位值。
+        /* estimate receiver position without a satellite */
+        if (!estpos(obs_e,n-1,rs_e,dts_e,vare_e,svh_e,nav,opt,&sol_e,azel_e,
+                    vsat_e,resp_e,msg_e)) {
+            trace(3,"raim_fde: exsat=%2d (%s)\n",obs[i].sat,msg);
+            continue;
+        }
+        //累加得到当前卫星实现定位后的伪距残差平方和与可用卫星数目
+        for (j=nvsat=0,rms_e=0.0;j<n-1;j++) {
+            if (!vsat_e[j]) continue;
+            rms_e+=SQR(resp_e[j]);
+            nvsat++;
+        }
+        if (nvsat<5) {//如果 nvsat<5，则说明当前卫星数目过少，无法进行 RAIM_FDE 操作，舍弃一个正好是4个方程？
+            trace(3,"raim_fde: exsat=%2d lack of satellites nvsat=%2d\n",
+                  obs[i].sat,nvsat);
+            continue;
+        }
+        rms_e=sqrt(rms_e/nvsat);//计算伪距残差平方和的标准差rms_e
+        
+        trace(3,"raim_fde: exsat=%2d rms=%8.3f\n",obs[i].sat,rms_e);
+        
+        if (rms_e>rms) continue;//如果伪距残差平方和的标准差rms_e>rms,继续下一次循环 rms是均方根差
+        //如果小于 rms，则说明当前定位结果更合理，将 stat 置为 1，
+        //重新更新 sol、azel、vsat(当前被舍弃的卫星，此值置为0)、resp等值，并将当前的 rms_e更新到 rms 中。
+        /* save result */
+        for (j=k=0;j<n;j++) {
+            if (j==i) continue;
+            matcpy(azel+2*j,azel_e+2*k,2,1);
+            vsat[j]=vsat_e[k];
+            resp[j]=resp_e[k++];
+        }
+        stat=1;
+        *sol=sol_e;
+        sat=obs[i].sat;
+        rms=rms_e;
+        vsat[i]=0;
+        strcpy(msg,msg_e);
+    }
+    // 如果 stat不为 0，则说明在弃用卫星的前提下有更好的解出现，输出信息，指出弃用了哪颗卫星。
+    if (stat) {
+        time2str(obs[0].time,tstr,2); satno2id(sat,name);
+        trace(2,"%s: %s excluded by raim\n",tstr+11,name);
+    }
+    free(obs_e);
+    free(rs_e ); free(dts_e ); free(vare_e); free(azel_e);
+    free(svh_e); free(vsat_e); free(resp_e);
+    return stat;
+}
+</code></pre>
+<h4 id="疑问：-5"><a href="#疑问：-5" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li>如果 nvsat&lt;5，则说明当前卫星数目过少，无法进行 RAIM_FDE 操作，舍弃一个正好是4个方程？</li>
+<li>stat是循环后才判断得是否为1，不应该是在i循环里边判断吗？而且stat没有重置</li>
+</ol>
+<h3 id="5、estvel"><a href="#5、estvel" class="headerlink" title="5、estvel"></a>5、estvel</h3><h4 id="流程图：-5"><a href="#流程图：-5" class="headerlink" title="流程图："></a>流程图：</h4><p><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%20standalone%3D%22no%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%2020010904%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FTR%2F2001%2FREC-SVG-20010904%2FDTD%2Fsvg10.dtd%22%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2271%22%20height%3D%22317%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Csource%3E%3C!%5BCDATA%5BCreated%20with%20Rapha%C3%ABl%202.1.2estvelresdoplsqend%5D%5D%3E%3C%2Fsource%3E%3Cdesc%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3ECreated%20with%20Rapha%C3%ABl%202.1.2%3C%2Fdesc%3E%3Cdefs%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%3E%3Cpath%20id%3D%22raphael-marker-block-obj9%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20stroke-linecap%3D%22round%22%20d%3D%22M%205%200%20L%200%202.5%20L%205%205%20Z%22%3E%3C%2Fpath%3E%3Cmarker%20id%3D%22raphael-marker-endblock33-obj10%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20refX%3D%221.5%22%20refY%3D%221.5%22%20markerWidth%3D%223%22%20markerHeight%3D%223%22%20orient%3D%22auto%22%3E%3Cuse%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22black%22%20stroke%3D%22none%22%20stroke-width%3D%221.6667%22%20transform%3D%22rotate(180%201.5%201.5)%20scale(0.6)%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xlink%3Ahref%3D%22%23raphael-marker-block-obj9%22%3E%3C%2Fuse%3E%3C%2Fmarker%3E%3C%2Fdefs%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22st%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%207.34%2C%204)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2259.18%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22stt%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%207.34%2C%204)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eestvel%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22resdop_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%2095.25)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2265.86%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22resdop_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%204%2C%2095.25)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eresdop%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22lsq_%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2017.345%2C%20186.5)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2239.17%22%20height%3D%2237.25%22%20rx%3D%220%22%20ry%3D%220%22%20r%3D%220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22lsq_t%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2017.345%2C%20186.5)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Elsq%3C%2Ftspan%3E%3C%2Ftext%3E%3Crect%20class%3D%22flowchart%22%20id%3D%22e%22%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2014.42%2C%20277.75)%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2245.02%22%20height%3D%2237.25%22%20rx%3D%2220%22%20ry%3D%2220%22%20r%3D%2220%22%3E%3C%2Frect%3E%3Ctext%20class%3D%22flowchartt%22%20id%3D%22et%22%20font-size%3D%2215px%22%20style%3D%22font%3A%2015px%20%26quot%3BArial%26quot%3B%3B%20font-size-adjust%3A%20none%3B%20font-stretch%3A%20normal%3B%20text-anchor%3A%20start%3B%20-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22%23000000%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20text-anchor%3D%22start%22%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%2014.42%2C%20277.75)%22%20x%3D%2210%22%20y%3D%2218.625%22%20font%3D%2210px%20%26quot%3BArial%26quot%3B%22%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20dy%3D%225.2%22%3Eend%3C%2Ftspan%3E%3Ctspan%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20x%3D%2210%22%20dy%3D%2218%22%3E%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj10%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2036.93%2041.25%20C%2036.93%2041.25%2036.93%2080.9041%2036.93%2092.2504%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj10%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2036.93%20132.5%20C%2036.93%20132.5%2036.93%20172.154%2036.93%20183.5%22%3E%3C%2Fpath%3E%3Cpath%20style%3D%22-webkit-tap-highlight-color%3A%20rgba(0%2C%200%2C%200%2C%200)%3B%22%20fill%3D%22none%22%20marker-end%3D%22url(%26quot%3B%23raphael-marker-endblock33-obj10%26quot%3B)%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20d%3D%22M%2036.93%20223.75%20C%2036.93%20223.75%2036.93%20263.404%2036.93%20274.75%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="img"></p>
+<h4 id="功能：-7"><a href="#功能：-7" class="headerlink" title="功能："></a>功能：</h4><p>依靠多普勒频移测量值计算接收机的速度。</p>
+<h4 id="输入参数：-5"><a href="#输入参数：-5" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">obsd_t *obs        I   OBS观测数据
+int      n         I   观测数据的数量
+double   *rs       I   卫星位置和速度，长度为6*n，{x,y,z,vx,vy,vz}(ecef)(m,m/s)
+double   *dts      I   卫星钟差，长度为2*n， {bias,drift} (s|s/s)
+nav_t    *nav      I   导航数据
+prcopt_t *opt      I   处理过程选项
+sol_t    *sol      IO  solution
+double   *azel     IO  方位角和俯仰角 (rad)
+int      *vsat     IO  卫星在定位时是否有效
+</code></pre>
+<h4 id="输出参数：-5"><a href="#输出参数：-5" class="headerlink" title="输出参数："></a>输出参数：</h4><pre><code>void
+</code></pre>
+<h4 id="执行流程：-6"><a href="#执行流程：-6" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li>定速的初始值直接给定为 0 ，而不像<a href="">定位时初值选上一历元的的位置</a>。</li>
+<li>for循环迭代计算，最大迭代次数（默认10次）<ul>
+<li>调用<code>resdop()</code>，计算定速方程组左边的几何矩阵和右端的速度残余，返回定速时所使用的卫星数目</li>
+<li>调用最小二乘法<code>lsq()</code>函数，解出{速度、频漂}的改正量<code>dx</code>，累加到<code>x</code>中。</li>
+<li>检查当前计算出的改正量的绝对值是否小于 1E-6 ，是：则说明当前解已经很接近真实值了，将接收机三个方向上的速度、协方差存入到 sol-&gt;rr 中 。否：进行下一次循环。</li>
+</ul>
+</li>
+</ul>
+<h4 id="代码：-7"><a href="#代码：-7" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">/* estimate receiver velocity ------------------------------------------------*/
+static void estvel(const obsd_t *obs, int n, const double *rs, const double *dts,
+                   const nav_t *nav, const prcopt_t *opt, sol_t *sol,
+                   const double *azel, const int *vsat)
+{
+    //这里不像定位时，初始值可能为上一历元的位置(从 sol 中读取初始值)，这里定速的初始值直接给定为 0
+    double x[4]={0},dx[4],Q[16],*v,*H;
+    int i,j,nv;
+    
+    trace(3,"estvel  : n=%d\n",n);
+    
+    v=mat(n,1); H=mat(4,n);
+    
+    for (i=0;i<MAXITR;i++) {
+        //调用 resdop，计算定速方程组左边的几何矩阵和右端的速度残余，返回定速时所使用的卫星数目
+        /* doppler residuals */
+        if ((nv=resdop(obs,n,rs,dts,nav,sol->rr,x,azel,vsat,v,H))<4) {
+            break;
+        }
+        //调用最小二乘法 lsq 函数，解出{速度、频漂}的改正量 dx，累加到 x 中。
+        
+        /* least square estimation */
+        if (lsq(H,v,4,nv,dx,Q)) break;
+        
+        for (j=0;j<4;j++) x[j]+=dx[j];
+        //检查当前计算出的改正量的绝对值是否小于 1E-6,
+        //是：则说明当前解已经很接近真实值了，将接收机三个方向上的速度存入到 sol->rr 中
+        //否：进行下一次循环
+        if (norm(dx,4)<1E-6) {
+            for (i=0;i<3;i++) sol->rr[i+3]=x[i];//频漂计算了，但并没有存
+            break;
+        }
+    }
+    free(v); free(H);
+}
+</code></pre>
+<h4 id="疑问：-6"><a href="#疑问：-6" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li>最终向 <code>sol_t</code>类型存储定速解时，并没有存储所计算出的接收器时钟频漂。为什么不储存？</li>
+</ol>
+<h2 id="PPP代码流程框图"><a href="#PPP代码流程框图" class="headerlink" title="PPP代码流程框图"></a>PPP代码流程框图</h2><p>![image-20240827145119600](E:\My Blog\博客文档\Rtklib学习.assets\image-20240827145119600.png)</p>
+<h2 id="PPP"><a href="#PPP" class="headerlink" title="PPP"></a>PPP</h2><h3 id="1、postpos"><a href="#1、postpos" class="headerlink" title="1、postpos"></a>1、postpos</h3><h4 id="流程图：-6"><a href="#流程图：-6" class="headerlink" title="流程图："></a>流程图：</h4><h4 id="功能：-8"><a href="#功能：-8" class="headerlink" title="功能："></a>功能：</h4><p>后处理定位的主入口函数，根据tu分计算时间段，调用调用<code>execses_b()</code>进行下一步解算</p>
+<p>输入文件包括观测文件、导航文件、精密星历文件等，postpos在处理输入文件时有两种方法，一种是输入文件可</p>
+<p>以只包含替换，然后通过函数<code>reppath()</code>处理，将关键词用时间、基准站编号、流动站编号等代替，另一种是直接</p>
+<p>调用输入文件的文件名，postpos主要是来判断是哪一种输入方式，然后调用相应函数。</p>
+<h4 id="输入参数：-6"><a href="#输入参数：-6" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">gtime_t ts       I   处理的起始时间，写0表示不限制
+gtime_t te       I   处理的起始时间，写0表示不限制
+double ti        I   处理的间隔时间 (s)，写0表示不限制，全处理
+double tu        I   处理的单元时间（s)，写0表示全部做一个单元处理
+prcopt_t *popt   I   处理选项结构体
+solopt_t *sopt   I   结果选项结构体
+filopt_t *fopt   I   文件选项结构体
+char   **infile  I   传入文件路径数组首地址
+int    n         I   传入文件数量
+char   *outfile  I   输出文件的路径，写0表示stdout终端
+char   *rov      I   流动站ID列表，空格隔开
+char   *base     I   基准站ID列表，空格隔开
+</code></pre>
+<h4 id="输出参数：-6"><a href="#输出参数：-6" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">return stat;
+处理一切正常会接收execxes_b()的返回值，失败返回0，内存失败返回-1
+execses_b()正常会接收execses_b()的返回值，失败返回0
+execses_r()正常会接收execses()的返回值，失败返回0，aborts返回1
+</code></pre>
+<h4 id="执行流程：-7"><a href="#执行流程：-7" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li><p>变量定义，<code>stat</code>默认为0，<code>flag</code>默认为1。</p>
+</li>
+<li><p>调用<code>openses()</code>，开始解算进程，读取天线、大地水准面文件。</p>
+</li>
+<li><p>判断起始解算时间<code>ts</code>、结束解算时间<code>te</code>、解算时间单元<code>tu</code>，有三种情况：</p>
+<blockquote>
+<ul>
+<li>为何要判断：拆分时间段解算需要tu值有效、调用reppath需要ts有效，调用reppaths需要ts和te有效。</li>
+<li>ifile[]、ofile[]作用：infile[]、outfile[]里的路径替换处理后存到ifile[]、ofile[]，传入<code>execses_b()</code>进行之后的解算。//路径变量复制吗？</li>
+<li>index[]的作用：会传给<code>execses_b()</code>，再传给<code>execses_r()</code>，再传给<code>execses()</code>，再传给<code>readobsnav() </code>。如果不需要根据tu分时间段解算，index存的就是0~n，如果需要分时间段解算，index存的是对应时间段内文件的下标。</li>
+</ul>
+</blockquote>
+<p>①：<strong>若<code>ts</code>、<code>te</code>不为0，<code>tu</code>大于等于0</strong>：</p>
+<ul>
+<li><p>判断<code>te</code>早于<code>ts</code>，return</p>
+</li>
+<li><p>为<code>ifile[]</code>数组空间</p>
+</li>
+<li><p>处理解算时间单元<code>tu</code>，0或者时间大于100天，设为100天</p>
+</li>
+<li><p>循环处理每个时间单元tts到tte：</p>
+<ul>
+<li><p>计算解算时间单元的开始<code>tts</code>、结束<code>tte</code>，判断<code>tts&lt;ts</code>则设为<code>ts</code>，<code>tte&gt;te</code>设为<code>te</code></p>
+<ul>
+<li>流动站、基准站名赋空值</li>
+</ul>
+</li>
+<li><p>遍历infile[]，<code>strrchr</code>找文件后缀名，<code>strcmp</code>判断后缀名 ：</p>
+<ul>
+<li>rtcm3：直接把<code>infile[j]</code>中路径赋值到<code>ifile[]</code>中</li>
+<li>星历文件：精密星历<code>ttte=tte+一小时</code>、广播星历<code>ttte=tte+两小时</code>，根据<code>tts</code>、<code>ttte</code>调用<code>reppaths()</code>将infile[j]中路径展开到<code>ifile[nf]</code>中。</li>
+</ul>
+<p>之后把<code>infile[]</code>的下标<code>j</code>存到<code>index[]</code>中。</p>
+</li>
+<li><p>调用<code>reppath()</code>替换<code>outfile</code>的替换符，存到ofile中。</p>
+</li>
+<li><p>调用<code>execses_b()</code>进行下一步解算。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>②：<strong>若<code>ts</code>不为0，<code>tu</code>为0或小于0</strong> ：就不考虑<code>te</code>、和<code>tu</code></p>
+<ul>
+<li>为<code>ifile[]</code>开辟空间，循环替换<code>infile[i]</code>的替换符到<code>ifile[i]</code>中。</li>
+<li>调用<code>reppath</code>替换outfile的替换符，存到ofile中。</li>
+<li>调用<code>execses_b()</code>进行下一步解算。</li>
+</ul>
+<p>③：<strong>若<code>ts</code>为0</strong>：直接把把<code>infile[]</code>的下标<code>j</code>存到<code>index[]</code>中，调用<code>execses_b</code> 进行下一步解算</p>
+</li>
+<li><p>调用<code>closeses()</code>，释放<code>openses()</code>开辟的内存。</p>
+</li>
+</ul>
+<h4 id="代码：-8"><a href="#代码：-8" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">extern int postpos(gtime_t ts, gtime_t te, double ti, double tu,
+                   const prcopt_t *popt, const solopt_t *sopt,
+                   const filopt_t *fopt, char **infile, int n, char *outfile,
+                   const char *rov, const char *base)
+{
+    gtime_t tts,//解算单元的开始时间
+        tte,//解算单元的结束时间
+        ttte;//读取星历文件的结束时间
+    double tunit,
+        tss;//周内整天个数
+    int i,j,k,
+        nf, //文件路径数组下标控制
+        stat=0,
+        week,//用于存GPST的周
+        flag=1,index[MAXINFILE]={0};
+    char *ifile[MAXINFILE],ofile[1024],*ext;
+    
+    trace(3,"postpos : ti=%.0f tu=%.0f n=%d outfile=%s\n",ti,tu,n,outfile);
+    
+    /* open processing session */    //开始处理,文件读取，赋值navs、pcvs、pcvsr
+    if (!openses(popt,sopt,fopt,&navs,&pcvss,&pcvsr)) return -1;
+    
+    if (ts.time!=0&&te.time!=0&&tu>=0.0) {//判断起始时间ts、te、处理单位时间是否大于0
+        if (timediff(te,ts)<0.0) {//time_t为长整型，存储了1970年1月1日0时0分0秒到历元的秒数。！！gpst起始时间为1月6日0时……
+            showmsg("error : no period");
+            closeses(&navs,&pcvss,&pcvsr);
+            return 0;
+        }
+        for (i=0;i<MAXINFILE;i++) {
+            if (!(ifile[i]=(char *)malloc(1024))) {//分配内存
+                for (;i>=0;i--) free(ifile[i]); //分配失败时，释放内存。tip：这里的if判断想当于把分配内存和判断结合在一起
+                closeses(&navs,&pcvss,&pcvsr);  //不合理则关闭处理，释放navs、pcvs、pcvsr
+                return -1;
+            }
+        }
+        if (tu==0.0||tu>86400.0*MAXPRCDAYS) tu=86400.0*MAXPRCDAYS;//如果tu不合理，tu处理时间段取最大处理时间段100天
+        settspan(ts,te);//settspan没有实现任何功能
+        tunit=tu<86400.0?tu:86400.0;  //如果tu小于1天为tu，否则为一天
+        tss=tunit*(int)floor(time2gpst(ts,&week)/tunit);//tss为周内整天的个数，即周几。week是开始处理历元的gps周
+        
+        //根据解算时间单元，分时间段循环处理，算出来tts>te或过程有错误，结束循环
+        //很多时候解算单元时间直接设0.0，只循环一次，tts=ts，tte=te
+
+        for (i=0;;i++) { /* for each periods */
+            tts=gpst2time(week,tss+i*tu);   //解算单元开始时间，每次循环加上一个i个tu？  week+tss为历元开始时间（不包括秒的浮点数）
+            tte=timeadd(tts,tu-DTTOL);      //为什么有个容忍差异时间  0.005？
+            if (timediff(tts,te)>0.0) break;    //如果tts>te 结束循环
+            if (timediff(tts,ts)<0.0) tts=ts;   //分时间段后tts若早于ts，设为ts
+            if (timediff(tte,te)>0.0) tte=te;    //分时间段后tte若早于te，设为te
+            
+            strcpy(proc_rov ,"");   //流动站、基准站值赋空
+            strcpy(proc_base,"");
+            if (checkbrk("reading    : %s",time_str(tts,0))) {//这里什么意思？显示读取历元
+                stat=1;
+                break;
+            }
+            for (j=k=nf=0;j<n;j++) {
+                
+                ext=strrchr(infile[j],'.'); //索引到.位置，获取文件后缀
+                
+                if (ext&&(!strcmp(ext,".rtcm3")||!strcmp(ext,".RTCM3"))) {  //实时数据流
+                    strcpy(ifile[nf++],infile[j]);
+                }
+                else {  //星历文件，包括精密星历和广播星历
+                    /* include next day precise ephemeris or rinex brdc nav */
+                    ttte=tte;
+                    if (ext&&(!strcmp(ext,".sp3")||!strcmp(ext,".SP3")||
+                              !strcmp(ext,".eph")||!strcmp(ext,".EPH"))) {
+                        ttte=timeadd(ttte,3600.0);  //有精密星历时，历元时间增加一小时
+                    }
+                    else if (strstr(infile[j],"brdc")) {
+                        ttte=timeadd(ttte,7200.0);  //广播星历加两小时
+                    }
+                    nf+=reppaths(infile[j],ifile+nf,MAXINFILE-nf,tts,ttte,"","");
+                }
+                while (k<nf) index[k++]=j;
+                
+                if (nf>=MAXINFILE) {
+                    trace(2,"too many input files. trancated\n");
+                    break;
+                }
+            }
+            if (!reppath(outfile,ofile,tts,"","")&&i>0) flag=0; //统一命名输出文件格式？//flag怎么置0了，表示替换出错了
+            
+            /* execute processing session */    //处理基站，进入定位入口
+            stat=execses_b(tts,tte,ti,popt,sopt,fopt,flag,ifile,index,nf,ofile,
+                           rov,base);
+            
+            if (stat==1) break;
+        }
+        for (i=0;i<MAXINFILE;i++) free(ifile[i]);
+    }
+    else if (ts.time!=0) {//认为te.time 或者tu 小于0
+        for (i=0;i<n&&i<MAXINFILE;i++) {
+            if (!(ifile[i]=(char *)malloc(1024))) {
+                for (;i>=0;i--) free(ifile[i]);
+                return -1;
+            }
+            reppath(infile[i],ifile[i],ts,"","");
+            index[i]=i;
+        }
+        reppath(outfile,ofile,ts,"","");//为什么下边条件不替换ofile的文件了？
+        
+        /* execute processing session */
+        stat=execses_b(ts,te,ti,popt,sopt,fopt,1,ifile,index,n,ofile,rov,
+                       base);
+        
+        for (i=0;i<n&&i<MAXINFILE;i++) free(ifile[i]);
+    }
+    else {//ts.time = 0
+        for (i=0;i<n;i++) index[i]=i;
+        
+        /* execute processing session */
+        stat=execses_b(ts,te,ti,popt,sopt,fopt,1,infile,index,n,outfile,rov,
+                       base);
+    }
+    /* close processing session */
+    closeses(&navs,&pcvss,&pcvsr);
+    
+    return stat;
+}
+</code></pre>
+<h4 id="疑问：-7"><a href="#疑问：-7" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li><p>tte怎么有个容忍差异0.005s？</p>
+</li>
+<li><p>文件命名的规则和输出文件的规则的精细统一处理，index和nf的作用没搞懂……</p>
+</li>
+<li><p>关于ts、te、tu的另外两个判断条件没有搞明白</p>
+</li>
+</ol>
+<h4 id="2-1-openses"><a href="#2-1-openses" class="headerlink" title="2.1 openses"></a>2.1 openses</h4><h5 id="功能：-9"><a href="#功能：-9" class="headerlink" title="功能："></a>功能：</h5><p>开始解算进程，读取天线、大地水准面文件</p>
+<ul>
+<li>readpcv()：读取天线文件，会调用readantex()、readngspcv()</li>
+<li>opengeoid()：读取geoid文件，会调用closegeoid()</li>
+</ul>
+<h5 id="代码：-9"><a href="#代码：-9" class="headerlink" title="代码："></a>代码：</h5><pre class=" language-c++"><code class="language-c++">static int openses(const prcopt_t *popt, const solopt_t *sopt,
+                   const filopt_t *fopt, nav_t *nav, pcvs_t *pcvs, pcvs_t *pcvr)
+{
+    char *ext;
+    
+    trace(3,"openses :\n");
+    
+    /* read satellite antenna parameters */
+    if (*fopt->satantp&&!(readpcv(fopt->satantp,pcvs))) {
+        showmsg("error : no sat ant pcv in %s",fopt->satantp);
+        trace(1,"sat antenna pcv read error: %s\n",fopt->satantp);
+        return 0;
+    }
+    /* read receiver antenna parameters */
+    if (*fopt->rcvantp&&!(readpcv(fopt->rcvantp,pcvr))) {
+        showmsg("error : no rec ant pcv in %s",fopt->rcvantp);
+        trace(1,"rec antenna pcv read error: %s\n",fopt->rcvantp);
+        return 0;
+    }
+    /* read dcb parameters */
+    if (*fopt->dcb) {
+        readdcb(fopt->dcb,nav);
+    }
+    /* read ionosphere data file */
+    if (*fopt->iono&&(ext=strrchr(fopt->iono,'.'))) {
+        if (strlen(ext)==4&&(ext[3]=='i'||ext[3]=='I')) {
+            readtec(fopt->iono,nav,0);
+        }
+#ifdef EXTSTEC  //如果标识符EXTSTEC被定义过，则对下边的程序段进行编译
+        else if (!strcmp(ext,".stec")||!strcmp(ext,".STEC")) {
+            stec_read(fopt->iono,nav);
+        }
+#endif
+    }
+    /* open geoid data */
+    if (sopt->geoid>0&&*fopt->geoid) {
+        if (!opengeoid(sopt->geoid,fopt->geoid)) {
+            showmsg("error : no geoid data %s",fopt->geoid);
+            trace(2,"no geoid data %s\n",fopt->geoid);
+        }
+    }
+    /* read erp data */ //读取eop地球自传参数文件
+    if (*fopt->eop) {
+        if (!readerp(fopt->eop,&nav->erp)) {
+            showmsg("error : no erp data %s",fopt->eop);
+            trace(2,"no erp data %s\n",fopt->eop);
+        }
+    }
+    return 1;
+}
+</code></pre>
+<h4 id="2-2-closeses"><a href="#2-2-closeses" class="headerlink" title="2.2 closeses"></a>2.2 closeses</h4><h5 id="功能：-10"><a href="#功能：-10" class="headerlink" title="功能："></a>功能：</h5><p>结束解算程序，释放天线、geoid、erp、trace、fp_stat 。</p>
+<p>会调用closegeoid() 、rtkclosestat() 、traceclose() </p>
+<h5 id="代码：-10"><a href="#代码：-10" class="headerlink" title="代码："></a>代码：</h5><pre class=" language-c++"><code class="language-c++">static void closeses(nav_t *nav, pcvs_t *pcvs, pcvs_t *pcvr)
+{
+    trace(3,"closeses:\n");
+    
+    /* free antenna parameters */
+    free(pcvs->pcv); pcvs->pcv=NULL; pcvs->n=pcvs->nmax=0;
+    free(pcvr->pcv); pcvr->pcv=NULL; pcvr->n=pcvr->nmax=0;
+    
+    /* close geoid data */
+    closegeoid();
+    
+    /* free erp data */
+    free(nav->erp.data); nav->erp.data=NULL; nav->erp.n=nav->erp.nmax=0;
+    
+    /* close solution statistics and debug trace */
+    rtkclosestat();
+    traceclose();
+}
+</code></pre>
+<h4 id="2-3-reppaths"><a href="#2-3-reppaths" class="headerlink" title="2.3 reppaths"></a>2.3 reppaths</h4><h5 id="功能：-11"><a href="#功能：-11" class="headerlink" title="功能："></a>功能：</h5><p>根据ts、te分时间段，循环调用reppath()，替换path[]中的替换符，存到repath[]中，返回文件数量</p>
+<p>**reppath()**：如果输入文件（file）中，含有替换符，则 reppath函数的目的就是将文件名中的替换符调用repstr() 进行替换，保存到rpath[]中 。替换符如下：</p>
+<blockquote>
+<p>reppaths()需要ts和te、而reppath只用ts(算是只分一个处理时间段吗，只记开始历元)</p>
+</blockquote>
+<pre class=" language-c++"><code class="language-c++">%Y -> yyyy : year (4 digits) (1900-2099)
+%y -> yy   : year (2 digits) (00-99)
+%m -> mm   : month           (01-12)
+%d -> dd   : day of month    (01-31)
+%h -> hh   : hours           (00-23)
+%M -> mm   : minutes         (00-59)
+%S -> ss   : seconds         (00-59)
+%n -> ddd  : day of year     (001-366)
+%W -> wwww : gps week        (0001-9999)
+%D -> d    : day of gps week (0-6)
+%H -> h    : hour code       (a=0,b=1,c=2,...,x=23)
+%ha-> hh   : 3 hours         (00,03,06,...,21)
+%hb-> hh   : 6 hours         (00,06,12,18)
+%hc-> hh   : 12 hours        (00,12)
+%t -> mm   : 15 minutes      (00,15,30,45)
+%r -> rrrr : rover id
+%b -> bbbb : base station id
+</code></pre>
+<h5 id="代码：-11"><a href="#代码：-11" class="headerlink" title="代码："></a>代码：</h5><pre class=" language-c++"><code class="language-c++">extern int reppath(const char *path, char *rpath, gtime_t time, const char *rov,
+                   const char *base)
+{
+    double ep[6],ep0[6]={2000,1,1,0,0,0};
+    int week,dow,doy,stat=0;
+    char rep[64];
+    
+    trace(3,"reppath : path =%s time=%s rov=%s base=%s\n",path,time_str(time,0),
+          rov,base);
+    
+    strcpy(rpath,path);
+    
+    if (!strstr(rpath,"%")) return 0;
+    if (*rov ) stat|=repstr(rpath,"%r",rov );
+    if (*base) stat|=repstr(rpath,"%b",base);
+    if (time.time!=0) {
+        time2epoch(time,ep);
+        ep0[0]=ep[0];
+        dow=(int)floor(time2gpst(time,&week)/86400.0);
+        doy=(int)floor(timediff(time,epoch2time(ep0))/86400.0)+1;
+        sprintf(rep,"%02d",  ((int)ep[3]/3)*3);   stat|=repstr(rpath,"%ha",rep);
+        sprintf(rep,"%02d",  ((int)ep[3]/6)*6);   stat|=repstr(rpath,"%hb",rep);
+        sprintf(rep,"%02d",  ((int)ep[3]/12)*12); stat|=repstr(rpath,"%hc",rep);
+        sprintf(rep,"%04.0f",ep[0]);              stat|=repstr(rpath,"%Y",rep);
+        sprintf(rep,"%02.0f",fmod(ep[0],100.0));  stat|=repstr(rpath,"%y",rep);
+        sprintf(rep,"%02.0f",ep[1]);              stat|=repstr(rpath,"%m",rep);
+        sprintf(rep,"%02.0f",ep[2]);              stat|=repstr(rpath,"%d",rep);
+        sprintf(rep,"%02.0f",ep[3]);              stat|=repstr(rpath,"%h",rep);
+        sprintf(rep,"%02.0f",ep[4]);              stat|=repstr(rpath,"%M",rep);
+        sprintf(rep,"%02.0f",floor(ep[5]));       stat|=repstr(rpath,"%S",rep);
+        sprintf(rep,"%03d",  doy);                stat|=repstr(rpath,"%n",rep);
+        sprintf(rep,"%04d",  week);               stat|=repstr(rpath,"%W",rep);
+        sprintf(rep,"%d",    dow);                stat|=repstr(rpath,"%D",rep);
+        sprintf(rep,"%c",    'a'+(int)ep[3]);     stat|=repstr(rpath,"%H",rep);
+        sprintf(rep,"%02d",  ((int)ep[4]/15)*15); stat|=repstr(rpath,"%t",rep);
+    }
+    else if (strstr(rpath,"%ha")||strstr(rpath,"%hb")||strstr(rpath,"%hc")||
+             strstr(rpath,"%Y" )||strstr(rpath,"%y" )||strstr(rpath,"%m" )||
+             strstr(rpath,"%d" )||strstr(rpath,"%h" )||strstr(rpath,"%M" )||
+             strstr(rpath,"%S" )||strstr(rpath,"%n" )||strstr(rpath,"%W" )||
+             strstr(rpath,"%D" )||strstr(rpath,"%H" )||strstr(rpath,"%t" )) {
+        return -1; /* no valid time */
+    }
+    trace(3,"reppath : rpath=%s\n",rpath);
+    return stat;
+}
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">extern int reppaths(const char *path, char *rpath[], int nmax, gtime_t ts,
+                    gtime_t te, const char *rov, const char *base)
+{
+    gtime_t time;
+    double tow,tint=86400.0;
+    int i,n=0,week;
+    
+    trace(3,"reppaths: path =%s nmax=%d rov=%s base=%s\n",path,nmax,rov,base);
+    
+    if (ts.time==0||te.time==0||timediff(ts,te)>0.0) return 0;
+    
+    if (strstr(path,"%S")||strstr(path,"%M")||strstr(path,"%t")) tint=900.0;//15分钟
+    else if (strstr(path,"%h")||strstr(path,"%H")) tint=3600.0;//一小时
+    
+    tow=time2gpst(ts,&week);
+    time=gpst2time(week,floor(tow/tint)*tint);
+    
+    while (timediff(time,te)<=0.0&&n<nmax) {
+        reppath(path,rpath[n],time,rov,base);    //只用到ts
+        if (n==0||strcmp(rpath[n],rpath[n-1])) n++;
+        time=timeadd(time,tint);
+    }
+    for (i=0;i<n;i++) trace(3,"reppaths: rpath=%s\n",rpath[i]);
+    return n;
+}
+</code></pre>
+<h3 id="2、execses-b、execses-r"><a href="#2、execses-b、execses-r" class="headerlink" title="2、execses_b、execses_r"></a>2、execses_b、execses_r</h3><h4 id="功能：-12"><a href="#功能：-12" class="headerlink" title="功能："></a>功能：</h4><p>execses_b()和execses_r()函数非常类似，execsec_b()会调用调用<code>readpreceph()</code>读取精密星历和SBAS数据，把传</p>
+<p>入<code>infile[]</code>文件中基准站替换符进行替换，之后调用<code>execses_r()</code>。<code>execses_r()</code>把传入<code>infile[]</code>文件中流动站替</p>
+<p>换符进行替换，再调用<code>execses()</code></p>
+<h4 id="输入参数：-7"><a href="#输入参数：-7" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">gtime_t ts              I   处理的起始时间，写0表示不限制
+gtime_t te              I   处理的起始时间，写0表示不限制
+double ti               I   处理的间隔时间 (s)，写0表示不限制，全处理
+const prcopt_t *popt    I   处理选项结构体
+const solopt_t *sopt    I   结果选项结构体
+const filopt_t *fopt    I   文件选项结构体
+int flag                I   用于控制输出
+char **infile           I   传入文件路径数组首地址
+const int *index        I   传入文件路径数组首地址
+int n                   I   传入文件数量
+char *outfile           I   输出文件的路径，写0表示stdout终端
+const char *rov         I   流动站ID列表，空格隔开
+const char *base        I   基准站ID列表，空格隔开
+</code></pre>
+<ul>
+<li>参数flag：<ul>
+<li>传入execses_r()，再传入execses()，用于控制输出，如果值为0,很多不输出；</li>
+<li>在postpos函数中赋值传入，替换输出文件替换符出错的时候设为0，其它情况为1</li>
+</ul>
+</li>
+</ul>
+<h4 id="输出参数：-7"><a href="#输出参数：-7" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">return stat;
+</code></pre>
+<h4 id="执行流程：-8"><a href="#执行流程：-8" class="headerlink" title="执行流程："></a>执行流程：</h4><ol>
+<li>调用<code>readpreceph()</code>读取精密星历和SBAS数据。</li>
+<li>遍历infile[]，寻找基准站替换符%b：<ul>
+<li>找不到基准站ID的替换符，直接调用<code>execses_r()</code>进行下一步解算 。</li>
+<li>找到了infile[i]含有基准站ID的替换符，遍历基准站：<ul>
+<li>将基准站ID赋值给<code>proc_base</code>。</li>
+<li>循环替换<code>infile[i]</code>里的基准站ID的替换符到<code>ifile[i] </code>。</li>
+<li>替换<code>outfile</code>里的基准站ID替换符到ofile。</li>
+<li>调用<code>execses_r()</code>进行下一步解算 。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>调用<code>freepreceph()</code>，释放<code>readpreceph()</code>开辟的空间。</li>
+</ol>
+<h4 id="代码：-12"><a href="#代码：-12" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">static int execses_b(gtime_t ts, gtime_t te, double ti, const prcopt_t *popt,
+                     const solopt_t *sopt, const filopt_t *fopt, int flag,
+                     char **infile, const int *index, int n, char *outfile,
+                     const char *rov, const char *base)
+{
+    gtime_t t0={0};
+    int i,stat=0;
+    char *ifile[MAXINFILE],ofile[1024],*base_,*p,*q,s[64];
+    
+    trace(3,"execses_b: n=%d outfile=%s\n",n,outfile);
+    
+    /* read prec ephemeris and sbas data */
+    readpreceph(infile,n,popt,&navs,&sbss,&lexs);   //读取精密星历和SBAS数据
+    
+    for (i=0;i<n;i++) if (strstr(infile[i],"%b")) break;
+    
+    //%b：基准站ID的替换符
+    if (i<n) { /* include base station keywords */
+        if (!(base_=(char *)malloc(strlen(base)+1))) {
+            freepreceph(&navs,&sbss,&lexs);
+            return 0;
+        }
+        strcpy(base_,base);
+        
+        for (i=0;i<n;i++) {
+            if (!(ifile[i]=(char *)malloc(1024))) {
+                free(base_); for (;i>=0;i--) free(ifile[i]);
+                freepreceph(&navs,&sbss,&lexs);
+                return 0;
+            }
+        }
+        for (p=base_;;p=q+1) { /* for each base station */
+            if ((q=strchr(p,' '))) *q='\0'; //拆出一个基准站  '\0'表示空字符，一个字符串结尾是以'\0'结束的，所以拆分出了一个基站的id
+            //strchr 返回第一次出现字符串‘ ’的位置
+            if (*p) {
+                strcpy(proc_base,p);
+                if (ts.time) time2str(ts,s,0); else *s='\0';
+                if (checkbrk("reading    : %s",s)) {
+                    stat=1;
+                    break;
+                }
+                //循环替换infile[i]里的基准站ID的替换符到ifile[i]
+                for (i=0;i<n;i++) reppath(infile[i],ifile[i],t0,"",p);
+                reppath(outfile,ofile,t0,"",p);
+                
+                stat=execses_r(ts,te,ti,popt,sopt,fopt,flag,ifile,index,n,ofile,rov);
+            }
+            if (stat==1||!q) break;
+        }
+        free(base_); for (i=0;i<n;i++) free(ifile[i]);
+    }
+    else {  //infile[i]都没有有基准站ID的替换符，直接调用execses_r()进行下一步解算
+        stat=execses_r(ts,te,ti,popt,sopt,fopt,flag,infile,index,n,outfile,rov);
+    }
+    /* free prec ephemeris and sbas data */
+    freepreceph(&navs,&sbss,&lexs);
+    
+    return stat;
+}
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">static int execses_r(gtime_t ts, gtime_t te, double ti, const prcopt_t *popt,
+                     const solopt_t *sopt, const filopt_t *fopt, int flag,
+                     char **infile, const int *index, int n, char *outfile,
+                     const char *rov)
+{
+    gtime_t t0={0};
+    int i,stat=0;
+    char *ifile[MAXINFILE],ofile[1024],*rov_,*p,*q,s[64]="";
+    
+    trace(3,"execses_r: n=%d outfile=%s\n",n,outfile);
+    
+    for (i=0;i<n;i++) if (strstr(infile[i],"%r")) break;    //返回第一次出现str‘%r’的位置，表示有流动站替换符
+    
+    if (i<n) { /* include rover keywords */
+        if (!(rov_=(char *)malloc(strlen(rov)+1))) return 0;
+        strcpy(rov_,rov);
+        
+        for (i=0;i<n;i++) {
+            if (!(ifile[i]=(char *)malloc(1024))) {
+                free(rov_); for (;i>=0;i--) free(ifile[i]);
+                return 0;
+            }
+        }
+        for (p=rov_;;p=q+1) { /* for each rover */
+            if ((q=strchr(p,' '))) *q='\0'; //拆分每一个流动站
+            
+            if (*p) {
+                strcpy(proc_rov,p);
+                if (ts.time) time2str(ts,s,0); else *s='\0';
+                if (checkbrk("reading    : %s",s)) {
+                    stat=1;
+                    break;
+                }
+                for (i=0;i<n;i++) reppath(infile[i],ifile[i],t0,p,"");
+                reppath(outfile,ofile,t0,p,"");
+                
+                /* execute processing session */
+                stat=execses(ts,te,ti,popt,sopt,fopt,flag,ifile,index,n,ofile);
+            }
+            if (stat==1||!q) break;
+        }
+        free(rov_); for (i=0;i<n;i++) free(ifile[i]);
+    }
+    else {
+        /* execute processing session */
+        stat=execses(ts,te,ti,popt,sopt,fopt,flag,infile,index,n,outfile);
+    }
+    return stat;
+}
+</code></pre>
+<h4 id="调用函数："><a href="#调用函数：" class="headerlink" title="调用函数："></a>调用函数：</h4><p>**readpreceph()**：</p>
+<p>遍历infile[]，判断，调用readsp3()读取精密星历、调用readrnxc() 读取精密钟差，调用sbsreadmsg()读取</p>
+<p>sbas文件，将RCTM的路径赋值给rtcm_file，调用init_rtcm()初始化rtcm控制结构体。</p>
+<pre class=" language-c++"><code class="language-c++">static void readpreceph(char **infile, int n, const prcopt_t *prcopt,
+                        nav_t *nav, sbs_t *sbs, lex_t *lex)
+{
+    seph_t seph0={0};
+    int i;
+    char *ext;
+    
+    trace(3,"readpreceph: n=%d\n",n);
+    
+    nav->ne=nav->nemax=0;
+    nav->nc=nav->ncmax=0;
+    sbs->n =sbs->nmax =0;
+    lex->n =lex->nmax =0;
+    
+    /* read precise ephemeris files */
+    for (i=0;i<n;i++) {
+        if (strstr(infile[i],"%r")||strstr(infile[i],"%b")) continue;
+        readsp3(infile[i],nav,0);
+    }
+    /* read precise clock files */
+    for (i=0;i<n;i++) {
+        if (strstr(infile[i],"%r")||strstr(infile[i],"%b")) continue;
+        readrnxc(infile[i],nav);
+    }
+    /* read sbas message files */
+    for (i=0;i<n;i++) {
+        if (strstr(infile[i],"%r")||strstr(infile[i],"%b")) continue;
+        sbsreadmsg(infile[i],prcopt->sbassatsel,sbs);
+    }
+    /* read lex message files */
+    for (i=0;i<n;i++) {
+        if (strstr(infile[i],"%r")||strstr(infile[i],"%b")) continue;
+        lexreadmsg(infile[i],0,lex);
+    }
+    /* allocate sbas ephemeris */
+    nav->ns=nav->nsmax=NSATSBS*2;
+    if (!(nav->seph=(seph_t *)malloc(sizeof(seph_t)*nav->ns))) {
+         showmsg("error : sbas ephem memory allocation");
+         trace(1,"error : sbas ephem memory allocation");
+         return;
+    }
+    for (i=0;i<nav->ns;i++) nav->seph[i]=seph0;
+    
+    /* set rtcm file and initialize rtcm struct */
+    //遍历ifile，将后缀为RTCM3的路径赋值到rtcm_file,初始化rtcm控制结构体
+    rtcm_file[0]=rtcm_path[0]='\0'; fp_rtcm=NULL;
+    
+    for (i=0;i<n;i++) {
+        if ((ext=strrchr(infile[i],'.'))&&
+            (!strcmp(ext,".rtcm3")||!strcmp(ext,".RTCM3"))) {
+            strcpy(rtcm_file,infile[i]);
+            init_rtcm(&rtcm);
+            break;
+        }
+    }
+}
+</code></pre>
+<h4 id="疑问：-8"><a href="#疑问：-8" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li><p>替换符就是关键字吗？reppath函数作用就是根据替换符号文件命名替换吗，<a href="">inflie名字替换好后存到ifile？</a></p>
+<p><a href="">outflie名字替换好后存到ofile?</a></p>
+<p>通配符的文件名称替换</p>
+</li>
+</ol>
+<h3 id="3、execses"><a href="#3、execses" class="headerlink" title="3、execses"></a>3、execses</h3><h4 id="功能：-13"><a href="#功能：-13" class="headerlink" title="功能："></a>功能：</h4><p>读取各种文件，并将文件中的内容赋值到程序的结构体内，<a href="">获取基准站的位置</a>，根据滤波方向调用procpos()进行</p>
+<p>下一步解算。.trace文件的生成、文件读取相关trace文件内容的生成，均在execses中 。</p>
+<h4 id="输入参数：-8"><a href="#输入参数：-8" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">gtime_t ts              I   处理的起始时间，写0表示不限制
+gtime_t te              I   处理的起始时间，写0表示不限制
+double ti               I   处理的间隔时间 (s)，写0表示不限制，全处理
+const prcopt_t *popt    I   处理选项结构体
+const solopt_t *sopt    I   结果选项结构体
+const filopt_t *fopt    I   文件选项结构体
+int flag                I   用于控制输出
+char **infile           I   传入文件路径数组首地址
+const int *index        I   传入文件路径数组首地址
+int n                   I   传入文件数量
+char *outfile           I   输出文件的路径，写0表示stdout终端
+const char *rov         I   流动站ID列表，空格隔开
+const char *base        I   基准站ID列表，空格隔开
+</code></pre>
+<h4 id="输出参数：-8"><a href="#输出参数：-8" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">return stat;
+处理一切正常会接收execxes_b()的返回值，失败返回0，内存失败返回-1
+execses_b()正常会接收execses_b()的返回值，失败返回0
+execses_r()正常会接收execses()的返回值，失败返回0，aborts返回1
+</code></pre>
+<h4 id="执行流程：-9"><a href="#执行流程：-9" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li><p>调用<code>traceclose() </code>、<code>traceopen()</code> 、<code>tracelevel()</code>，先关闭原有trace，打开trace文件，并设置trace等级。</p>
+</li>
+<li><p>调用<code>readtec()</code> ，读取电离层TEC文件，TEC:Total electronic content 总电子含量 。</p>
+</li>
+<li><p>调用<code>readerp()</code>，读取地球自转参数ERP文件。</p>
+</li>
+<li><p>调用<code>readobsnav() </code>，读取OBS和NAV文件 。</p>
+</li>
+<li><p>调用<code>readdcb()</code>，读取差分码偏差DCB参数，一种硬件误差 。</p>
+</li>
+<li><p>调用<code>setpcv()</code>，读取天线参数，PCV：天线相位中心变化 。</p>
+</li>
+<li><p>调用<code>readotl()</code>，读取潮汐参数 。</p>
+</li>
+<li><p>FIXED模式，调用<code>antpos()</code>得到流动站坐标 。</p>
+</li>
+<li><p>DGPS、KINEMA、STATIC模式，调用<code>antpos()</code>得到基准站坐标 。  //获取迭代的初值吗？spp或者读文件获取坐标吗？好像也不对</p>
+</li>
+<li><p>调用<code>rtkclosestat() </code>、<code>rtkopenstat()</code>，打开结果统计文件 。openstat只是打开了stat文件，逐历元解算的时候才会将信息填写进去</p>
+</li>
+<li><p>调用<code>outhead()</code>，写输出结果文件的文件头 。结果文件的文件尾在<code>procpos()</code>内调用<code>outsol()</code>输出。</p>
+</li>
+<li><p>判断滤波类型，用不同的方式调用<code>procpos()</code>进行下一步解算：</p>
+<blockquote>
+<p>前向滤波和后向滤波调用procpos函数传参相同，两者区别在于procpos函数内会调用inputobs函数，针对不同的滤波解算类型，inputobs函数内读取文件数据的顺序不同。</p>
+<p>revs：0：forward；1：backward</p>
+<p>iobsu：当前流动站观测数据下标</p>
+<p>iobsr：当前参考站观测数据下标</p>
+<p>isbs：当前sbas数据下标</p>
+</blockquote>
+<ul>
+<li>forward 前向滤波：iobsu=iobsr=isbs=revs 0，直接调用<code>procpos()</code>。</li>
+<li>backward 后向滤波：res=1，iobsu=iobsr=obss.n-1 ，isbs=sbss.n-1 ，再调用<code>procpos()</code>。</li>
+<li>combined ：先算前向滤波的结果，设置revs、iobsu、iobsr、isbs值之后再算后向滤波的结果，最后调用combress()结合。</li>
+</ul>
+</li>
+<li><p>调用<code>freeobsnav()</code>释放obs-&gt;data 、nav-&gt;eph 、nav-&gt;geph 、nav-&gt;seph。</p>
+</li>
+</ul>
+<h4 id="代码：-13"><a href="#代码：-13" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">static int execses(gtime_t ts, gtime_t te, double ti, const prcopt_t *popt,
+                   const solopt_t *sopt, const filopt_t *fopt, int flag,
+                   char **infile, const int *index, int n, char *outfile)
+{
+    FILE *fp;
+    prcopt_t popt_=*popt;
+    char tracefile[1024],statfile[1024];
+    
+    trace(3,"execses : n=%d outfile=%s\n",n,outfile);
+    
+    /* open debug trace */  //打开trace文件，并设置trace等级
+    if (flag&&sopt->trace>0) {
+        if (*outfile) {
+            strcpy(tracefile,outfile);
+            strcat(tracefile,".trace");
+        }
+        else {
+            strcpy(tracefile,fopt->trace);
+        }
+        traceclose();
+        traceopen(tracefile);
+        tracelevel(sopt->trace);
+    }
+    /* read obs and nav data */
+    if (!readobsnav(ts,te,ti,infile,index,n,&popt_,&obss,&navs,stas)) return 0;//二次开发自定义读取观测文件和导航文件
+    
+    /* set antenna paramters */
+    if (popt_.mode!=PMODE_SINGLE) {
+        setpcv(obss.n>0?obss.data[0].time:timeget(),&popt_,&navs,&pcvss,&pcvsr,
+               stas);
+    }
+    /* read ocean tide loading parameters */
+    if (popt_.mode>PMODE_SINGLE&&fopt->blq) {
+        readotl(&popt_,fopt->blq,stas);
+    }
+    /* rover/reference fixed position */
+    if (popt_.mode==PMODE_FIXED) {  //FIXED模式，调用antpos()得到流动站坐标
+        if (!antpos(&popt_,1,&obss,&navs,stas,fopt->stapos)) {
+            freeobsnav(&obss,&navs);
+            return 0;
+        }
+    }
+    else if (PMODE_DGPS<=popt_.mode&&popt_.mode<=PMODE_STATIC) {    //DGPS、KINEMA、STATIC模式，调用antpos()得到基准站坐标，为什么这里是基准站
+        if (!antpos(&popt_,2,&obss,&navs,stas,fopt->stapos)) {
+            freeobsnav(&obss,&navs);
+            return 0;
+        }
+    }
+    /* open solution statistics */  //打开结果统计文件
+    if (flag&&sopt->sstat>0) {
+        strcpy(statfile,outfile);
+        strcat(statfile,".stat");
+        rtkclosestat();
+        rtkopenstat(statfile,sopt->sstat);
+    }
+    /* write header to output file */   //写输出结果文件的文件头
+    if (flag&&!outhead(outfile,infile,n,&popt_,sopt)) {
+        freeobsnav(&obss,&navs);
+        return 0;
+    }
+    iobsu=iobsr=isbs=ilex=revs=aborts=0;
+    
+    if (popt_.mode==PMODE_SINGLE||popt_.soltype==0) {
+        if ((fp=openfile(outfile))) {   
+            procpos(fp,&popt_,sopt,0); /* forward */    //前向滤波
+            fclose(fp);
+        }
+    }
+    else if (popt_.soltype==1) {
+        if ((fp=openfile(outfile))) {
+            revs=1; iobsu=iobsr=obss.n-1; isbs=sbss.n-1; ilex=lexs.n-1;
+            procpos(fp,&popt_,sopt,0); /* backward */   //后向滤波
+            fclose(fp);
+        }
+    }
+    else { /* combined */
+        solf=(sol_t *)malloc(sizeof(sol_t)*nepoch);    //前向结果
+        solb=(sol_t *)malloc(sizeof(sol_t)*nepoch);    //后向结果
+        rbf=(double *)malloc(sizeof(double)*nepoch*3);  //前向基准站坐标
+        rbb=(double *)malloc(sizeof(double)*nepoch*3);  //后向基准站坐标
+        
+        if (solf&&solb) {
+            isolf=isolb=0;
+            procpos(NULL,&popt_,sopt,1); /* forward */  //前向滤波
+            revs=1; iobsu=iobsr=obss.n-1; isbs=sbss.n-1; ilex=lexs.n-1;
+            procpos(NULL,&popt_,sopt,1); /* backward */ //后向滤波
+            
+            //虽然前向滤波和后向滤波调用procpos函数的源代码相同（如下所示），
+            //但是两者最主要的一个区别就是由于procpos函数内会调用inputobs函数，
+            //然而针对不同的滤波解算类型，inputobs函数内读取文件数据的顺序不同
+
+            /* combine forward/backward solutions */
+            if (!aborts&&(fp=openfile(outfile))) {
+                combres(fp,&popt_,sopt);
+                fclose(fp);
+            }
+        }
+        else showmsg("error : memory allocation");
+        free(solf);
+        free(solb);
+        free(rbf);
+        free(rbb);
+    }
+    /* free obs and nav data */
+    freeobsnav(&obss,&navs);
+    
+    return aborts?1:0;
+}
+</code></pre>
+<blockquote>
+<p>（前向滤波：从头读数据，后向滤波从尾读数据(只适用于后处理)，双向滤波：先进行一次前向滤波再进行一次后向滤波，最后再将两组解结合。结合方式是：每个历元两组进行比较，两组解中若存在固定解，则输出固定解，否则使用smoother函数处理）</p>
+</blockquote>
+<h4 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数:"></a>调用函数:</h4><p>**antpos()**：得到坐标，参2<code>rcvno</code>传1得到流动站坐标，传2得到基准站坐标</p>
+<ul>
+<li><p>postype=POSOPT_SINGLE ：调用<code>avepos()</code>利用基准站的观测文件计算其SPP定位结果作为基准站的坐标 。</p>
+</li>
+<li><p>postype=POSOPT_FILE ：调用<code>getstapos()</code>从pos文件读取基准站坐标 。</p>
+</li>
+<li><p>postype=POSOPT_RINEX ：从rinex头文件中获取测站经过相位中心改正的位置数据。头文件中的测站数据</p>
+<p>经过读取后已存到stas中。</p>
+</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">static sta_t stas[MAXRCV];      /* station infomation */
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">typedef struct {        /* station parameter type */
+    char name   [MAXANT]; /* marker name */
+    char marker [MAXANT]; /* marker number */
+    char antdes [MAXANT]; /* antenna descriptor */
+    char antsno [MAXANT]; /* antenna serial number */
+    char rectype[MAXANT]; /* receiver type descriptor */
+    char recver [MAXANT]; /* receiver firmware version */
+    char recsno [MAXANT]; /* receiver serial number */
+    int antsetup;       /* antenna setup id */
+    int itrf;           /* ITRF realization year */
+    int deltype;        /* antenna delta type (0:enu,1:xyz) */
+    double pos[3];      /* station position (ecef) (m) */
+    double del[3];      /* antenna position delta (e/n/u or x/y/z) (m) */
+    double hgt;         /* antenna height (m) */
+    int glo_cp_align;   /* GLONASS code-phase alignment (0:no,1:yes) */
+    double glo_cp_bias[4]; /* GLONASS code-phase biases {1C,1P,2C,2P} (m) */
+} sta_t;
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">/* antenna phase center position ---------------------------------------------*/    //天线中心位置
+static int antpos(prcopt_t *opt, int rcvno, const obs_t *obs, const nav_t *nav,
+                  const sta_t *sta, const char *posfile)
+{
+    double *rr=rcvno==1?opt->ru:opt->rb,del[3],pos[3],dr[3]={0};
+    int i,postype=rcvno==1?opt->rovpos:opt->refpos;
+    char *name;
+    
+    trace(3,"antpos  : rcvno=%d\n",rcvno);
+    
+    if (postype==1) { /* average of single position */
+        if (!avepos(rr,rcvno,obs,nav,opt)) {    //SPP计算作为基准站坐标
+            showmsg("error : station pos computation");
+            return 0;
+        }
+    }
+    else if (postype==2) { /* read from position file */
+        name=stas[rcvno==1?0:1].name;
+        if (!getstapos(posfile,name,rr)) {
+            showmsg("error : no position of %s in %s",name,posfile);
+            return 0;
+        }
+    }
+    else if (postype==3) { /* get from rinex header */  //rinex头文件中获取
+        if (norm(stas[rcvno==1?0:1].pos,3)<=0.0) {
+            showmsg("error : no position in rinex header");
+            trace(1,"no position position in rinex header\n");
+            return 0;
+        }
+        /* antenna delta */ //天线相位中心改正
+        if (stas[rcvno==1?0:1].deltype==0) { /* enu */
+            for (i=0;i<3;i++) del[i]=stas[rcvno==1?0:1].del[i];
+            del[2]+=stas[rcvno==1?0:1].hgt;
+            ecef2pos(stas[rcvno==1?0:1].pos,pos);
+            enu2ecef(pos,del,dr);
+        }
+        else { /* xyz */
+            for (i=0;i<3;i++) dr[i]=stas[rcvno==1?0:1].del[i];
+        }
+        for (i=0;i<3;i++) rr[i]=stas[rcvno==1?0:1].pos[i]+dr[i];
+    }
+    return 1;
+}
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">/* open procssing session ----------------------------------------------------*/
+static int openses(const prcopt_t *popt, const solopt_t *sopt,
+                   const filopt_t *fopt, nav_t *nav, pcvs_t *pcvs, pcvs_t *pcvr)
+{
+    char *ext;
+    
+    trace(3,"openses :\n");
+    
+    /* read satellite antenna parameters */
+    if (*fopt->satantp&&!(readpcv(fopt->satantp,pcvs))) {
+        showmsg("error : no sat ant pcv in %s",fopt->satantp);
+        trace(1,"sat antenna pcv read error: %s\n",fopt->satantp);
+        return 0;
+    }
+    /* read receiver antenna parameters */
+    if (*fopt->rcvantp&&!(readpcv(fopt->rcvantp,pcvr))) {
+        showmsg("error : no rec ant pcv in %s",fopt->rcvantp);
+        trace(1,"rec antenna pcv read error: %s\n",fopt->rcvantp);
+        return 0;
+    }
+    /* read dcb parameters */
+    if (*fopt->dcb) {
+        readdcb(fopt->dcb,nav);
+    }
+    /* read ionosphere data file */
+    if (*fopt->iono&&(ext=strrchr(fopt->iono,'.'))) {
+        if (strlen(ext)==4&&(ext[3]=='i'||ext[3]=='I')) {
+            readtec(fopt->iono,nav,0);
+        }
+#ifdef EXTSTEC  //如果标识符EXTSTEC被定义过，则对下边的程序段进行编译
+        else if (!strcmp(ext,".stec")||!strcmp(ext,".STEC")) {
+            stec_read(fopt->iono,nav);
+        }
+#endif
+    }
+    /* open geoid data */
+    if (sopt->geoid>0&&*fopt->geoid) {
+        if (!opengeoid(sopt->geoid,fopt->geoid)) {
+            showmsg("error : no geoid data %s",fopt->geoid);
+            trace(2,"no geoid data %s\n",fopt->geoid);
+        }
+    }
+    /* read erp data */ //读取eop地球自传参数文件
+    if (*fopt->eop) {
+        if (!readerp(fopt->eop,&nav->erp)) {
+            showmsg("error : no erp data %s",fopt->eop);
+            trace(2,"no erp data %s\n",fopt->eop);
+        }
+    }
+    return 1;
+}
+</code></pre>
+<p>**avepos()**：通过nav和多个obs单点定位计算位置，存到ra[]中</p>
+<pre class=" language-c++"><code class="language-c++">/* average of single position ------------------------------------------------*/
+static int avepos(double *ra, int rcv, const obs_t *obs, const nav_t *nav,
+                  const prcopt_t *opt)
+{
+    obsd_t data[MAXOBS];
+    gtime_t ts={0};
+    sol_t sol={{0}};
+    int i,j,n=0,m,iobs;
+    char msg[128];
+    
+    trace(3,"avepos: rcv=%d obs.n=%d\n",rcv,obs->n);
+    
+    for (i=0;i<3;i++) ra[i]=0.0;
+    
+    for (iobs=0;(m=nextobsf(obs,&iobs,rcv))>0;iobs+=m) {
+        
+        for (i=j=0;i<m&&i<MAXOBS;i++) {
+            data[j]=obs->data[iobs+i];
+            if ((satsys(data[j].sat,NULL)&opt->navsys)&&
+                opt->exsats[data[j].sat-1]!=1) j++;
+        }
+        if (j<=0||!screent(data[0].time,ts,ts,1.0)) continue; /* only 1 hz */
+        //ti是处理的间隔时间，T = 1s  所以采样频率f = 1hz
+        
+
+        //单点定位结果，先存到sol，再传给ra
+        if (!pntpos(data,j,nav,opt,&sol,NULL,NULL,msg)) continue;
+        
+        for (i=0;i<3;i++) ra[i]+=sol.rr[i];
+        n++;
+    }
+    if (n<=0) {
+        trace(1,"no average of base station position\n");
+        return 0;
+    }
+    for (i=0;i<3;i++) ra[i]/=n; //平均中心位置
+    return 1;
+}
+</code></pre>
+<p>**getstapos()**：从pos文件读取基准站坐标</p>
+<pre class=" language-c++"><code class="language-c++">/* station position from file ------------------------------------------------*/
+static int getstapos(const char *file, char *name, double *r)
+{
+    FILE *fp;
+    char buff[256],sname[256],*p,*q;
+    double pos[3];
+    
+    trace(3,"getstapos: file=%s name=%s\n",file,name);
+    
+    if (!(fp=fopen(file,"r"))) {    //以读的方式打开
+        trace(1,"station position file open error: %s\n",file);
+        return 0;
+    }
+    while (fgets(buff,sizeof(buff),fp)) {
+        if ((p=strchr(buff,'%'))) *p='\0';  //找到%，后边截断
+        
+        if (sscanf(buff,"%lf %lf %lf %s",pos,pos+1,pos+2,sname)<4) continue;    //sscanf 返回匹配的个数
+        
+        for (p=sname,q=name;*p&&*q;p++,q++) {
+            if (toupper((int)*p)!=toupper((int)*q)) break;  //逐字符大写比较测站名字
+        }
+        if (!*p) {  //如果内存不够，转为另一个坐标系？
+            pos[0]*=D2R;
+            pos[1]*=D2R;    //pos[2]呢？
+            pos2ecef(pos,r);
+            fclose(fp);
+            return 1;
+        }
+    }
+    fclose(fp);
+    trace(1,"no station position: %s %s\n",name,file);
+    return 0;
+}
+</code></pre>
+<p>**outhead()**：创建输出结果文件，写入文件头</p>
+<pre class=" language-c++"><code class="language-c++">/* write header to output file -----------------------------------------------*/
+static int outhead(const char *outfile, char **infile, int n,
+                   const prcopt_t *popt, const solopt_t *sopt)
+{
+    FILE *fp=stdout;    //fp默认为stdout
+    
+    trace(3,"outhead: outfile=%s n=%d\n",outfile,n);
+    
+    if (*outfile) {
+        createdir(outfile); //递归创建文件夹
+        
+        if (!(fp=fopen(outfile,"w"))) {
+            showmsg("error : open output file %s",outfile);
+            return 0;
+        }
+    }
+    /* output header */
+    outheader(fp,infile,n,popt,sopt);
+    
+    if (*outfile) fclose(fp);
+    
+    return 1;
+}
+</code></pre>
+<p>**openfile()**：以追加(ab?)的方式打开结果文件，返回文件描述符</p>
+<pre class=" language-c++"><code class="language-c++">static FILE *openfile(const char *outfile)
+{
+    trace(3,"openfile: outfile=%s\n",outfile);
+    
+    return !*outfile?stdout:fopen(outfile,"a");
+}
+</code></pre>
+<p>**combres()**：调用smoother()结合前后向滤波的结果</p>
+<p>$Q_s=(Q_f^{-1}+Q_b^{-1})^{-1} $ $ X_s=Q_s*(Q_f^{-1}*X_f+Qb^{-1}*X_b) $</p>
+<p>执行流程：</p>
+<ul>
+<li><p>判断静态模式，处理选项和结果选项都得为静态</p>
+</li>
+<li><p>开始大循环，i:从前到后，取前向滤波的结果 ，j:从后到前，取后向滤波的结果 ，判断前后向滤波结果的时间差 tt</p>
+</li>
+<li><p>时间差大于DTTOL ，sols、rbs取时间早的结果，另一个结果的下标不变，进行下一次循环的判断</p>
+</li>
+<li><p>时间差很小，solution status不同，sols、rbs取solution status小的结果</p>
+</li>
+<li><p>时间差很小，solution status相同，进行结合</p>
+<ul>
+<li>sols取前向滤波结果 ，时间取前后向时间的平均</li>
+<li>相对定位模式，若结果为固定解，调用valcomb()检验，如果失败将fix降级为float</li>
+<li>赋值前后向协方差给Qf、Qb ，调用smoother()进行前后向滤波结果结合，位置存在sols.rr[]，方差存在sols.qr[]</li>
+<li>同样的方式，对速度进行结合，位置存在sols.rr[]，方差存在sols.qv[]     <a href="">？？？？</a></li>
+</ul>
+</li>
+<li><p>结果状态的#define：</p>
+</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">#define SOLQ_NONE   0                   /* solution status: no solution */
+#define SOLQ_FIX    1                   /* solution status: fix */
+#define SOLQ_FLOAT  2                   /* solution status: float */
+#define SOLQ_SBAS   3                   /* solution status: SBAS */
+#define SOLQ_DGPS   4                   /* solution status: DGPS/DGNSS */
+#define SOLQ_SINGLE 5                   /* solution status: single */
+#define SOLQ_PPP    6                   /* solution status: PPP */
+#define SOLQ_DR     7                   /* solution status: dead reconing */
+#define MAXSOLQ     7                   /* max number of solution status */
+</code></pre>
+<ul>
+<li>sol_t结构体：</li>
+</ul>
+<blockquote>
+<p>因为协方差矩阵是对称的，qr、qv都只用6个元素就可存协方差矩阵，但计算的时候得转成3*3矩阵才行。</p>
+</blockquote>
+<pre class=" language-c++"><code class="language-c++">typedef struct {        /* solution type */
+    gtime_t time;       /* time (GPST) */
+    double rr[6];       /* position/velocity (m|m/s) */
+                        /* {x,y,z,vx,vy,vz} or {e,n,u,ve,vn,vu} */
+    float  qr[6];       /* position variance/covariance (m^2) */
+                        /* {c_xx,c_yy,c_zz,c_xy,c_yz,c_zx} or */
+                        /* {c_ee,c_nn,c_uu,c_en,c_nu,c_ue} */
+    float  qv[6];       /* velocity variance/covariance (m^2/s^2) */
+    double dtr[6];      /* receiver clock bias to time systems (s) */
+    uint8_t type;       /* type (0:xyz-ecef,1:enu-baseline) */
+    uint8_t stat;       /* solution status (SOLQ_???) */
+    uint8_t ns;         /* number of valid satellites */
+    float age;          /* age of differential (s) */
+    float ratio;        /* AR ratio factor for valiation */
+    float thres;        /* AR ratio threshold for valiation */
+} sol_t;
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">/* combine forward/backward solutions and output results ---------------------*/
+static void combres(FILE *fp, const prcopt_t *popt, const solopt_t *sopt)
+{
+    gtime_t time={0};
+    sol_t sols={{0}},sol={{0}};
+    double tt,Qf[9],Qb[9],Qs[9],rbs[3]={0},rb[3]={0},rr_f[3],rr_b[3],rr_s[3];
+    int i,j,k,solstatic,pri[]={0,1,2,3,4,5,1,6};
+    
+    trace(3,"combres : isolf=%d isolb=%d\n",isolf,isolb);
+    
+    //判断静态模式，处理选项和结果选项都得为静态
+    solstatic=sopt->solstatic&&
+              (popt->mode==PMODE_STATIC||popt->mode==PMODE_PPP_STATIC);
+    
+    //i:从前到后，取前向滤波的结果
+    //j:从后到前，取后向滤波的结果
+
+    for (i=0,j=isolb-1;i<isolf&&j>=0;i++,j--) {
+        
+        //判断前后向滤波结果的时间差，时间差界限是DTTOL，
+        //sols、rbs取时间早的结果，另一个结果的下标不变，进行下一次循环的判断
+
+        if ((tt=timediff(solf[i].time,solb[j].time))<-DTTOL) {  //如果前向时间迟于后向时间
+            sols=solf[i];
+            for (k=0;k<3;k++) rbs[k]=rbf[k+i*3];    //前向基站坐标赋值给rbs[]
+            j++;    //后向时间不变，继续下一次循环
+        }
+        else if (tt>DTTOL) {    //如果前向时间早于后向时间
+            sols=solb[j];
+            for (k=0;k<3;k++) rbs[k]=rbb[k+j*3];    //把后向基站坐标赋值给rbs[]
+            i--;    //i不变
+        }
+        //时间差正好是DTTOL，取小的结果
+        else if (solf[i].stat<solb[j].stat) {
+            sols=solf[i];
+            for (k=0;k<3;k++) rbs[k]=rbf[k+i*3];
+        }
+        else if (solf[i].stat>solb[j].stat) {
+            sols=solb[j];
+            for (k=0;k<3;k++) rbs[k]=rbb[k+j*3];
+        }
+        else {  //前向后向结果相同的情况
+            sols=solf[i];   //sols取前向
+            sols.time=timeadd(sols.time,-tt/2.0);   //时间取平均
+            
+            if ((popt->mode==PMODE_KINEMA||popt->mode==PMODE_MOVEB)&&
+                sols.stat==SOLQ_FIX) {
+                
+                /* degrade fix to float if validation failed */
+                if (!valcomb(solf+i,solb+j)) sols.stat=SOLQ_FLOAT;  //如果检验失败，结果降为浮点解
+            }
+            for (k=0;k<3;k++) {    //赋值前后向协方差给Qf、Qb
+                Qf[k+k*3]=solf[i].qr[k];    //对角线元素
+                Qb[k+k*3]=solb[j].qr[k];
+            }
+            Qf[1]=Qf[3]=solf[i].qr[3];  //非对角线元素
+            Qf[5]=Qf[7]=solf[i].qr[4];
+            Qf[2]=Qf[6]=solf[i].qr[5];
+            Qb[1]=Qb[3]=solb[j].qr[3];
+            Qb[5]=Qb[7]=solb[j].qr[4];
+            Qb[2]=Qb[6]=solb[j].qr[5];
+            
+
+            //调用smoother()进行前后向滤波结果结合，位置存在sols.rr[]，方差存在sols.qr[]
+            if (popt->mode==PMODE_MOVEB) {
+                for (k=0;k<3;k++) rr_f[k]=solf[i].rr[k]-rbf[k+i*3]; // 流动站坐标 - 基准站坐标得到基线
+                for (k=0;k<3;k++) rr_b[k]=solb[j].rr[k]-rbb[k+j*3];
+                if (smoother(rr_f,Qf,rr_b,Qb,3,rr_s,Qs)) continue;
+                for (k=0;k<3;k++) sols.rr[k]=rbs[k]+rr_s[k];
+            }
+            else {
+                if (smoother(solf[i].rr,Qf,solb[j].rr,Qb,3,sols.rr,Qs)) continue;
+            }
+            sols.qr[0]=(float)Qs[0];
+            sols.qr[1]=(float)Qs[4];
+            sols.qr[2]=(float)Qs[8];
+            sols.qr[3]=(float)Qs[1];
+            sols.qr[4]=(float)Qs[5];
+            sols.qr[5]=(float)Qs[2];
+        }
+        if (!solstatic) {
+            outsol(fp,&sols,rbs,sopt);
+        }
+        else if (time.time==0||pri[sols.stat]<=pri[sol.stat]) {
+            sol=sols;
+            for (k=0;k<3;k++) rb[k]=rbs[k];
+            if (time.time==0||timediff(sols.time,time)<0.0) {
+                time=sols.time;
+            }
+        }
+    }
+    //循环处理完之后，如果是静态模式且时间存在，调用outsol()输出结果
+    if (solstatic&&time.time!=0.0) {
+        sol.time=time;
+        outsol(fp,&sol,rb,sopt);
+    }
+}
+</code></pre>
+<p>**valcomb()**：判断combine结果的有效性，ok if in 4-sigma</p>
+<pre class=" language-c++"><code class="language-c++">static int valcomb(const sol_t *solf, const sol_t *solb)
+{
+    double dr[3],var[3];
+    int i;
+    char tstr[32];
+    
+    trace(3,"valcomb :\n");
+    
+    /* compare forward and backward solution */
+    for (i=0;i<3;i++) {
+        dr[i]=solf->rr[i]-solb->rr[i];  //坐标值差dr为两坐标相减
+        var[i]=solf->qr[i]+solb->qr[i]; //方差var为两相加
+    }
+    for (i=0;i<3;i++) { //dr在限差4倍标准差之内，就合格return 1，否则return 0
+        if (dr[i]*dr[i]<=16.0*var[i]) continue; /* ok if in 4-sigma */
+        
+        time2str(solf->time,tstr,2);
+        trace(2,"degrade fix to float: %s dr=%.3f %.3f %.3f std=%.3f %.3f %.3f\n",
+              tstr+11,dr[0],dr[1],dr[2],SQRT(var[0]),SQRT(var[1]),SQRT(var[2]));
+        return 0;
+    }
+    return 1;
+}
+</code></pre>
+<h4 id="疑问：-9"><a href="#疑问：-9" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li></li>
+</ol>
+<h3 id="4、procpos"><a href="#4、procpos" class="headerlink" title="4、procpos"></a>4、procpos</h3><h4 id="功能：-14"><a href="#功能：-14" class="headerlink" title="功能："></a>功能：</h4><p>从这个函数开始正式整个流动站和基准站逐历元处理。每次循环都通过inputobs函数读取一个历元的数据，并调</p>
+<p>用rtkpos函数对该历元的数据进行解算。 </p>
+<h4 id="输入参数：-9"><a href="#输入参数：-9" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">FILE *fp                  I/O 输出结果文件指针  
+const prcopt_t *popt    I   处理选项结构体
+const solopt_t *sopt    I   结果选项结构体
+const filopt_t *fopt    I   文件选项结构体
+int mode               I   0：forward/backward、1：combined
+</code></pre>
+<h4 id="输出参数：-9"><a href="#输出参数：-9" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">空返回  return none 
+</code></pre>
+<h4 id="执行流程：-10"><a href="#执行流程：-10" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li>判断结果是否为静态,处理选项和结果选项都为静态才算静态</li>
+<li>调用<code>rtkinit()</code> 初始化<code>rtk_t </code>，将popt结构体赋值给rtk的部分成员</li>
+<li>while大循环，调用<code>inputobs()</code>，每次取一个历元的观测数据<code>obs[]</code></li>
+<li>排除禁用卫星的观测值</li>
+<li>PPP中如果需要，调用<code>corr_phase_bias_ssr()</code>相位的小数轴偏差改正</li>
+<li>调用<code>rtkpos()</code>对当前历元进行解算</li>
+<li>根据模式，输出结果，记录当前历元时间</li>
+</ul>
+<h4 id="代码：-14"><a href="#代码：-14" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">/* process positioning -------------------------------------------------------*/
+static void procpos(FILE *fp, const prcopt_t *popt, const solopt_t *sopt,
+                    int mode)
+{
+    gtime_t time={0};
+    sol_t sol={{0}};
+    rtk_t rtk;
+    obsd_t obs[MAXOBS*2]; /* for rover and base */
+    double rb[3]={0};
+    int i,nobs,n,solstatic,pri[]={0,1,2,3,4,5,1,6};
+    
+    trace(3,"procpos : mode=%d\n",mode);
+    
+    solstatic=sopt->solstatic&& //先判断结果是否为静态,处理选项和结果选项都为静态才算静态
+              (popt->mode==PMODE_STATIC||popt->mode==PMODE_PPP_STATIC);
+    
+    rtkinit(&rtk,popt); //初始化rtk_t，主要将popt结构体赋值给rtk的部分成员
+    rtcm_path[0]='\0';
+    
+
+    //对每一个历元进行遍历求解和输出
+    //获取当前历元观测值数nobs以及当前历元各观测记录obs[MAXOBS*2]，流动站和基站？
+
+    while ((nobs=inputobs(obs,rtk.sol.stat,popt))>=0) {
+        
+        /* exclude satellites */  //剔除无用数据，比如要用北斗数据，把北斗数据放在数组前10即可。
+        for (i=n=0;i<nobs;i++) {    //satsys:传入satellite number，返回卫星系统(SYS_GPS,SYS_GLO,...) ，通过传入的指针prn传出PRN码。
+            if ((satsys(obs[i].sat,NULL)&popt->navsys)&&
+                popt->exsats[obs[i].sat-1]!=1) obs[n++]=obs[i]; //排除禁用卫星的观测值
+        }
+        if (n<=0) continue;
+        
+        //调用rtkpos()进行解算
+        if (!rtkpos(&rtk,obs,n,&navs)) continue;
+        
+
+        //单forward/backward模式
+        if (mode==0) { /* forward/backward */
+            if (!solstatic) {
+                outsol(fp,&rtk.sol,rtk.rb,sopt);    //不是静态模式就直接输出结果
+            }
+            else if (time.time==0||pri[rtk.sol.stat]<=pri[sol.stat]) {
+                sol=rtk.sol;
+                for (i=0;i<3;i++) rb[i]=rtk.rb[i];
+                if (time.time==0||timediff(rtk.sol.time,time)<0.0) {
+                    time=rtk.sol.time;  //记录上一历元的时间
+                }
+            }
+        }
+        else if (!revs) { /* combined-forward */
+            if (isolf>=nepoch) return;
+            solf[isolf]=rtk.sol;
+            for (i=0;i<3;i++) rbf[i+isolf*3]=rtk.rb[i];
+            isolf++;
+        }
+        else { /* combined-backward */
+            if (isolb>=nepoch) return;
+            solb[isolb]=rtk.sol;
+            for (i=0;i<3;i++) rbb[i+isolb*3]=rtk.rb[i];
+            isolb++;
+        }
+    }
+    if (mode==0&&solstatic&&time.time!=0.0) {
+        sol.time=time;
+        outsol(fp,&sol,rb,sopt);
+    }
+    rtkfree(&rtk);
+}
+</code></pre>
+<h4 id="调用函数：-1"><a href="#调用函数：-1" class="headerlink" title="调用函数："></a>调用函数：</h4><p>**inputobs()**：取一个历元基准站、流动站的观测数据到OBS数组中；如果需要，调用sbsupdatecorr()、update_rtcm_ssr()进行改正。</p>
+<p> <strong>涉及的全局变量：</strong></p>
+<ul>
+<li><p>iobsu ：流动站当前历元索引 - iobsr ：基准站当前历元索引</p>
+</li>
+<li><p>isbs ：SBAS信息索引</p>
+</li>
+<li><p>revs ：0:forward 1:backward</p>
+</li>
+<li><p>**nextobsf()**：在obs中正向指定接收机查找下一个历元观测数据的下标 ，下标从 i 开始，连续 n 个，之间卫星不同。</p>
+</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">/* search next observation data index ----------------------------------------*/
+static int nextobsf(const obs_t *obs, int *i, int rcv)
+{
+    double tt;
+    int n;
+    //obs->data的元素已经用sortobs(),根据time, rcv, sat 排序、去重了
+    //一直正向i++，直到obsd的rcv与传入接收机ID相等，找到传入接收机
+    for (;*i<obs->n;(*i)++) if (obs->data[*i].rcv==rcv) break;
+    for (n=0;*i+n<obs->n;n++) { 
+        //在i的基础上加n++，直到流动站变了或时间差大于DTTOL
+        tt=timediff(obs->data[*i+n].time,obs->data[*i].time);   //求i+n位数据与i数据的时间差tt
+        if (obs->data[*i+n].rcv!=rcv||tt>DTTOL) break;  //时间不同或rcv不同，则结束循环
+    }
+    return n;    //返回在i基础上加的n,n应该是同一接收机同一时间的OBS数，卫星不同,即n为卫星数
+}
+</code></pre>
+<ul>
+<li>**nextobsb()**：在obs反向查找指定接收机下一个历元观测数据的下标</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">static int nextobsb(const obs_t *obs, int *i, int rcv)
+{
+    double tt;
+    int n;
+    //一直反向--i，直到obsd的rcv与传入rcv流动站ID相等，找到传入的流动站
+    for (;*i>=0;(*i)--) if (obs->data[*i].rcv==rcv) break;
+    for (n=0;*i-n>=0;n++) 
+    {
+        //在i的基础上减n++，直到流动站变了或时间差小于DTTOL
+        tt=timediff(obs->data[*i-n].time,obs->data[*i].time);
+        if (obs->data[*i-n].rcv!=rcv||tt<-DTTOL) break;
+    }
+    return n;
+}
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">static int inputobs(obsd_t *obs, int solq, const prcopt_t *popt)
+{
+    //循环读取一个历元的数据
+    gtime_t time={0};
+    char path[1024];
+    int i,nu,nr,//nu、nr存同一流动站基准站相同历元的观测值个数，应该是卫星不同
+        n=0;    //obs数组下标
+    
+    //iobsu ：流动站当前历元索引
+    //iobsr ：基准站当前历元索引
+    //isbs  ：SBAS信息索引
+    //revs  ：0:forward 1:backward
+
+
+
+    trace(3,"infunc  : revs=%d iobsu=%d iobsr=%d isbs=%d\n",revs,iobsu,iobsr,isbs);
+    
+    if (0<=iobsu&&iobsu<obss.n) {
+        settime((time=obss.data[iobsu].time));  //time赋值为当前流动站的时间
+        if (checkbrk("processing : %s Q=%d",time_str(time,0),solq)) {
+            aborts=1; showmsg("aborted"); return -1;
+        }
+    }
+    if (!revs) { /* input forward data */   //前向滤波
+        if ((nu=nextobsf(&obss,&iobsu,1))<=0) return -1;
+        if (popt->intpref) {
+            for (;(nr=nextobsf(&obss,&iobsr,2))>0;iobsr+=nr)
+                if (timediff(obss.data[iobsr].time,obss.data[iobsu].time)>-DTTOL) break;
+        }
+        else {
+            for (i=iobsr;(nr=nextobsf(&obss,&i,2))>0;iobsr=i,i+=nr)
+                if (timediff(obss.data[i].time,obss.data[iobsu].time)>DTTOL) break;
+        }
+        nr=nextobsf(&obss,&iobsr,2);
+        for (i=0;i<nu&&n<MAXOBS*2;i++) obs[n++]=obss.data[iobsu+i];
+        for (i=0;i<nr&&n<MAXOBS*2;i++) obs[n++]=obss.data[iobsr+i];
+        iobsu+=nu;
+        
+        /* update sbas corrections */
+        while (isbs<sbss.n) {
+            time=gpst2time(sbss.msgs[isbs].week,sbss.msgs[isbs].tow);
+            
+            if (getbitu(sbss.msgs[isbs].msg,8,6)!=9) { /* except for geo nav */
+                sbsupdatecorr(sbss.msgs+isbs,&navs);
+            }
+            if (timediff(time,obs[0].time)>-1.0-DTTOL) break;
+            isbs++;
+        }
+        /* update lex corrections */
+        while (ilex<lexs.n) {
+            if (lexupdatecorr(lexs.msgs+ilex,&navs,&time)) {
+                if (timediff(time,obs[0].time)>-1.0-DTTOL) break;
+            }
+            ilex++;
+        }
+        /* update rtcm corrections */
+        if (*rtcm_file) {
+            
+            /* open or swap rtcm file */
+            reppath(rtcm_file,path,obs[0].time,"","");
+            
+            if (strcmp(path,rtcm_path)) {
+                strcpy(rtcm_path,path);
+                
+                if (fp_rtcm) fclose(fp_rtcm);
+                fp_rtcm=fopen(path,"rb");
+                if (fp_rtcm) {
+                    rtcm.time=obs[0].time;
+                    input_rtcm3f(&rtcm,fp_rtcm);
+                    trace(2,"rtcm file open: %s\n",path);
+                }
+            }
+            if (fp_rtcm) {
+                input_ssr(obs[0].time, &rtcm, &navs, fp_rtcm);
+            }
+        }
+    }
+    else { /* input backward data */
+        if ((nu=nextobsb(&obss,&iobsu,1))<=0) return -1;
+        if (popt->intpref) {
+            for (;(nr=nextobsb(&obss,&iobsr,2))>0;iobsr-=nr)
+                if (timediff(obss.data[iobsr].time,obss.data[iobsu].time)<DTTOL) break;
+        }
+        else {
+            for (i=iobsr;(nr=nextobsb(&obss,&i,2))>0;iobsr=i,i-=nr)
+                if (timediff(obss.data[i].time,obss.data[iobsu].time)<-DTTOL) break;
+        }
+        nr=nextobsb(&obss,&iobsr,2);
+        for (i=0;i<nu&&n<MAXOBS*2;i++) obs[n++]=obss.data[iobsu-nu+1+i];
+        for (i=0;i<nr&&n<MAXOBS*2;i++) obs[n++]=obss.data[iobsr-nr+1+i];
+        iobsu-=nu;
+        
+        /* update sbas corrections */
+        while (isbs>=0) {
+            time=gpst2time(sbss.msgs[isbs].week,sbss.msgs[isbs].tow);
+            
+            if (getbitu(sbss.msgs[isbs].msg,8,6)!=9) { /* except for geo nav */
+                sbsupdatecorr(sbss.msgs+isbs,&navs);
+            }
+            if (timediff(time,obs[0].time)<1.0+DTTOL) break;
+            isbs--;
+        }
+        /* update lex corrections */
+        while (ilex>=0) {
+            if (lexupdatecorr(lexs.msgs+ilex,&navs,&time)) {
+                if (timediff(time,obs[0].time)<1.0+DTTOL) break;
+            }
+            ilex--;
+        }
+    }
+    return n; // 返回n：此历元基准站、流动站观测值OBS总数
+}
+</code></pre>
+<h4 id="疑问：-10"><a href="#疑问：-10" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li>需要细看这些读取文件内容的函数吗？以后直接调用不可以吗？还是要重复造轮子……</li>
+</ol>
+<h3 id="5、rtkpos"><a href="#5、rtkpos" class="headerlink" title="5、rtkpos"></a>5、rtkpos</h3><h4 id="功能：-15"><a href="#功能：-15" class="headerlink" title="功能："></a>功能：</h4><ul>
+<li><p>根据观测数据和导航信息，计算接收机的<strong>位置、速度和钟差</strong>。 设置基准站位置，记录观测值数量。调用</p>
+<p>pntpos 进行接收机单点定位。若为单点定位模式，输出，返回。</p>
+</li>
+<li><p>若为 PPP 模式，调用 pppos 进行精密单点定位，输出，返回。若无基准站观测数据，输出，返回。若为移</p>
+<p>动基站模式，调用 pntpos 进行基站单点定位，并加以时间同步；否则只计算一下差分时间。</p>
+</li>
+<li><p>调用 relpos 进行相对基站的接收机定位，输出，返回。相对定位模式在调用rtkpos之前应该先设置好基站位</p>
+<p>置，动基线模式除外。 </p>
+</li>
+</ul>
+<h4 id="输入参数：-10"><a href="#输入参数：-10" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++">rtk_t *rtk            RTK控制结构体
+const obsd_t *obs     观测数据OBS
+int n               观测数据数量
+const nav_t *nav     导航电文信息
+</code></pre>
+<h4 id="输出参数：-10"><a href="#输出参数：-10" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">空返回  return none 
+</code></pre>
+<h4 id="执行流程：-11"><a href="#执行流程：-11" class="headerlink" title="执行流程："></a>执行流程：</h4><ul>
+<li>pntpos spp定位</li>
+<li>relpos   rtk定位</li>
+<li>pppos  ppp定位</li>
+</ul>
+<h4 id="代码：-15"><a href="#代码：-15" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">extern int rtkpos(rtk_t *rtk, const obsd_t *obs, int n, const nav_t *nav)
+{
+    prcopt_t *opt=&rtk->opt;    //定义了一个prcopt_t用来储存传入的rtk_t中的prcopt_t
+    sol_t solb={{0}};
+    gtime_t time;
+    int i,nu,nr;
+    char msg[128]="";
+    
+    trace(3,"rtkpos  : time=%s n=%d\n",time_str(obs[0].time,3),n);
+    trace(4,"obs=\n"); traceobs(4,obs,n);
+    /*trace(5,"nav=\n"); tracenav(5,nav);*/
+    
+    //设置rtk内基准站坐标，基准站坐标在execses函数内已经计算了，速度设为0.0
+    //这里将配置结构体opt内基准站的坐标赋值给解算结构体rtk内基准站的坐标
+
+
+    /* set base staion position */
+    if (opt->refpos<=3&&opt->mode!=PMODE_SINGLE&&opt->mode!=PMODE_MOVEB) {
+        for (i=0;i<6;i++) rtk->rb[i]=i<3?opt->rb[i]:0.0;    //opt内基准站坐标赋值给rtk->rb,速度设为0.0   //初始化为0
+    }
+    /* count rover/base station observations */
+    for (nu=0;nu   <n&&obs[nu   ].rcv==1;nu++) ;    //确定流动站观测卫星的数量
+    for (nr=0;nu+nr<n&&obs[nu+nr].rcv==2;nr++) ;    //统计基准站OBS个数nu，流动站OBS个数nr，可用于后面判断是否满足差分条件
+    
+    time=rtk->sol.time; /* previous epoch */
+    
+    /* rover position by single point positioning */ //spp的计算
+    //利用观测值及星历计算流动站的SPP定位结果，作为kalman滤波的近似坐标。需要注意，
+    //如果由于流动站SPP定位结果坐标误差过大等原因导致的SPP无解，则不进行rtk运算，当前历元无解。
+    if (!pntpos(obs,nu,nav,&rtk->opt,&rtk->sol,NULL,rtk->ssat,msg)) {
+        errmsg(rtk,"point pos error (%s)\n",msg);
+        
+        if (!rtk->opt.dynamics) {
+            outsolstat(rtk);
+            return 0;
+        }
+    }
+    if (time.time!=0) rtk->tt=timediff(rtk->sol.time,time); //什么意思？
+    
+    /* single point positioning */
+    if (opt->mode==PMODE_SINGLE) {  //单点定位模式直接输出刚刚SPP算的坐标
+        outsolstat(rtk);
+        return 1;
+    }
+    /* precise point positioning */
+    if (opt->mode>=PMODE_PPP_KINEMA) {//PPP定位模式选择
+        pppos(rtk,obs,nu,nav);
+        pppoutsolstat(rtk,statlevel,fp_stat);
+        return 1;
+    }
+    //检查该历元流动站观测时间和基准站观测时间是否对应，若无基准站观测数据，return
+    /* check number of data of base station and age of differential */
+    if (nr==0) {
+        errmsg(rtk,"no base station observation data for rtk\n");
+        outsolstat(rtk);
+        return 1;
+    }
+    if (opt->mode==PMODE_MOVEB) { /*  moving baseline */
+        
+        //动基线与其他差分定位方式，动基线的基站坐标需要随时间同步变化，所以需要计算出变化速率,
+        //解释了为什么第二步除了单点定位，动基线也不参与基站解算，动基线在这里单独解算
+
+        /* estimate position/velocity of base station */    //若为移动基线模式
+        if (!pntpos(obs+nu,nr,nav,&rtk->opt,&solb,NULL,NULL,msg)) { //spp计算基准站位置
+            errmsg(rtk,"base station position error (%s)\n",msg);
+            return 0;
+        }
+        rtk->sol.age=(float)timediff(rtk->sol.time,solb.time);  //计算差分龄期rtk->sol.age
+        
+        if (fabs(rtk->sol.age)>TTOL_MOVEB) {    //fabs 获取绝对值
+            errmsg(rtk,"time sync error for moving-base (age=%.1f)\n",rtk->sol.age);
+            return 0;
+        }
+        for (i=0;i<6;i++) rtk->rb[i]=solb.rr[i];    //把solb.rr赋值给rtk->rb
+        
+        /* time-synchronized position of base station */    //时间同步基站位置
+        for (i=0;i<3;i++) rtk->rb[i]+=rtk->rb[i+3]*rtk->sol.age;    //位置+=对应速度*差分龄期
+    }
+    else {
+        rtk->sol.age=(float)timediff(obs[0].time,obs[nu].time);
+        
+        if (fabs(rtk->sol.age)>opt->maxtdiff) {
+            errmsg(rtk,"age of differential error (age=%.1f)\n",rtk->sol.age);
+            outsolstat(rtk);
+            return 1;
+        }
+    }
+
+    //上面的步骤只算了相对定位的差分时间和动基线坐标,这里进行相位定位，并输出最终结果，到这里定位步骤全部完成
+    //相对定位算法的核心函数
+
+
+    /* relative potitioning */
+    relpos(rtk,obs,nu,nr,nav);
+    outsolstat(rtk);
+    
+    return 1;
+}
+</code></pre>
+<h4 id="疑问：-11"><a href="#疑问：-11" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li>根据不同的定位解算类型来分别进行基站（接收机）的定位，否则最后再进行RTK定位？</li>
+</ol>
+<h3 id="6、pppos"><a href="#6、pppos" class="headerlink" title="6、pppos"></a>6、pppos</h3><h4 id="流程图：-7"><a href="#流程图：-7" class="headerlink" title="流程图："></a>流程图：</h4><p>![image-20240726094049127](E:\My Blog\博客文档\Rtklib学习.assets\image-20240726094049127.png)</p>
+<h4 id="功能：-16"><a href="#功能：-16" class="headerlink" title="功能："></a>功能：</h4><p>PPP处理</p>
+<h4 id="输入参数：-11"><a href="#输入参数：-11" class="headerlink" title="输入参数："></a>输入参数：</h4><pre class=" language-c++"><code class="language-c++"> args:          IO    rtk_t *rtk            rtk solution structure
+             I     const obsd_t *obs    当前历元观测值
+             I     int n               当前移动站观测值数目
+             I     const nav_t *nav    星历 
+</code></pre>
+<h4 id="输出参数：-11"><a href="#输出参数：-11" class="headerlink" title="输出参数："></a>输出参数：</h4><pre class=" language-c++"><code class="language-c++">空返回  return none 
+</code></pre>
+<h4 id="执行流程：-12"><a href="#执行流程：-12" class="headerlink" title="执行流程："></a>执行流程：</h4><ol>
+<li><p>调用<code>udstate_ppp</code>函数进行卡尔曼滤波的一步预测；</p>
+</li>
+<li><p>调用<code>satposs</code>函数计算卫星位置；</p>
+</li>
+<li><p>如果在配置中选择排除block IIA卫星，调用<code>testeclipse</code>函数，将这些卫星的位置、速度置0(“排除”)；</p>
+</li>
+<li><p>如果在配置中选择潮汐修正，调用<code>tidedisp</code>函数进行潮汐修正；</p>
+</li>
+<li><p>调用<code>ppp_res</code>函数计算预测值与量测值之间的残差；</p>
+</li>
+<li><p>待用<code>filter</code>函数进行卡尔曼滤波的量测更新；</p>
+</li>
+<li><p>调用<code>ppp_res</code>函数计算量测更新后的残差；</p>
+</li>
+<li><p>调用<code>ppp_ar</code>进行<a href="">整周模糊度结算</a>，并调用<code>ppp_res</code>进行残差计算；//这里后处理的原因是什么?为什么不是先模糊度固定？？</p>
+</li>
+<li><p>调用<code>update_stat</code>更新输入、输出参数<code>rtk solution</code>的状态。</p>
+</li>
+</ol>
+<blockquote>
+<p>需要注意的是，步骤8中ppp_ar是个空函数，返回值为0，因此实际后面的ppp_res函数也不会被调用。如此来看，实际PPP的解为通过卡尔曼滤波得到的浮点解。</p>
+</blockquote>
+<h4 id="代码：-16"><a href="#代码：-16" class="headerlink" title="代码："></a>代码：</h4><pre class=" language-c++"><code class="language-c++">extern void pppos(rtk_t *rtk, const obsd_t *obs, int n, const nav_t *nav)
+{
+    const prcopt_t *opt=&rtk->opt;
+    double *rs,*dts,*var,*v,*H,*R,*azel,*xp,*Pp;
+    int i,nv,info,svh[MAXOBS],stat=SOLQ_SINGLE;
+    
+    trace(3,"pppos   : nx=%d n=%d\n",rtk->nx,n);
+    
+    rs=mat(6,n); dts=mat(2,n); var=mat(1,n); azel=zeros(2,n);//rs:卫星位置和速度 dts：卫星钟差  var：伪距残差的偏差？
+    
+    for (i=0;i<MAXSAT;i++) rtk->ssat[i].fix[0]=0;
+    
+    /* temporal update of states */
+    udstate_ppp(rtk,obs,n,nav);//首历元的初始化或者时间更新  //状态更新
+    
+    trace(4,"x(0)="); tracemat(4,rtk->x,1,NR(opt),13,4);
+    
+    /* satellite positions and clocks */
+    satposs(obs[0].time,obs,n,nav,rtk->opt.sateph,rs,dts,var,svh);
+    
+    /* exclude measurements of eclipsing satellite */   //剔除遮挡信号
+    if (rtk->opt.posopt[3]) {
+        testeclipse(obs,n,nav,rs);
+    }
+    xp=mat(rtk->nx,1); Pp=zeros(rtk->nx,rtk->nx);   //参数个数和参数协方差
+    matcpy(xp,rtk->x,rtk->nx,1);    //将伪距单点定位状态解赋给xp矩阵
+    nv=n*rtk->opt.nf*2; v=mat(nv,1); H=mat(rtk->nx,nv); R=mat(nv,nv);
+    // nv是观测值个数=有效观测卫星数*载波频率数*2
+    //v是观测向量的残差向量
+    //H是设计矩阵或雅克比矩阵
+    //R是观测值方差阵
+
+
+    for (i=0;i<rtk->opt.niter;i++) {    //开始迭代
+        
+        /* phase and code residuals */
+        if ((nv=res_ppp(i,obs,n,rs,dts,var,svh,nav,xp,rtk,v,H,R,azel))<=0) break;   //进入到res_ppp函数完成扩展卡尔曼滤波的预测部分
+        
+        /* measurement update */
+        matcpy(Pp,rtk->P,rtk->nx,rtk->nx);  //这段代码复制参数协方差阵后正式进入到扩展卡尔曼滤波的更新部分。
+        
+        if ((info=filter(xp,Pp,H,v,R,rtk->nx,nv))) {    //扩展卡尔曼滤波的更新部分。
+            trace(2,"ppp filter error %s info=%d\n",time_str(rtk->sol.time,0),
+                  info);
+            break;
+        }
+        trace(4,"x(%d)=",i+1); tracemat(4,xp,1,NR(opt),13,4);
+        
+        stat=SOLQ_PPP;
+    }
+    if (stat==SOLQ_PPP) {   //模糊度固定之前为社么要先迭代几次？不应该是先模糊度固定后加快解算效率吗？
+        /* postfit residuals */
+        res_ppp(1,obs,n,rs,dts,var,svh,nav,xp,rtk,v,H,R,azel);
+        
+        /* update state and covariance matrix */
+        matcpy(rtk->x,xp,rtk->nx,1);
+        matcpy(rtk->P,Pp,rtk->nx,rtk->nx);
+        
+        /* ambiguity resolution in ppp */
+        if (opt->modear==ARMODE_PPPAR||opt->modear==ARMODE_PPPAR_ILS) {
+            if (pppamb(rtk,obs,n,nav,azel)) stat=SOLQ_FIX;  //模糊度固定
+        }
+        /* update solution status */    //2.4.3中整合到一个函数了
+        rtk->sol.ns=0;
+        for (i=0;i<n&&i<MAXOBS;i++) {
+            if (!rtk->ssat[obs[i].sat-1].vsat[0]) continue;
+            rtk->ssat[obs[i].sat-1].lock[0]++;
+            rtk->ssat[obs[i].sat-1].outc[0]=0;
+            rtk->ssat[obs[i].sat-1].fix [0]=4;
+            rtk->sol.ns++;
+        }
+        rtk->sol.stat=stat;
+        
+        for (i=0;i<3;i++) {
+            rtk->sol.rr[i]=rtk->x[i];
+            rtk->sol.qr[i]=(float)rtk->P[i+i*rtk->nx];
+        }
+        rtk->sol.qr[3]=(float)rtk->P[1];
+        rtk->sol.qr[4]=(float)rtk->P[2+rtk->nx];
+        rtk->sol.qr[5]=(float)rtk->P[2];
+        rtk->sol.dtr[0]=rtk->x[IC(0,opt)];
+        rtk->sol.dtr[1]=rtk->x[IC(1,opt)]-rtk->x[IC(0,opt)];
+        for (i=0;i<n&&i<MAXOBS;i++) {
+            rtk->ssat[obs[i].sat-1].snr[0]=MIN(obs[i].SNR[0],obs[i].SNR[1]);
+        }
+        for (i=0;i<MAXSAT;i++) {
+            if (rtk->ssat[i].slip[0]&3) rtk->ssat[i].slipc[0]++;
+        }
+    }
+    free(rs); free(dts); free(var); free(azel);
+    free(xp); free(Pp); free(v); free(H); free(R);
+}
+</code></pre>
+<h4 id="调用函数-1"><a href="#调用函数-1" class="headerlink" title="调用函数:"></a>调用函数:</h4><p><strong>udstate_ppp()</strong>:</p>
+<p>首历元的初始化或者时间更新  //状态更新</p>
+<pre class=" language-c++"><code class="language-c++">static void udstate_ppp(rtk_t *rtk, const obsd_t *obs, int n, const nav_t *nav)
+{
+    //待估参数有位置、速度、接收机钟差、对流层参数、卫星相位偏差
+    trace(3,"udstate_ppp: n=%d\n",n);
+    
+    /* temporal update of position */
+    udpos_ppp(rtk);//位置初始化  //位置更新
+    
+    /* temporal update of clock */
+    udclk_ppp(rtk);//钟差初始化
+    
+    /* temporal update of tropospheric parameters */
+    if (rtk->opt.tropopt>=TROPOPT_EST) {
+        udtrop_ppp(rtk);//对流层初始化
+    }
+    /* temporal update of phase-bias */
+    udbias_ppp(rtk,obs,n,nav);//模糊度初始化
+}
+</code></pre>
+<p><code>udbias_ppp(rtk,obs,n,nav);//模糊度初始化</code></p>
+<p>包括周跳探测：</p>
+<p>detslp_ll、 detslp_gf、detslp_mw、detslp_dop</p>
+<blockquote>
+<p>tip：N1，N2同时发生一样的周跳时，则N1-N2相当没有周跳</p>
+</blockquote>
+<h4 id="疑问：-12"><a href="#疑问：-12" class="headerlink" title="疑问："></a>疑问：</h4><ol>
+<li><p>为什么进行三频average_LC处理？哪里来的三频</p>
+<p>好像是利用载波和伪距方程组合出的三种不同组合。为什么这样组合？</p>
+</li>
+<li><p>卫星对线性独立是什么意思？判断函数是is_depend</p>
+</li>
+<li><p>为什么通过整周模糊度转换为无电离层组合模糊度，并使用整周模糊度和非整周模糊度的组合来固定模糊度？</p>
+</li>
+<li><p>ppp.c文件中udbias_ppp函数包括周跳函数的入口，其中mw检测方法可以用滑动窗口计算平均值和标准差的方法是什么意思？</p>
+</li>
+<li><p>模糊度固定完后就只进行一次结果更新？误差归并到什么地方去了？</p>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">BM-kun</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2024/03/11/rtklib-xue-xi/">http://example.com/2024/03/11/rtklib-xue-xi/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">BM-kun</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Rtklib/">
+                                    <span class="chip bg-color">Rtklib</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81Njg2OC8zMzMzMg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/05/16/gnss-zhuan-ye-zhu-yu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="GNSS专业术语">
+                        
+                        <span class="card-title">GNSS专业术语</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            BM-kun
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/GNSS/">
+                        <span class="chip bg-color">GNSS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/07/11/python-ru-men/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Python入门">
+                        
+                        <span class="card-title">Python入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            BM-kun
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">BM-kun</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">17.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/BM-kun" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:shijiuwk@126.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=49101352" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 49101352" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
